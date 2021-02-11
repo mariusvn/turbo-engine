@@ -65,6 +65,6 @@ jobs:
       with:
         name: lib-files-win
         path: |
-          ${{github.workspace}}/out/build/standard/libturbo-engine.dll
-          ${{github.workspace}}/out/build/standard/libturbo-engine.dll.a
+          ${{github.workspace}}/out/build/standard/libturbo_engine.dll
+          ${{github.workspace}}/out/build/standard/libturbo_engine.dll.a
           ${{github.workspace}}/out/build/standard/allegro*.dll
