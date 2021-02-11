@@ -3,4 +3,8 @@
 
 ----
 
-<div align="center"><a href="https://github.com/mariusvn/turbo-engine/releases">Releases</a></div>
+<div align="center">
+<a href="https://github.com/mariusvn/turbo-engine/releases">Releases</a>
+-
+<a href="https://mariusvn.github.io/turbo-engine/">Documentation</a>
+</div>
