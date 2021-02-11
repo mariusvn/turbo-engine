@@ -1,6 +1,6 @@
 <map id="turbo::Sprite" name="turbo::Sprite">
-<area shape="rect" id="node1" title="Represent a drawable sprite." alt="" coords="169,95,263,121"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,117,32"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_rectangle.html" title="Class used to define a generic rectangle." alt="" coords="142,5,290,32"/>
-<area shape="rect" id="node4" href="$classturbo_1_1_texture.html" title="Contains the data of the sprites." alt="" coords="314,5,417,32"/>
+<area shape="rect" id="node1" title="Represent a drawable sprite." alt="" coords="201,103,313,133"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,143,36"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_rectangle.html" title="Class used to define a generic rectangle." alt="" coords="167,5,347,36"/>
+<area shape="rect" id="node4" href="$classturbo_1_1_texture.html" title="Contains the data of the sprites." alt="" coords="371,5,494,36"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="turbo::CircleShape" name="turbo::CircleShape">
-<area shape="rect" id="node1" title="Simple cicle shape." alt="" coords="55,171,185,197"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="13,81,109,108"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,117,32"/>
-<area shape="rect" id="node4" href="$classturbo_1_1_color.html" title="Represent a color." alt="" coords="134,81,223,108"/>
+<area shape="rect" id="node1" title="Simple cicle shape." alt="" coords="96,183,255,213"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="16,85,132,116"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,143,36"/>
+<area shape="rect" id="node4" href="$classturbo_1_1_color.html" title="Represent a color." alt="" coords="156,85,264,116"/>
 </map>

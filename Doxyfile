@@ -38,7 +38,7 @@ PROJECT_NAME           = "Turbo Engine"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 0.2
+PROJECT_NUMBER         = 0.6
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -1714,7 +1714,7 @@ MATHJAX_CODEFILE       =
 # The default value is: YES.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-SEARCHENGINE           = YES
+SEARCHENGINE           = NO
 
 # When the SERVER_BASED_SEARCH tag is enabled the search engine will be
 # implemented using a web server instead of a web client using JavaScript. There
@@ -2385,7 +2385,7 @@ DOT_FONTNAME           = Helvetica
 # Minimum value: 4, maximum value: 24, default value: 10.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_FONTSIZE           = 10
+DOT_FONTSIZE           = 13
 
 # By default doxygen will tell dot to use the default font as specified with
 # DOT_FONTNAME. If you specify a different font using DOT_FONTNAME you can set

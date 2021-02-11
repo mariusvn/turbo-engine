@@ -1,5 +1,5 @@
 <map id="turbo::RectangleShape" name="turbo::RectangleShape">
-<area shape="rect" id="node1" title="Represents a drawable rectangle." alt="" coords="5,155,160,181"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="35,80,131,107"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="27,5,139,32"/>
+<area shape="rect" id="node1" title="Represents a drawable rectangle." alt="" coords="5,163,193,193"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="41,84,157,115"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="31,5,168,36"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="turbo::CircleShape" name="turbo::CircleShape">
-<area shape="rect" id="node1" title="Simple cicle shape." alt="" coords="5,155,135,181"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="22,80,118,107"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="14,5,126,32"/>
+<area shape="rect" id="node1" title="Simple cicle shape." alt="" coords="5,163,164,193"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="27,84,143,115"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="16,5,153,36"/>
 </map>

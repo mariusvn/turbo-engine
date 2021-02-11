@@ -1,6 +1,6 @@
 <map id="turbo::GameObject" name="turbo::GameObject">
-<area shape="rect" id="node1" title="Basic scene object." alt="" coords="96,185,228,212"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_transform.html" title=" " alt="" coords="104,109,220,136"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node4" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="173,5,325,32"/>
+<area shape="rect" id="node1" title="Basic scene object." alt="" coords="114,201,273,232"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_transform.html" title=" " alt="" coords="122,121,265,152"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="5,5,179,36"/>
+<area shape="rect" id="node4" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="203,5,389,36"/>
 </map>
