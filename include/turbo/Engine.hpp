@@ -122,6 +122,6 @@ namespace turbo {
 
 /**
  * @mainpage Turbo Engine Documentation
- * <a href="namespaces.html">Namespace List</a>
+ * <a href="hierarchy.html">Class hierarchy</a>
  * 
  */
