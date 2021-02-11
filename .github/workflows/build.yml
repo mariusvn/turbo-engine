@@ -33,7 +33,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: lib-files
+        name: lib-files-ubuntu
         path: ${{github.workspace}}/out/build/standard/libturbo_engine.so
 
   build-windows:
@@ -63,7 +63,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: lib-files
+        name: lib-files-win
         path: |
           ${{github.workspace}}/out/build/standard/libturbo-engine.dll
           ${{github.workspace}}/out/build/standard/libturbo-engine.dll.a
