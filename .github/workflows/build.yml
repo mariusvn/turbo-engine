@@ -29,6 +29,13 @@ jobs:
       working-directory: ${{github.workspace}}/out/build/standard
       shell: bash
       run: cmake --build . --config $BUILD_TYPE
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: lib-files-ubuntu
+        path: ${{github.workspace}}/out/build/standard/libturbo_engine.so
+
   build-windows:
     runs-on: windows-latest
     
@@ -46,9 +53,18 @@ jobs:
     - name: Configure CMake
       shell: pwsh
       working-directory: ${{github.workspace}}/out/build/standard
-      run: cmake ${{github.workspace}} -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      run: cmake ${{github.workspace}} -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DMING_LIB_PATH="out/build/standard/allegro/allegro" -G "MinGW Makefiles"
       
     - name: Build
       working-directory: ${{github.workspace}}/out/build/standard
       shell: pwsh
       run: cmake --build . --config $BUILD_TYPE
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: lib-files-win
+        path: |
+          ${{github.workspace}}/out/build/standard/libturbo_engine.dll
+          ${{github.workspace}}/out/build/standard/libturbo_engine.dll.a
+          ${{github.workspace}}/out/build/standard/allegro*.dll
