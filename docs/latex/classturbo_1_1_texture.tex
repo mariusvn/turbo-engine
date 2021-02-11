@@ -1,0 +1,85 @@
+\hypertarget{classturbo_1_1_texture}{}\doxysection{turbo\+::Texture Class Reference}
+\label{classturbo_1_1_texture}\index{turbo::Texture@{turbo::Texture}}
+
+
+Contains the data of the sprites.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classturbo_1_1_texture_a4ef5b49419b6f502c25542145114ecf9}{Texture}} (\mbox{\hyperlink{classturbo_1_1_path}{Path}} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classturbo_1_1_texture}{Texture}} object. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classturbo_1_1_texture_a27a06d932f46c224c31a6a1def31d59f}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the texture. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classturbo_1_1_texture_a529220c18e1d5c736795db2a796eab6d}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_texture_aa0aa79217dfe1fa5b31def83929a5ac3}\label{classturbo_1_1_texture_aa0aa79217dfe1fa5b31def83929a5ac3}} 
+void $\ast$ {\bfseries \+\_\+\+\_\+get\+\_\+texture\+\_\+bitmap} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_texture_a3dd75820ff10ac8e68802d513beccedd}\label{classturbo_1_1_texture_a3dd75820ff10ac8e68802d513beccedd}} 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classturbo_1_1_texture_a3dd75820ff10ac8e68802d513beccedd}{bitmap}}
+\begin{DoxyCompactList}\small\item\em Target allegro bitmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the data of the sprites. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classturbo_1_1_texture_a4ef5b49419b6f502c25542145114ecf9}\label{classturbo_1_1_texture_a4ef5b49419b6f502c25542145114ecf9}} 
+\index{turbo::Texture@{turbo::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!turbo::Texture@{turbo::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily turbo\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classturbo_1_1_path}{Path}} $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classturbo_1_1_texture}{Texture}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to the image to load \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classturbo_1_1_texture_a529220c18e1d5c736795db2a796eab6d}\label{classturbo_1_1_texture_a529220c18e1d5c736795db2a796eab6d}} 
+\index{turbo::Texture@{turbo::Texture}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!turbo::Texture@{turbo::Texture}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily unsigned int turbo\+::\+Texture\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the texture. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int height 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classturbo_1_1_texture_a27a06d932f46c224c31a6a1def31d59f}\label{classturbo_1_1_texture_a27a06d932f46c224c31a6a1def31d59f}} 
+\index{turbo::Texture@{turbo::Texture}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!turbo::Texture@{turbo::Texture}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily unsigned int turbo\+::\+Texture\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the texture. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int width 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/graphics/Texture.\+hpp\item 
+src/graphics/Texture.\+cpp\end{DoxyCompactItemize}

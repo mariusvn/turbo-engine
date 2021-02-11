@@ -1,0 +1,4 @@
+<map id="turbo::Shape" name="turbo::Shape">
+<area shape="rect" id="node1" title="Represent a drawable primitive shape." alt="" coords="13,80,109,107"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,117,32"/>
+</map>

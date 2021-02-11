@@ -1,0 +1,72 @@
+\hypertarget{classturbo_1_1_shader}{}\doxysection{turbo\+::Shader Class Reference}
+\label{classturbo_1_1_shader}\index{turbo::Shader@{turbo::Shader}}
+
+
+Collaboration diagram for turbo\+::Shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classturbo_1_1_shader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a90f876b1a2d3415b584f175644630910}\label{classturbo_1_1_shader_a90f876b1a2d3415b584f175644630910}} 
+{\bfseries Shader} (const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&pixel\+\_\+shader\+\_\+path, const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&vertex\+\_\+shader\+\_\+path)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a516e40f5c5cacc2f35713c46b86b964c}\label{classturbo_1_1_shader_a516e40f5c5cacc2f35713c46b86b964c}} 
+void {\bfseries set\+\_\+vertex\+\_\+shader} (const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&vertex\+\_\+shader\+\_\+path)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a2084edc41c1587251a9a0b56992dc757}\label{classturbo_1_1_shader_a2084edc41c1587251a9a0b56992dc757}} 
+void {\bfseries set\+\_\+pixel\+\_\+shader} (const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&pixel\+\_\+shader\+\_\+path)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_aab3f60231d668edd41ce0b3b0d6b20b5}\label{classturbo_1_1_shader_aab3f60231d668edd41ce0b3b0d6b20b5}} 
+void {\bfseries remove\+\_\+vertex\+\_\+shader} ()
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a9760e6832e80faf40e9171858cb4fdf7}\label{classturbo_1_1_shader_a9760e6832e80faf40e9171858cb4fdf7}} 
+void {\bfseries remove\+\_\+pixel\+\_\+shader} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a91fee595f66db723c54621adacef50e2}\label{classturbo_1_1_shader_a91fee595f66db723c54621adacef50e2}} 
+static void {\bfseries init\+\_\+shaders} ()
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_acb969cb62fc4add8258a4b50f83a7121}\label{classturbo_1_1_shader_acb969cb62fc4add8258a4b50f83a7121}} 
+static void {\bfseries set\+\_\+active\+\_\+shader} (\mbox{\hyperlink{classturbo_1_1_shader}{Shader}} $\ast$shader)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_af11adf67ae28db58229e777d9f9a16bc}\label{classturbo_1_1_shader_af11adf67ae28db58229e777d9f9a16bc}} 
+static \mbox{\hyperlink{classturbo_1_1_shader}{Shader}} $\ast$ {\bfseries get\+\_\+active\+\_\+shader} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_ae464f3a387a5dda8839f8cbd853a3a11}\label{classturbo_1_1_shader_ae464f3a387a5dda8839f8cbd853a3a11}} 
+static const char $\ast$ {\bfseries read\+\_\+file} (const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_abbadf7c2773ef0ec30c70ef1e4013ae7}\label{classturbo_1_1_shader_abbadf7c2773ef0ec30c70ef1e4013ae7}} 
+ALLEGRO\+\_\+\+SHADER $\ast$ {\bfseries shader} = nullptr
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_afa7982ac814177a61f4701e8ef59a3fb}\label{classturbo_1_1_shader_afa7982ac814177a61f4701e8ef59a3fb}} 
+const char $\ast$ {\bfseries pixel\+\_\+shader\+\_\+src} = nullptr
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_ad55bdc003cf862e0a4ba8c833d294ac9}\label{classturbo_1_1_shader_ad55bdc003cf862e0a4ba8c833d294ac9}} 
+const char $\ast$ {\bfseries vertex\+\_\+shader\+\_\+src} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_shader_a9a953ff8001cb2134881f833b231fad8}\label{classturbo_1_1_shader_a9a953ff8001cb2134881f833b231fad8}} 
+static \mbox{\hyperlink{classturbo_1_1_shader}{Shader}} $\ast$ {\bfseries current\+\_\+shader} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/graphics/Shader.\+hpp\item 
+src/graphics/Shader.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+out/build
+!.gitkeep
+.vscode
+.vs
+.idea
+build.bat
+build.sh
+CMakeSettings.json
+cmake-build-debug*

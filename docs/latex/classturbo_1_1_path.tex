@@ -1,0 +1,265 @@
+\hypertarget{classturbo_1_1_path}{}\doxysection{turbo\+::Path Class Reference}
+\label{classturbo_1_1_path}\index{turbo::Path@{turbo::Path}}
+
+
+\mbox{\hyperlink{classturbo_1_1_path}{Path}} class is used to simplify the edition of paths.  
+
+
+
+
+{\ttfamily \#include $<$Path.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classturbo_1_1_path_ace5f3b9292a75c68188e3a3190ceafba}{Path}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classturbo_1_1_path}{Path}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a01901ef5f26595db98c10521848d86ca}\label{classturbo_1_1_path_a01901ef5f26595db98c10521848d86ca}} 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_a01901ef5f26595db98c10521848d86ca}{get\+\_\+drive}} () const
+\begin{DoxyCompactList}\small\item\em Get the drive of the path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a425e7d24ede8c1ee3d41676e88ff5f2a}\label{classturbo_1_1_path_a425e7d24ede8c1ee3d41676e88ff5f2a}} 
+int \mbox{\hyperlink{classturbo_1_1_path_a425e7d24ede8c1ee3d41676e88ff5f2a}{get\+\_\+num\+\_\+components}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of components in the path. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_a92ca72f8ebed48c38fa309e3d785dfac}{get\+\_\+component}} (int i) const
+\begin{DoxyCompactList}\small\item\em Get the component at a choosen position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_ac3dfc92b43ca9f740f6adb1c7d575b20}\label{classturbo_1_1_path_ac3dfc92b43ca9f740f6adb1c7d575b20}} 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_ac3dfc92b43ca9f740f6adb1c7d575b20}{get\+\_\+tail}} () const
+\begin{DoxyCompactList}\small\item\em Get the last component of the path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a42c6bbb3c61a523d8b127708764e8a58}\label{classturbo_1_1_path_a42c6bbb3c61a523d8b127708764e8a58}} 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_a42c6bbb3c61a523d8b127708764e8a58}{get\+\_\+filename}} () const
+\begin{DoxyCompactList}\small\item\em Get the filename of the path (can be null if there is no file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a9444c4473004f15b1ac80d5fea35a0c7}\label{classturbo_1_1_path_a9444c4473004f15b1ac80d5fea35a0c7}} 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_a9444c4473004f15b1ac80d5fea35a0c7}{get\+\_\+basename}} () const
+\begin{DoxyCompactList}\small\item\em Get the basename of the file (can be null if there is no file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a361f59ec1fae0f78113132309118b841}\label{classturbo_1_1_path_a361f59ec1fae0f78113132309118b841}} 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_a361f59ec1fae0f78113132309118b841}{get\+\_\+file\+\_\+extension}} () const
+\begin{DoxyCompactList}\small\item\em Get the file extension of the path (can be null if there is no file) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_a6609fe3e4fb7d4c2fc9dcaaf8521d666}{set\+\_\+drive}} (const char $\ast$drive)
+\begin{DoxyCompactList}\small\item\em Set the drive of the path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_a3ac2247f53d5414f3ced84ba9b03d833}{append\+\_\+component}} (const char $\ast$component)
+\begin{DoxyCompactList}\small\item\em Add a component to the path (add a folder to the end of the path) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_abad0f427469912b4970aa7f7b28157b9}{insert\+\_\+component}} (int i, const char $\ast$component)
+\begin{DoxyCompactList}\small\item\em Insert a component at a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_add94285454e7a7dd001490a8dc672d60}{replace\+\_\+component}} (int i, const char $\ast$component)
+\begin{DoxyCompactList}\small\item\em Replace a component at a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_a918b222d3891e45433839308f25a753d}{remove\+\_\+component}} (int i)
+\begin{DoxyCompactList}\small\item\em Remove a compoent at a specified position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_af2a23e20d1a4af31068fda9931e8462e}\label{classturbo_1_1_path_af2a23e20d1a4af31068fda9931e8462e}} 
+void \mbox{\hyperlink{classturbo_1_1_path_af2a23e20d1a4af31068fda9931e8462e}{drop\+\_\+tail}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last component of the path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_a3efd8aa6cbe925a865b048e1c95a4240}{set\+\_\+filename}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Set the filename of the path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classturbo_1_1_path_ae602d9ca7d050884cd944c00711a9b92}{set\+\_\+file\+\_\+extension}} (const char $\ast$ext)
+\begin{DoxyCompactList}\small\item\em Set the file extension of the path file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_ace1b90aa89fcb2015355449a357f5614}\label{classturbo_1_1_path_ace1b90aa89fcb2015355449a357f5614}} 
+void \mbox{\hyperlink{classturbo_1_1_path_ace1b90aa89fcb2015355449a357f5614}{absolute}} ()
+\begin{DoxyCompactList}\small\item\em Make the path canonical removes the .. and . component and make it absolute. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{classturbo_1_1_path_af4c9336a297003e5c4ab2135bf5fc32e}{c\+\_\+str}} () const
+\begin{DoxyCompactList}\small\item\em Get the path string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_path_ad93af89a5e419e3da72f1c31a764cf9c}\label{classturbo_1_1_path_ad93af89a5e419e3da72f1c31a764cf9c}} 
+{\bfseries operator const char $\ast$} () const
+\item 
+\mbox{\Hypertarget{classturbo_1_1_path_af1bfba6095e04725e3cbfcc887112a5a}\label{classturbo_1_1_path_af1bfba6095e04725e3cbfcc887112a5a}} 
+{\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classturbo_1_1_path}{Path}} $\ast$ \mbox{\hyperlink{classturbo_1_1_path_ac66767e41b9e2fa120133b049a1ea7c5}{get\+\_\+resources\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em Get the standard resource path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_path_a5c50669b5d30daee556bb4e4c5bd4b27}\label{classturbo_1_1_path_a5c50669b5d30daee556bb4e4c5bd4b27}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&output, const \mbox{\hyperlink{classturbo_1_1_path}{Path}} \&path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classturbo_1_1_path}{Path}} class is used to simplify the edition of paths. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classturbo_1_1_path_ace5f3b9292a75c68188e3a3190ceafba}\label{classturbo_1_1_path_ace5f3b9292a75c68188e3a3190ceafba}} 
+\index{turbo::Path@{turbo::Path}!Path@{Path}}
+\index{Path@{Path}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily turbo\+::\+Path\+::\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classturbo_1_1_path}{Path}} object. 
+
+\begin{DoxyNote}{Note}
+this constructor remove the . and .. components of the path 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classturbo_1_1_path_ace1b90aa89fcb2015355449a357f5614}{absolute}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & initial path \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classturbo_1_1_path_a3ac2247f53d5414f3ced84ba9b03d833}\label{classturbo_1_1_path_a3ac2247f53d5414f3ced84ba9b03d833}} 
+\index{turbo::Path@{turbo::Path}!append\_component@{append\_component}}
+\index{append\_component@{append\_component}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{append\_component()}{append\_component()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::append\+\_\+component (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component }\end{DoxyParamCaption})}
+
+
+
+Add a component to the path (add a folder to the end of the path) 
+
+{\bfseries{Example\+:}} {\ttfamily  my\+Path.\+append\+\_\+component(\char`\"{}src\char`\"{}); }
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & component to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_af4c9336a297003e5c4ab2135bf5fc32e}\label{classturbo_1_1_path_af4c9336a297003e5c4ab2135bf5fc32e}} 
+\index{turbo::Path@{turbo::Path}!c\_str@{c\_str}}
+\index{c\_str@{c\_str}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{c\_str()}{c\_str()}}
+{\footnotesize\ttfamily const char $\ast$ turbo\+::\+Path\+::c\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the path string. 
+
+\begin{DoxyReturn}{Returns}
+const char$\ast$ path string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classturbo_1_1_path_a92ca72f8ebed48c38fa309e3d785dfac}\label{classturbo_1_1_path_a92ca72f8ebed48c38fa309e3d785dfac}} 
+\index{turbo::Path@{turbo::Path}!get\_component@{get\_component}}
+\index{get\_component@{get\_component}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{get\_component()}{get\_component()}}
+{\footnotesize\ttfamily const char $\ast$ turbo\+::\+Path\+::get\+\_\+component (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get the component at a choosen position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_ac66767e41b9e2fa120133b049a1ea7c5}\label{classturbo_1_1_path_ac66767e41b9e2fa120133b049a1ea7c5}} 
+\index{turbo::Path@{turbo::Path}!get\_resources\_path@{get\_resources\_path}}
+\index{get\_resources\_path@{get\_resources\_path}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{get\_resources\_path()}{get\_resources\_path()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classturbo_1_1_path}{Path}} $\ast$ turbo\+::\+Path\+::get\+\_\+resources\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the standard resource path. 
+
+\begin{DoxyReturn}{Returns}
+Path$\ast$ new path that needs to be deleted after usage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classturbo_1_1_path_abad0f427469912b4970aa7f7b28157b9}\label{classturbo_1_1_path_abad0f427469912b4970aa7f7b28157b9}} 
+\index{turbo::Path@{turbo::Path}!insert\_component@{insert\_component}}
+\index{insert\_component@{insert\_component}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{insert\_component()}{insert\_component()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::insert\+\_\+component (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const char $\ast$}]{component }\end{DoxyParamCaption})}
+
+
+
+Insert a component at a specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posiiton \\
+\hline
+{\em component} & component to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_a918b222d3891e45433839308f25a753d}\label{classturbo_1_1_path_a918b222d3891e45433839308f25a753d}} 
+\index{turbo::Path@{turbo::Path}!remove\_component@{remove\_component}}
+\index{remove\_component@{remove\_component}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{remove\_component()}{remove\_component()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::remove\+\_\+component (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Remove a compoent at a specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_add94285454e7a7dd001490a8dc672d60}\label{classturbo_1_1_path_add94285454e7a7dd001490a8dc672d60}} 
+\index{turbo::Path@{turbo::Path}!replace\_component@{replace\_component}}
+\index{replace\_component@{replace\_component}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{replace\_component()}{replace\_component()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::replace\+\_\+component (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const char $\ast$}]{component }\end{DoxyParamCaption})}
+
+
+
+Replace a component at a specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & position \\
+\hline
+{\em component} & component to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_a6609fe3e4fb7d4c2fc9dcaaf8521d666}\label{classturbo_1_1_path_a6609fe3e4fb7d4c2fc9dcaaf8521d666}} 
+\index{turbo::Path@{turbo::Path}!set\_drive@{set\_drive}}
+\index{set\_drive@{set\_drive}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{set\_drive()}{set\_drive()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::set\+\_\+drive (\begin{DoxyParamCaption}\item[{const char $\ast$}]{drive }\end{DoxyParamCaption})}
+
+
+
+Set the drive of the path. 
+
+{\bfseries{Example\+:}} {\ttfamily  my\+Path.\+set\+\_\+drive(\char`\"{}\+C\+:\char`\"{}); } 
+\begin{DoxyParams}{Parameters}
+{\em drive} & target drive \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_ae602d9ca7d050884cd944c00711a9b92}\label{classturbo_1_1_path_ae602d9ca7d050884cd944c00711a9b92}} 
+\index{turbo::Path@{turbo::Path}!set\_file\_extension@{set\_file\_extension}}
+\index{set\_file\_extension@{set\_file\_extension}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{set\_file\_extension()}{set\_file\_extension()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::set\+\_\+file\+\_\+extension (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ext }\end{DoxyParamCaption})}
+
+
+
+Set the file extension of the path file. 
+
+{\bfseries{Example\+:}} {\ttfamily  my\+Path.\+set\+\_\+file\+\_\+extension(\char`\"{}png\char`\"{}); }
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext} & extension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classturbo_1_1_path_a3efd8aa6cbe925a865b048e1c95a4240}\label{classturbo_1_1_path_a3efd8aa6cbe925a865b048e1c95a4240}} 
+\index{turbo::Path@{turbo::Path}!set\_filename@{set\_filename}}
+\index{set\_filename@{set\_filename}!turbo::Path@{turbo::Path}}
+\doxysubsubsection{\texorpdfstring{set\_filename()}{set\_filename()}}
+{\footnotesize\ttfamily void turbo\+::\+Path\+::set\+\_\+filename (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Set the filename of the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & file name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/Path.\+hpp\item 
+src/Path.\+cpp\end{DoxyCompactItemize}

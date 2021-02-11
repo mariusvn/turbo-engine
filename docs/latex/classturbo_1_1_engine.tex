@@ -1,0 +1,120 @@
+\hypertarget{classturbo_1_1_engine}{}\doxysection{turbo\+::Engine Class Reference}
+\label{classturbo_1_1_engine}\index{turbo::Engine@{turbo::Engine}}
+
+
+Main engine class.  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+hpp$>$}
+
+
+
+Collaboration diagram for turbo\+::Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classturbo_1_1_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classturbo_1_1_engine_ae0267aca6f819bc82d398964a851be51}{Engine}} ()
+\begin{DoxyCompactList}\small\item\em Initialize a new engine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_ac69dbd1798e7ccfac959a270749fc522}\label{classturbo_1_1_engine_ac69dbd1798e7ccfac959a270749fc522}} 
+void {\bfseries start\+\_\+window} (const char $\ast$win\+\_\+name, unsigned short width, unsigned short height)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a0adf9186f1ae4383a591ed43b292bdc8}\label{classturbo_1_1_engine_a0adf9186f1ae4383a591ed43b292bdc8}} 
+void {\bfseries stop\+\_\+window} ()
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_ac3f585811823c96441fefb78525a4ed7}\label{classturbo_1_1_engine_ac3f585811823c96441fefb78525a4ed7}} 
+void {\bfseries set\+\_\+window\+\_\+title} (const char $\ast$title)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_ad7fb8263f3ee2e31090bac69ea441e15}\label{classturbo_1_1_engine_ad7fb8263f3ee2e31090bac69ea441e15}} 
+void {\bfseries set\+\_\+window\+\_\+size} (unsigned short width, unsigned short height)
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a118c4861f44b0dbe5e92606b4ad325c8}\label{classturbo_1_1_engine_a118c4861f44b0dbe5e92606b4ad325c8}} 
+void \mbox{\hyperlink{classturbo_1_1_engine_a118c4861f44b0dbe5e92606b4ad325c8}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Starts main loop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a461a9a2bc961fc65ce438494c4b77dfc}\label{classturbo_1_1_engine_a461a9a2bc961fc65ce438494c4b77dfc}} 
+void \mbox{\hyperlink{classturbo_1_1_engine_a461a9a2bc961fc65ce438494c4b77dfc}{force\+\_\+render}} ()
+\begin{DoxyCompactList}\small\item\em Force the engine to render as soon as possible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a460af8998d8bd6c3db87286ba6a68bf8}\label{classturbo_1_1_engine_a460af8998d8bd6c3db87286ba6a68bf8}} 
+void \mbox{\hyperlink{classturbo_1_1_engine_a460af8998d8bd6c3db87286ba6a68bf8}{force\+\_\+logic}} ()
+\begin{DoxyCompactList}\small\item\em Force the engine to tick as soon as possible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a9f2223519a1eab8bcaea56ed6b93dc6f}\label{classturbo_1_1_engine_a9f2223519a1eab8bcaea56ed6b93dc6f}} 
+void \mbox{\hyperlink{classturbo_1_1_engine_a9f2223519a1eab8bcaea56ed6b93dc6f}{close}} ()
+\begin{DoxyCompactList}\small\item\em Stops the main loop and close the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a28d85f9657889e1c01500e44ae59234c}\label{classturbo_1_1_engine_a28d85f9657889e1c01500e44ae59234c}} 
+void {\bfseries on\+\_\+update\+\_\+tick} ()
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_af0a515827460cd5f55adf65a869891a0}\label{classturbo_1_1_engine_af0a515827460cd5f55adf65a869891a0}} 
+void {\bfseries on\+\_\+render\+\_\+tick} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_afc195c7e42fa56ea6b488e7df51641e7}\label{classturbo_1_1_engine_afc195c7e42fa56ea6b488e7df51641e7}} 
+\mbox{\hyperlink{classturbo_1_1_scene_manager}{Scene\+Manager}} {\bfseries scene\+\_\+manager} = \mbox{\hyperlink{classturbo_1_1_scene_manager}{Scene\+Manager}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classturbo_1_1_engine_acccd8c2ce7145cf2800ce5ebc24a6181}{version}} = \char`\"{}0.\+2\char`\"{}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classturbo_1_1_engine}{Engine}} version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_engine_a509c9610ccf2873ba1b35cda6d53cb93}\label{classturbo_1_1_engine_a509c9610ccf2873ba1b35cda6d53cb93}} 
+static \mbox{\hyperlink{classturbo_1_1_input}{Input}} {\bfseries input} = \mbox{\hyperlink{classturbo_1_1_input}{Input}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main engine class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classturbo_1_1_engine_ae0267aca6f819bc82d398964a851be51}\label{classturbo_1_1_engine_ae0267aca6f819bc82d398964a851be51}} 
+\index{turbo::Engine@{turbo::Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!turbo::Engine@{turbo::Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily turbo\+::\+Engine\+::\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize a new engine. 
+
+\begin{DoxyNote}{Note}
+Only one instance should be used at a time
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em win\+\_\+name} & Name of the window \\
+\hline
+{\em width} & width of the window \\
+\hline
+{\em height} & height of the window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classturbo_1_1_engine_acccd8c2ce7145cf2800ce5ebc24a6181}\label{classturbo_1_1_engine_acccd8c2ce7145cf2800ce5ebc24a6181}} 
+\index{turbo::Engine@{turbo::Engine}!version@{version}}
+\index{version@{version}!turbo::Engine@{turbo::Engine}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily const std\+::string turbo\+::\+Engine\+::version = \char`\"{}0.\+2\char`\"{}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{classturbo_1_1_engine}{Engine}} version. 
+
+\begin{DoxyNote}{Note}
+This string is hard writter read only 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/Engine.\+hpp\item 
+src/Engine.\+cpp\end{DoxyCompactItemize}

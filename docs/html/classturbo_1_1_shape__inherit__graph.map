@@ -1,0 +1,6 @@
+<map id="turbo::Shape" name="turbo::Shape">
+<area shape="rect" id="node1" title="Represent a drawable primitive shape." alt="" coords="105,80,201,107"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_circle_shape.html" title="Simple cicle shape." alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node4" href="$classturbo_1_1_rectangle_shape.html" title="Represents a drawable rectangle." alt="" coords="159,155,314,181"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="97,5,209,32"/>
+</map>

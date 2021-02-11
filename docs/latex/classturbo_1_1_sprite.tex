@@ -1,0 +1,91 @@
+\hypertarget{classturbo_1_1_sprite}{}\doxysection{turbo\+::Sprite Class Reference}
+\label{classturbo_1_1_sprite}\index{turbo::Sprite@{turbo::Sprite}}
+
+
+Represent a drawable sprite.  
+
+
+
+
+{\ttfamily \#include $<$Sprite.\+hpp$>$}
+
+
+
+Inheritance diagram for turbo\+::Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classturbo_1_1_sprite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for turbo\+::Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classturbo_1_1_sprite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_sprite_a9f75b30333ed214c87374eda9619c3a2}\label{classturbo_1_1_sprite_a9f75b30333ed214c87374eda9619c3a2}} 
+{\bfseries Sprite} (\mbox{\hyperlink{classturbo_1_1_texture}{Texture}} $\ast$\mbox{\hyperlink{classturbo_1_1_sprite_ad265bb2481d653f10082240bedaffa7f}{texture}})
+\item 
+\mbox{\Hypertarget{classturbo_1_1_sprite_a925db37c6c7bffa64ca8c9ff48aec808}\label{classturbo_1_1_sprite_a925db37c6c7bffa64ca8c9ff48aec808}} 
+void \mbox{\hyperlink{classturbo_1_1_sprite_a925db37c6c7bffa64ca8c9ff48aec808}{draw}} () const override
+\begin{DoxyCompactList}\small\item\em Draw the drawable -\/\+\_\+-\/. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classturbo_1_1_sprite_af8ede64d963b34ffa3777d73099eb607}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the sprite. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classturbo_1_1_sprite_a6cdf1b1617332c8014b249815cba93a8}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_sprite_ad265bb2481d653f10082240bedaffa7f}\label{classturbo_1_1_sprite_ad265bb2481d653f10082240bedaffa7f}} 
+\mbox{\hyperlink{classturbo_1_1_texture}{Texture}} $\ast$ \mbox{\hyperlink{classturbo_1_1_sprite_ad265bb2481d653f10082240bedaffa7f}{texture}}
+\begin{DoxyCompactList}\small\item\em Target texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_sprite_a48901a1c8c870708919e8a0b444ae7f5}\label{classturbo_1_1_sprite_a48901a1c8c870708919e8a0b444ae7f5}} 
+\mbox{\hyperlink{classturbo_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{classturbo_1_1_sprite_a48901a1c8c870708919e8a0b444ae7f5}{rect}} = \mbox{\hyperlink{classturbo_1_1_rectangle}{Rectangle}}$<$$>$()
+\begin{DoxyCompactList}\small\item\em Target texture region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent a drawable sprite. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classturbo_1_1_sprite_a6cdf1b1617332c8014b249815cba93a8}\label{classturbo_1_1_sprite_a6cdf1b1617332c8014b249815cba93a8}} 
+\index{turbo::Sprite@{turbo::Sprite}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!turbo::Sprite@{turbo::Sprite}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily unsigned int turbo\+::\+Sprite\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the sprite. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int height 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classturbo_1_1_sprite_af8ede64d963b34ffa3777d73099eb607}\label{classturbo_1_1_sprite_af8ede64d963b34ffa3777d73099eb607}} 
+\index{turbo::Sprite@{turbo::Sprite}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!turbo::Sprite@{turbo::Sprite}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily unsigned int turbo\+::\+Sprite\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the sprite. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int width 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/graphics/Sprite.\+hpp\item 
+src/graphics/Sprite.\+cpp\end{DoxyCompactItemize}

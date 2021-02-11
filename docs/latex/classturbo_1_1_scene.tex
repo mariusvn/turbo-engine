@@ -1,0 +1,78 @@
+\hypertarget{classturbo_1_1_scene}{}\doxysection{turbo\+::Scene Class Reference}
+\label{classturbo_1_1_scene}\index{turbo::Scene@{turbo::Scene}}
+
+
+Basic scene class.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+
+
+Inheritance diagram for turbo\+::Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classturbo_1_1_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for turbo\+::Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classturbo_1_1_scene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_scene_a7d9ccd35314d4253ee51bd5c6a1ae4fd}\label{classturbo_1_1_scene_a7d9ccd35314d4253ee51bd5c6a1ae4fd}} 
+virtual void \mbox{\hyperlink{classturbo_1_1_scene_a7d9ccd35314d4253ee51bd5c6a1ae4fd}{load}} ()
+\begin{DoxyCompactList}\small\item\em Called when the scene is loading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_scene_a0b4c9b1023050cbc804197698c475443}\label{classturbo_1_1_scene_a0b4c9b1023050cbc804197698c475443}} 
+virtual void \mbox{\hyperlink{classturbo_1_1_scene_a0b4c9b1023050cbc804197698c475443}{unload}} ()
+\begin{DoxyCompactList}\small\item\em Called when the scene is unloading. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classturbo_1_1_scene_ad1f00e3c1f430d198bbf2d6e7a1fccec}{update}} (int delta\+\_\+time) final
+\begin{DoxyCompactList}\small\item\em Called on every logic frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classturbo_1_1_scene_a8ebfb464e0a78f7dfb5765f6e044228a}\label{classturbo_1_1_scene_a8ebfb464e0a78f7dfb5765f6e044228a}} 
+virtual void \mbox{\hyperlink{classturbo_1_1_scene_a8ebfb464e0a78f7dfb5765f6e044228a}{render}} () final
+\begin{DoxyCompactList}\small\item\em Called on every render frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classturbo_1_1_scene_aa5ee48219dfd2a2ee42dd60f93fb522a}\label{classturbo_1_1_scene_aa5ee48219dfd2a2ee42dd60f93fb522a}} 
+\mbox{\hyperlink{classturbo_1_1_game_object}{Game\+Object}} $\ast$ \mbox{\hyperlink{classturbo_1_1_scene_aa5ee48219dfd2a2ee42dd60f93fb522a}{root\+\_\+gameobject}}
+\begin{DoxyCompactList}\small\item\em Root \mbox{\hyperlink{classturbo_1_1_game_object}{Game\+Object}} of the scene objects hierarchy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic scene class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classturbo_1_1_scene_ad1f00e3c1f430d198bbf2d6e7a1fccec}\label{classturbo_1_1_scene_ad1f00e3c1f430d198bbf2d6e7a1fccec}} 
+\index{turbo::Scene@{turbo::Scene}!update@{update}}
+\index{update@{update}!turbo::Scene@{turbo::Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void turbo\+::\+Scene\+::update (\begin{DoxyParamCaption}\item[{int}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Called on every logic frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & milliseconds since the last call \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/turbo/Scene.\+hpp\item 
+src/Scene.\+cpp\end{DoxyCompactItemize}

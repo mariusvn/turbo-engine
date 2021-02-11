@@ -1,0 +1,4 @@
+<map id="turbo::Text" name="turbo::Text">
+<area shape="rect" id="node1" title="Represent a drawable text." alt="" coords="19,80,103,107"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,117,32"/>
+</map>

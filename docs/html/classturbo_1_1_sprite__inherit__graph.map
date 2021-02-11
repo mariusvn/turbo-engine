@@ -1,0 +1,4 @@
+<map id="turbo::Sprite" name="turbo::Sprite">
+<area shape="rect" id="node1" title="Represent a drawable sprite." alt="" coords="15,80,108,107"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,5,117,32"/>
+</map>
