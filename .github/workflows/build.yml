@@ -46,7 +46,7 @@ jobs:
     - name: Configure CMake
       shell: pwsh
       working-directory: ${{github.workspace}}/out/build/standard
-      run: cmake ${{github.workspace}} -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DMING_LIB_PATH="./allegro" -G "MinGW Makefiles"
+      run: cmake ${{github.workspace}} -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DMING_LIB_PATH="${{github.workspace}}/out/build/standard/allegro/allegro" -G "MinGW Makefiles"
       
     - name: Build
       working-directory: ${{github.workspace}}/out/build/standard
