@@ -88,4 +88,4 @@ jobs:
       with:
         name: lib-files-win
         path: |
-          ${{github.workspace}}/out/build/standard/res/turbo-engine-win.zip
+          ${{github.workspace}}/out/build/standard/turbo-engine-win.zip
