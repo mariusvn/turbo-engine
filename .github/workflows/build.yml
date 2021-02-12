@@ -70,8 +70,8 @@ jobs:
       run: |
         mkdir res
         mkdir res/include
-        cp allegro/allegro/include/* res/include
-        cp ../../../include/* res/include
+        cp -r allegro/allegro/include/* res/include
+        cp -r ../../../include/* res/include
         mkdir res/bin
         cp *.dll res/bin
         mkdir res/lib
@@ -81,11 +81,11 @@ jobs:
         ls res/bin
         ls res/include
         ls res/lib
-        7z -tzip a turbo-engine-win res/*
+        mv res turbo-engine-win
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: lib-files-win
         path: |
-          ${{github.workspace}}/out/build/standard/turbo-engine-win.zip
+          ${{github.workspace}}/out/build/standard/turbo-engine-win
