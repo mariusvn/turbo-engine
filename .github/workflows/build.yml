@@ -81,7 +81,7 @@ jobs:
         ls res/bin
         ls res/include
         ls res/lib
-        7z a turbo-engine-win res/*
+        7z -tzip a turbo-engine-win res/*
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2
