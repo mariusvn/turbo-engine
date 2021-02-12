@@ -81,7 +81,7 @@ jobs:
         ls res/bin
         ls res/include
         ls res/lib
-        mv libturbo_engine-static-merged.a libturbo_engine_static.a
+        mv res/lib/libturbo_engine-static-merged.a res/lib/libturbo_engine_static.a
         mv res turbo-engine-win
     
     - name: Upload artifact
