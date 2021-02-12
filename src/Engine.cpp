@@ -130,7 +130,9 @@ namespace turbo {
     }
 
     void Engine::on_render_tick() {
-        this->scene_manager.get_active_scene()->render();
+        turbo::Scene* scene = this->scene_manager.get_active_scene();
+        if (scene)
+            scene->render();
     }
 
     void Engine::on_update_tick() {
@@ -139,6 +141,8 @@ namespace turbo {
             this->fps_actualizer = clock();
         }
         Engine::input.process_timer_event();
-        this->scene_manager.get_active_scene()->update(1000*loop_time);
+        turbo::Scene* active_scene = this->scene_manager.get_active_scene();
+        if (active_scene)
+            active_scene->update(1000*loop_time);
     }
 }
