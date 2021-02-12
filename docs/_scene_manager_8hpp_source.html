@@ -63,22 +63,28 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Scene.hpp&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>turbo {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classturbo_1_1_scene_manager.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classturbo_1_1_scene_manager.html">SceneManager</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classturbo_1_1_scene_manager.html">SceneManager</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> register_scene(<a class="code" href="classturbo_1_1_scene.html">Scene</a>* scene, <span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> set_active_scene(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classturbo_1_1_scene.html">Scene</a>* get_active_scene() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classturbo_1_1_scene.html">Scene</a>* active_scene = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::map&lt;const char*, Scene*&gt; scenes = {};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classturbo_1_1_scene_manager.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classturbo_1_1_scene_manager.html">SceneManager</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classturbo_1_1_scene_manager.html">SceneManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classturbo_1_1_scene_manager.html#a65eff576b80674b9937a80673bb6b677">register_scene</a>(<a class="code" href="classturbo_1_1_scene.html">Scene</a>* scene, <span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classturbo_1_1_scene_manager.html#a8b800d4c17d250b642fdcc1136690b38">set_active_scene</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classturbo_1_1_scene.html">Scene</a>* <a class="code" href="classturbo_1_1_scene_manager.html#ad8f7715510f3d8eb32dfb7e2fe37093e">get_active_scene</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classturbo_1_1_scene.html">Scene</a>* active_scene = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::map&lt;const char*, Scene*&gt; scenes = {};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassturbo_1_1_scene_html"><div class="ttname"><a href="classturbo_1_1_scene.html">turbo::Scene</a></div><div class="ttdoc">Basic scene class.</div><div class="ttdef"><b>Definition:</b> Scene.hpp:11</div></div>
-<div class="ttc" id="aclassturbo_1_1_scene_manager_html"><div class="ttname"><a href="classturbo_1_1_scene_manager.html">turbo::SceneManager</a></div><div class="ttdef"><b>Definition:</b> SceneManager.hpp:11</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html"><div class="ttname"><a href="classturbo_1_1_scene_manager.html">turbo::SceneManager</a></div><div class="ttdef"><b>Definition:</b> SceneManager.hpp:14</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html_a65eff576b80674b9937a80673bb6b677"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a65eff576b80674b9937a80673bb6b677">turbo::SceneManager::register_scene</a></div><div class="ttdeci">void register_scene(Scene *scene, const char *name)</div><div class="ttdoc">Register a scene in the manager.</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:5</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html_a8b800d4c17d250b642fdcc1136690b38"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a8b800d4c17d250b642fdcc1136690b38">turbo::SceneManager::set_active_scene</a></div><div class="ttdeci">void set_active_scene(const char *name)</div><div class="ttdoc">Set the scene currently displayed.</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:13</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html_ad8f7715510f3d8eb32dfb7e2fe37093e"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#ad8f7715510f3d8eb32dfb7e2fe37093e">turbo::SceneManager::get_active_scene</a></div><div class="ttdeci">Scene * get_active_scene() const</div><div class="ttdoc">Retrieves the currently displayed scene.</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

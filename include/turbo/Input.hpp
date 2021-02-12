@@ -12,12 +12,19 @@
 #define __TURBO_KEY_RELEASED 2
 
 namespace turbo {
+    /**
+     * Input helper util
+     */
     class Input final {
     public:
         Input();
         void process_timer_event();
         void process_key_down_event(ALLEGRO_EVENT* event);
         void process_key_up_event(ALLEGRO_EVENT* event);
+        /**
+         * @brief check if a key is currently pressed
+         * @param key turbo::KEY
+         */
         bool is_key_pressed(int key) const;
 
     private:

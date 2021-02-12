@@ -6,4 +6,4 @@ out/build
 build.bat
 build.sh
 CMakeSettings.json
-cmake-build-debug*
+cmake-build-*

@@ -8,6 +8,10 @@
 #include <sstream>
 
 namespace turbo {
+    /**
+     * Used to represent a 2 dimensional container
+     * @tparam T type
+     */
     template<typename T>
     class Vector2 {
     public:

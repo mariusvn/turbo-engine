@@ -12,13 +12,41 @@ namespace turbo {
         Shader();
         ~Shader();
 
+        /**
+         * Load the specified GLSL vertex shader file
+         * @param vertex_shader_path path to the shader file
+         */
         void set_vertex_shader(const Path& vertex_shader_path);
+
+        /**
+         * Set the specified GLSL pixel shader file
+         * @param pixel_shader_path path to the shader file
+         */
         void set_pixel_shader(const Path& pixel_shader_path);
+
+        /**
+         * Reset the vertex shader to the default shader
+         */
         void remove_vertex_shader();
+
+        /**
+         * Reset the pixel shader to the default shader
+         */
         void remove_pixel_shader();
 
+        /** already initialized internally, do not call this */
         static void init_shaders();
+
+        /**
+         * Set the active shader
+         * @param shader target shader
+         */
         static void set_active_shader(Shader* shader);
+
+        /**
+         * Retrieve the current shader
+         * @return
+         */
         static Shader* get_active_shader();
 
     protected:
