@@ -61,12 +61,29 @@ jobs:
       working-directory: ${{github.workspace}}/out/build/standard
       shell: pwsh
       run: cmake --build . --config $BUILD_TYPE
+      
+    - name: Processing files
+      working-directory: ${{github.workspace}}/out/build/standard
+      shell: pwsh
+      run: |
+        mkdir res
+        mkdir res/include
+        cp allegro/allegro/include/* res/include
+        cp ../../../include/* res/include
+        mkdir res/bin
+        cp *.dll res/bin
+        mkdir res/lib
+        cp *.dll.a res/lib
+        cp libturbo_engine-static-merged.a res/lib
+        ls res
+        ls res/bin
+        ls res/include
+        ls res/lib
+        7z a turbo-engine-win res/*
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: lib-files-win
         path: |
-          ${{github.workspace}}/out/build/standard/libturbo_engine.dll
-          ${{github.workspace}}/out/build/standard/libturbo_engine.dll.a
-          ${{github.workspace}}/out/build/standard/allegro*.dll
+          ${{github.workspace}}/out/build/standard/turbo-engine-win.zip
