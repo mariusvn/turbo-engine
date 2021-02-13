@@ -34,7 +34,7 @@ namespace turbo {
         this->render_tick += [this] { on_render_tick(); };
         this->update_tick += [this] { on_update_tick(); };
 
-        this->scene_manager.debug.render();
+        ONLYIMGUI(this->scene_manager.debug.render());
     }
 
     void Engine::loop() {

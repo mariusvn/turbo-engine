@@ -35,7 +35,7 @@ namespace turbo {
          */
         Scene* get_active_scene() const;
 
-        debug::SceneManagerDebug debug;
+        ONLYIMGUI(debug::SceneManagerDebug debug);
 
     private:
         Scene* active_scene = nullptr;
