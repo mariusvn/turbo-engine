@@ -18,6 +18,10 @@ if (NOT DEFINED MING_STATIC_LINK_PATH)
     set(MING_STATIC_LINK_PATH "../libs/Allegro5-static")
 endif()
 
+if (NOT DEFINED MING_LIB_IMGUI)
+    set(MING_LIB_IMGUI "../libs/imgui")
+endif()
+
 
 FILE(GLOB src src/*.cpp src/**/*.cpp)
 set(req_libs allegro allegro_ttf allegro_font allegro_image allegro_primitives)
@@ -90,6 +94,21 @@ elseif(WIN32)
             COMMAND del *.obj
             COMMENT "Deleting OBJ files ...")
 endif()
+
+string(TOLOWER "${CMAKE_BUILD_TYPE}" CMAKE_BUILD_TYPE_LOWER)
+if ("${CMAKE_BUILD_TYPE_LOWER}" STREQUAL "debug")
+    file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${MING_LIB_IMGUI}/bin/libimgui.dll" libfile)
+    message("Debug mode deltected, implement IMGUI")
+    add_compile_definitions(__TURBO_USE_IMGUI__)
+    include_directories(${MING_LIB_IMGUI}/include)
+    list(APPEND req_libs ${libfile})
+    list(APPEND req_libs_static ${libfile})
+    add_custom_command(TARGET turbo_engine POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${libfile}
+            "${CMAKE_BINARY_DIR}\\libimgui.dll"
+            COMMENT "Copy ${libfile} to ${CMAKE_BINARY_DIR}\\libimgui.dll")
+endif ()
 
 target_link_libraries(turbo_engine ${req_libs})
 target_link_libraries(turbo_engine_static PUBLIC ${req_libs_static})

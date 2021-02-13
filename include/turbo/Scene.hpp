@@ -32,6 +32,10 @@ namespace turbo {
          */
         virtual void render() final;
 
+        GameObject* get_root_gameobject() const {
+            return this->root_gameobject;
+        }
+
     protected:
         /**
          * @brief Root GameObject of the scene objects hierarchy

@@ -4,13 +4,16 @@
 #include <allegro5/allegro_primitives.h>
 #include <functional>
 #include <turbo/graphics/Shader.hpp>
+#include <turbo/DebugImgui.hpp>
 
 namespace turbo {
     Engine::Engine() {
+        this->engine = this;
         al_init();
         al_install_keyboard();
         al_init_font_addon();
         al_init_ttf_addon();
+        al_install_mouse();
         al_init_image_addon();
         al_init_primitives_addon();
 
@@ -24,11 +27,14 @@ namespace turbo {
         al_set_new_display_flags(ALLEGRO_WINDOWED | ALLEGRO_OPENGL | ALLEGRO_PROGRAMMABLE_PIPELINE);
 
         al_register_event_source(this->event_queue, al_get_keyboard_event_source());
+        al_register_event_source(this->event_queue, al_get_mouse_event_source());
         al_register_event_source(this->event_queue, al_get_timer_event_source(this->render_timer));
         al_register_event_source(this->event_queue, al_get_timer_event_source(this->update_timer));
 
         this->render_tick += [this] { on_render_tick(); };
         this->update_tick += [this] { on_update_tick(); };
+
+        this->scene_manager.debug.render();
     }
 
     void Engine::loop() {
@@ -40,6 +46,8 @@ namespace turbo {
         while (this->main_loop) {
 
             al_wait_for_event(this->event_queue, &event);
+
+            ONLYIMGUI(ImGui_ImplAllegro5_ProcessEvent(&event));
 
             //TODO refactor with event system
             if (event.type == ALLEGRO_EVENT_TIMER) {
@@ -57,6 +65,10 @@ namespace turbo {
                 Engine::input.process_key_down_event(&event);
             } else if (event.type == ALLEGRO_EVENT_KEY_UP) {
                 Engine::input.process_key_up_event(&event);
+            } else if (event.type == ALLEGRO_EVENT_DISPLAY_RESIZE) {
+                ONLYIMGUI(ImGui_ImplAllegro5_InvalidateDeviceObjects());
+                al_acknowledge_resize(display);
+                ONLYIMGUI(ImGui_ImplAllegro5_CreateDeviceObjects());
             }
 
             if (this->main_loop && al_is_event_queue_empty(this->event_queue)) {
@@ -70,8 +82,18 @@ namespace turbo {
                     this->loop_time = (float) (((double)(clock() - this->_loop_time)) / CLOCKS_PER_SEC);
                     this->_loop_time = clock();
 
+                    ONLYIMGUI(
+                        this->debug.register_fps_time(1 / this->loop_time);
+                        ImGui_ImplAllegro5_NewFrame();
+                        ImGui::NewFrame();
+                        );
                     al_clear_to_color(al_map_rgb(0, 0, 0));
                     this->render_tick();
+                    ONLYIMGUI(
+                        this->debug.render();
+                        ImGui::Render();
+                        ImGui_ImplAllegro5_RenderDrawData(ImGui::GetDrawData())
+                        );
                     al_flip_display();
                     this->render = false;
 
@@ -100,9 +122,18 @@ namespace turbo {
         al_set_window_title(this->display, win_name);
         al_register_event_source(this->event_queue, al_get_display_event_source(this->display));
         Shader::init_shaders();
+
+        ONLYIMGUI(
+            IMGUI_CHECKVERSION();
+            ImGui::CreateContext();
+            ImGui::StyleColorsDark();
+            ImGui_ImplAllegro5_Init(this->display);
+            this->debug.update_win_size(turbo::Vector2(width, height));
+        );
     }
 
     void Engine::stop_window() {
+        ONLYIMGUI(ImGui_ImplAllegro5_Shutdown());
         al_use_shader(nullptr);
         al_unregister_event_source(this->event_queue, al_get_display_event_source(this->display));
         al_destroy_display(this->display);
@@ -115,6 +146,7 @@ namespace turbo {
 
     void Engine::set_window_size(unsigned short width, unsigned short height) {
         al_resize_display(this->display, width, height);
+        ONLYIMGUI(this->debug.update_win_size(turbo::Vector2(width, height)));
     }
 
     void Engine::force_render() {
@@ -138,6 +170,7 @@ namespace turbo {
     void Engine::on_update_tick() {
         if (((float)(clock() - fps_actualizer)) / CLOCKS_PER_SEC >= 0.2) {
             this->set_window_title((std::string("Turbo Engine | FPS: ") + std::to_string(1/ this->loop_time)).c_str());
+            ONLYIMGUI(this->debug.update_fps((int)(1.0f / (float)this->loop_time)));
             this->fps_actualizer = clock();
         }
         Engine::input.process_timer_event();

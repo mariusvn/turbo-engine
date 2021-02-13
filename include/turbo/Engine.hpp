@@ -17,6 +17,8 @@
 #include "SceneManager.hpp"
 #include "Font.hpp"
 #include "Input.hpp"
+#include "DebugImgui.hpp"
+#include "RotativeBuffer.hpp"
 
 namespace turbo {
     /**
@@ -66,13 +68,20 @@ namespace turbo {
          */
         inline static const std::string version = "0.2";
 
-        SceneManager scene_manager = SceneManager();
+        static inline Engine* engine = nullptr;
+
+        SceneManager scene_manager;
         static inline Input input = Input();
 
         void on_update_tick();
         void on_render_tick();
+        Event<> update_tick = Event<>();
+        Event<> render_tick = Event<>();
+
+        ONLYIMGUI(debug::EngineDebug debug = debug::EngineDebug(this));
 
     private:
+
         /**
          * @brief Timer for the render frames
          */
@@ -107,9 +116,6 @@ namespace turbo {
          * @brief Main loop condition, closes the window if false
          */
         bool main_loop = true;
-
-        Event<> update_tick = Event<>();
-        Event<> render_tick = Event<>();
 
         unsigned long _loop_time = clock();
         float loop_time = 0;

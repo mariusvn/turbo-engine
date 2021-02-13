@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <string>
 #include "Scene.hpp"
+#include "DebugImgui.hpp"
 
 namespace turbo {
     /**
@@ -13,7 +14,7 @@ namespace turbo {
      */
     class SceneManager {
     public:
-        SceneManager() = default;
+        SceneManager();
 
         /**
          * @brief Register a scene in the manager
@@ -33,6 +34,8 @@ namespace turbo {
          * @return Current scene
          */
         Scene* get_active_scene() const;
+
+        debug::SceneManagerDebug debug;
 
     private:
         Scene* active_scene = nullptr;
