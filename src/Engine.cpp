@@ -169,7 +169,6 @@ namespace turbo {
 
     void Engine::on_update_tick() {
         if (((float)(clock() - fps_actualizer)) / CLOCKS_PER_SEC >= 0.2) {
-            this->set_window_title((std::string("Turbo Engine | FPS: ") + std::to_string(1/ this->loop_time)).c_str());
             ONLYIMGUI(this->debug.update_fps((int)(1.0f / (float)this->loop_time)));
             this->fps_actualizer = clock();
         }
