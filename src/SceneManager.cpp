@@ -23,8 +23,10 @@ namespace turbo {
         Scene* tmp = this->scenes[name];
         tmp->load();
         this->active_scene = tmp;
-        this->debug.scene_name = name;
-        this->debug.set_root_gameobject(this->active_scene->get_root_gameobject());
+        ONLYIMGUI(
+            this->debug.scene_name = name;
+            this->debug.set_root_gameobject(this->active_scene->get_root_gameobject());
+        );
     }
 
     Scene* SceneManager::get_active_scene() const {
