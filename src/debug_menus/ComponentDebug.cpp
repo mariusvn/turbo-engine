@@ -5,7 +5,8 @@
     #include <turbo/DebugImgui.hpp>
     #include <turbo/Engine.hpp>
 
-    #define __TURBO_IMGUI_LABEL(text, index, name) ((std::string(text) + "##" + std::string(name) + std::to_string(index)).c_str())
+    #define __TURBO_IMGUI_LABEL(text, index, name) \
+        ((std::string(text) + "##" + std::string(name) + std::to_string(index)).c_str())
 
 namespace debug {
     ComponentDebug::ComponentDebug(turbo::Component *component) {
