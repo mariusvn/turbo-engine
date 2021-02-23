@@ -47,26 +47,28 @@ target_link_directories(turbo_engine PUBLIC ${LIBALLEG_PATH}/lib)
 
 ### POST BUILD DLL MOVING COMMANDS ###
 
-# Getting the allegro binary location
-file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${LIBALLEG_PATH}/bin" src_path)
-# Getting the destination location
-file(TO_NATIVE_PATH "${CMAKE_BINARY_DIR}" target_path)
-# A little message, it's beautiful <3
-message( "Setting up post-build commands")
-# For all selected libraries
-foreach(file_lib ${req_libs})
-    # Moving message
-    message( "${src_path}\\${file_lib}-5.2.dll to ${target_path}\\${file_lib}-5.2.dll")
-    # Command definition
-    add_custom_command(TARGET turbo_engine POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            "${src_path}/${file_lib}-5.2.dll"
-            "${CMAKE_BINARY_DIR}/${file_lib}-5.2.dll"
-            COMMENT "Copy ${src_path}/${file_lib}-5.2.dll to ${target_path}/${file_lib}-5.2.dll")
-endforeach(file_lib)
-# Again a message, so lovely
-message( "Post-build commands are setup")
-
+# Moving libraries is only required on windows
+if (WIN32)
+    # Getting the allegro binary location
+    file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${LIBALLEG_PATH}/bin" src_path)
+    # Getting the destination location
+    file(TO_NATIVE_PATH "${CMAKE_BINARY_DIR}" target_path)
+    # A little message, it's beautiful <3
+    message( "Setting up post-build commands")
+    # For all selected libraries
+    foreach(file_lib ${req_libs})
+        # Moving message
+        message( "${src_path}\\${file_lib}-5.2.dll to ${target_path}\\${file_lib}-5.2.dll")
+        # Command definition
+        add_custom_command(TARGET turbo_engine POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${src_path}/${file_lib}-5.2.dll"
+                "${CMAKE_BINARY_DIR}/${file_lib}-5.2.dll"
+                COMMENT "Copy ${src_path}/${file_lib}-5.2.dll to ${target_path}/${file_lib}-5.2.dll")
+    endforeach(file_lib)
+    # Again a message, so lovely
+    message( "Post-build commands are setup")
+endif()
 
 ### IMGUI LINKING ###
 
@@ -88,8 +90,8 @@ if ("${CMAKE_BUILD_TYPE_LOWER}" STREQUAL "debug")
     add_custom_command(TARGET turbo_engine POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
             ${libfile}
-            "${CMAKE_BINARY_DIR}\\libimgui.dll"
-            COMMENT "Copy ${libfile} to ${CMAKE_BINARY_DIR}\\libimgui.dll")
+            "${CMAKE_BINARY_DIR}/libimgui.dll"
+            COMMENT "Copy ${libfile} to ${CMAKE_BINARY_DIR}/libimgui.dll")
 endif()
 
 ### LINKING LIBRARIES ###
