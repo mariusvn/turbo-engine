@@ -2,6 +2,9 @@
 #ifndef __TURBO_COMPONENT_HPP__
 #define __TURBO_COMPONENT_HPP__
 
+#include "debug_menus/Inspector.hpp"
+#include <vector>
+
 namespace turbo {
     class GameObject;
 
@@ -64,9 +67,17 @@ namespace turbo {
          */
         bool is_enabled();
 
+        const char* get_name() const;
+
+        /**
+         * @brief Debug use only. List of observed values in the inspector
+         */
+        ::std::vector<debug::InspectorObserver*> debug_inspector_observers{};
+
     protected:
         GameObject* gameObject = nullptr;
         bool enabled = true;
+        const char *name = "Unknown";
     };
 }
 

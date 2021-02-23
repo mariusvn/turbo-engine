@@ -1,6 +1,7 @@
 #include <turbo/GameObject.hpp>
 #include <stdexcept>
 #include <iostream>
+#include <algorithm>
 
 namespace turbo {
 
@@ -18,7 +19,7 @@ namespace turbo {
         delete this->drawable;
         for (Component* comp: this->components)
             delete comp;
-        this->components = std::list<Component*>();
+        this->components = std::vector<Component*>();
     }
 
     void GameObject::add_component(Component* comp) {
@@ -27,7 +28,8 @@ namespace turbo {
     }
 
     void GameObject::remove_component(Component* comp) {
-        this->components.remove(comp);
+        std::vector<Component *>& vec = this->components;
+        vec.erase(std::remove(vec.begin(), vec.end(), comp), vec.end());
         comp->unload();
     }
 
@@ -66,5 +68,13 @@ namespace turbo {
 
     Drawable* GameObject::get_drawable() const {
         return this->drawable;
+    }
+
+    std::string GameObject::get_name() const {
+        return this->name;
+    }
+
+    unsigned short GameObject::get_component_amount() const {
+        return this->components.size();
     }
 }

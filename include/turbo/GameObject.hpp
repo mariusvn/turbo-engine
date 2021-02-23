@@ -2,7 +2,7 @@
 #ifndef __TURBO_GAMEOBJECT_HPP__
 #define __TURBO_GAMEOBJECT_HPP__
 
-#include <list>
+#include <vector>
 #include <string>
 #include <type_traits>
 #include "Component.hpp"
@@ -39,11 +39,15 @@ namespace turbo {
          */
         void remove_component(Component* comp);
 
+        unsigned short get_component_amount() const;
+
         void render(void* transform);
         void update(int delta_time);
 
         void set_drawable(Drawable* drawable);
         Drawable* get_drawable() const;
+
+        std::string get_name() const;
 
         /**
          * @brief Get the component object
@@ -64,10 +68,10 @@ namespace turbo {
         }
 
         bool show = true;
+        std::vector<GameObject*> childs{};
+        std::vector<Component*> components{};
 
     private:
-        std::list<Component*> components{};
-        std::list<GameObject*> childs{};
         GameObject* parent = nullptr;
         std::string name;
         Drawable* drawable = nullptr;

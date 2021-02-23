@@ -4,11 +4,32 @@
 
 class TestComponent: public turbo::Component {
 public:
-    using turbo::Component::Component;
+    float multiplier = 1.0f;
+    int testmi1 = 145;
+    int testmi2 = -256877;
+    int testmi3 = 14558;
+    explicit TestComponent(turbo::GameObject* obj): turbo::Component::Component(obj) {
+
+        this->debug_inspector_observers.push_back(
+            new debug::InspectorObserver(
+                &this->multiplier,
+                debug::FLOAT,
+                "Multiplier"
+            )
+        );
+        this->debug_inspector_observers.push_back(
+            new debug::InspectorObserver(
+                new int*[3]{&this->testmi1, &this->testmi2, &this->testmi3},
+                debug::INT3,
+                "test vector int"
+            )
+        );
+    }
 
     bool toRight = true;
 
     void load() override {
+        this->name = strdup("Test Component");
     }
 
     void unload() override {
@@ -17,15 +38,15 @@ public:
     void update(int delta_time) override {
         turbo::GameObject* game_obj = this->gameObject;
         delta_time /= 8;
-        game_obj->rotate(delta_time / 2);
+        game_obj->rotate((delta_time / 2) * this->multiplier);
         if (game_obj->get_position().x > 400)
             this->toRight = false;
         if (game_obj->get_position().x < 30)
             this->toRight = true;
         if (!this->toRight)
-            game_obj->translate(-1 * (delta_time / 2), 0);
+            game_obj->translate((-1 * ((float)delta_time / 2)) * multiplier, 0);
         else
-            game_obj->translate(delta_time / 2, 0);
+            game_obj->translate(((float)delta_time / 2) * multiplier, 0);
     }
 };
 
