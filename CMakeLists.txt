@@ -27,7 +27,7 @@ endif()
 FILE(GLOB src src/*.cpp src/**/*.cpp)
 
 # Main library definition
-add_library(turbo_engine STATIC ${src})
+add_library(turbo_engine SHARED ${src})
 
 # Include directories path
 target_include_directories(turbo_engine PUBLIC ./include)
@@ -60,8 +60,8 @@ foreach(file_lib ${req_libs})
     # Command definition
     add_custom_command(TARGET turbo_engine POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            "${src_path}\\${file_lib}-5.2.dll"
-            "${CMAKE_BINARY_DIR}\\${file_lib}-5.2.dll"
+            "${src_path}/${file_lib}-5.2.dll"
+            "${CMAKE_BINARY_DIR}/${file_lib}-5.2.dll"
             COMMENT "Copy ${src_path}/${file_lib}-5.2.dll to ${target_path}/${file_lib}-5.2.dll")
 endforeach(file_lib)
 # Again a message, so lovely
