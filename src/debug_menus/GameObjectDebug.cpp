@@ -2,6 +2,7 @@
 #ifdef __TURBO_USE_IMGUI__
 
     #include <turbo/debug_menus/GameObjectDebug.hpp>
+    #include <turbo/debug_menus/ComponentDebug.hpp>
 
 namespace debug {
     GameObjectDebug::GameObjectDebug(turbo::GameObject *gameobject): gameobject(gameobject) {
@@ -36,7 +37,9 @@ namespace debug {
 
         if (ImGui::TreeNode("Component list")) {
             for (turbo::Component* comp : this->gameobject->components) {
-                ImGui::Text("%s", comp->get_name());
+                if (ImGui::Button(comp->get_name())) {
+                    new debug::ComponentDebug(comp);
+                }
             }
             ImGui::TreePop();
         }

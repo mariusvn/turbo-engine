@@ -3,8 +3,24 @@
 
 namespace turbo::component {
     void SimpleControl::load() {
-        this->name = "Simple Control";
+        this->name = strdup("Simple Control");
         this->velocity.reset();
+
+        this->debug_inspector_observers.push_back(
+            new debug::InspectorObserver(
+                &this->velocity.x,
+                debug::FLOAT,
+                "Velocity X"
+                )
+            );
+
+        this->debug_inspector_observers.push_back(
+            new debug::InspectorObserver(
+                &this->velocity.y,
+                debug::FLOAT,
+                "Velocity Y"
+            )
+        );
     }
 
     void SimpleControl::unload() {

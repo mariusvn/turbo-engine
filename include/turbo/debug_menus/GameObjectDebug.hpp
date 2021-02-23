@@ -9,7 +9,7 @@
 namespace debug {
     class GameObjectDebug: public DebugWindow {
     public:
-        GameObjectDebug(turbo::GameObject* gameobject);
+        explicit GameObjectDebug(turbo::GameObject* gameobject);
 
         void render() override;
 
