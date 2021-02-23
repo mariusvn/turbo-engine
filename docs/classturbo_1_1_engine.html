@@ -70,9 +70,10 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classturbo_1_1_engine__coll__graph.png" border="0" usemap="#aturbo_1_1_engine_coll__map" alt="Collaboration graph"/></div>
 <map name="aturbo_1_1_engine_coll__map" id="aturbo_1_1_engine_coll__map">
-<area shape="rect" title="Main engine class." alt="" coords="81,103,201,133"/>
+<area shape="rect" title="Main engine class." alt="" coords="162,121,282,152"/>
 <area shape="rect" href="classturbo_1_1_input.html" title=" " alt="" coords="5,5,111,36"/>
-<area shape="rect" href="classturbo_1_1_scene_manager.html" title=" " alt="" coords="135,5,315,36"/>
+<area shape="rect" href="classturbo_1_1_event.html" title=" " alt="" coords="135,5,309,36"/>
+<area shape="rect" href="classturbo_1_1_scene_manager.html" title=" " alt="" coords="333,5,513,36"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -115,18 +116,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>on_update_tick</b> ()
 <tr class="memitem:af0a515827460cd5f55adf65a869891a0"><td class="memItemLeft" align="right" valign="top"><a id="af0a515827460cd5f55adf65a869891a0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on_render_tick</b> ()</td></tr>
 <tr class="separator:af0a515827460cd5f55adf65a869891a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09766b3503f6e99173ec35157e973cd"><td class="memItemLeft" align="right" valign="top"><a id="aa09766b3503f6e99173ec35157e973cd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ONLYIMGUI</b> (<a class="el" href="classdebug_1_1_engine_debug.html">debug::EngineDebug</a> debug=<a class="el" href="classdebug_1_1_engine_debug.html">debug::EngineDebug</a>(this))</td></tr>
+<tr class="separator:aa09766b3503f6e99173ec35157e973cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afc195c7e42fa56ea6b488e7df51641e7"><td class="memItemLeft" align="right" valign="top"><a id="afc195c7e42fa56ea6b488e7df51641e7"></a>
-<a class="el" href="classturbo_1_1_scene_manager.html">SceneManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scene_manager</b> = <a class="el" href="classturbo_1_1_scene_manager.html">SceneManager</a>()</td></tr>
+<a class="el" href="classturbo_1_1_scene_manager.html">SceneManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scene_manager</b></td></tr>
 <tr class="separator:afc195c7e42fa56ea6b488e7df51641e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35851bd3f46b88bc4826be106628b15d"><td class="memItemLeft" align="right" valign="top"><a id="a35851bd3f46b88bc4826be106628b15d"></a>
+<a class="el" href="classturbo_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>update_tick</b> = <a class="el" href="classturbo_1_1_event.html">Event</a>&lt;&gt;()</td></tr>
+<tr class="separator:a35851bd3f46b88bc4826be106628b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e9d9d98bbbdf6544c2c937bb6ce63a"><td class="memItemLeft" align="right" valign="top"><a id="a48e9d9d98bbbdf6544c2c937bb6ce63a"></a>
+<a class="el" href="classturbo_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>render_tick</b> = <a class="el" href="classturbo_1_1_event.html">Event</a>&lt;&gt;()</td></tr>
+<tr class="separator:a48e9d9d98bbbdf6544c2c937bb6ce63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:acccd8c2ce7145cf2800ce5ebc24a6181"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_engine.html#acccd8c2ce7145cf2800ce5ebc24a6181">version</a> = &quot;0.2&quot;</td></tr>
 <tr class="memdesc:acccd8c2ce7145cf2800ce5ebc24a6181"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classturbo_1_1_engine.html" title="Main engine class.">Engine</a> version.  <a href="classturbo_1_1_engine.html#acccd8c2ce7145cf2800ce5ebc24a6181">More...</a><br /></td></tr>
 <tr class="separator:acccd8c2ce7145cf2800ce5ebc24a6181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f64dc1a42a1086c0f8e74d783f45d66"><td class="memItemLeft" align="right" valign="top"><a id="a1f64dc1a42a1086c0f8e74d783f45d66"></a>
+static <a class="el" href="classturbo_1_1_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b> = nullptr</td></tr>
+<tr class="separator:a1f64dc1a42a1086c0f8e74d783f45d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a509c9610ccf2873ba1b35cda6d53cb93"><td class="memItemLeft" align="right" valign="top"><a id="a509c9610ccf2873ba1b35cda6d53cb93"></a>
 static <a class="el" href="classturbo_1_1_input.html">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input</b> = <a class="el" href="classturbo_1_1_input.html">Input</a>()</td></tr>
 <tr class="separator:a509c9610ccf2873ba1b35cda6d53cb93"><td class="memSeparator" colspan="2">&#160;</td></tr>

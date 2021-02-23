@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classturbo_1_1_event.html" title=" " alt="" coords="5,5,179,36"/>
+<area shape="rect" id="node1" href="$classturbo_1_1_drawable.html" title="Represent somthing that can be drawn." alt="" coords="5,87,143,117"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_shape.html" title="Represent a drawable primitive shape." alt="" coords="191,32,307,63"/>
+<area shape="rect" id="node5" href="$classturbo_1_1_sprite.html" title="Represent a drawable sprite." alt="" coords="193,87,305,117"/>
+<area shape="rect" id="node6" href="$classturbo_1_1_text.html" title="Represent a drawable text." alt="" coords="199,141,298,172"/>
+<area shape="rect" id="node3" href="$classturbo_1_1_circle_shape.html" title="Simple cicle shape." alt="" coords="369,5,528,36"/>
+<area shape="rect" id="node4" href="$classturbo_1_1_rectangle_shape.html" title="Represents a drawable rectangle." alt="" coords="355,60,543,91"/>
 </map>

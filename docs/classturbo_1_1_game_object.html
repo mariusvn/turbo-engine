@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adda6b717969100e563c9ef8efff40c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_game_object.html#adda6b717969100e563c9ef8efff40c99">remove_component</a> (<a class="el" href="classturbo_1_1_component.html">Component</a> *comp)</td></tr>
 <tr class="memdesc:adda6b717969100e563c9ef8efff40c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a component to the <a class="el" href="classturbo_1_1_game_object.html" title="Basic scene object.">GameObject</a>.  <a href="classturbo_1_1_game_object.html#adda6b717969100e563c9ef8efff40c99">More...</a><br /></td></tr>
 <tr class="separator:adda6b717969100e563c9ef8efff40c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd71c68f03aeed39028fa8cc79d01519"><td class="memItemLeft" align="right" valign="top"><a id="afd71c68f03aeed39028fa8cc79d01519"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>get_component_amount</b> () const</td></tr>
+<tr class="separator:afd71c68f03aeed39028fa8cc79d01519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf71b09b3f4921aab61cef3074035c01"><td class="memItemLeft" align="right" valign="top"><a id="adf71b09b3f4921aab61cef3074035c01"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (void *transform)</td></tr>
 <tr class="separator:adf71b09b3f4921aab61cef3074035c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,6 +113,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_drawable</b> (<a 
 <tr class="memitem:a63f0adc5d9cb0337f10501822c79c6f5"><td class="memItemLeft" align="right" valign="top"><a id="a63f0adc5d9cb0337f10501822c79c6f5"></a>
 <a class="el" href="classturbo_1_1_drawable.html">Drawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_drawable</b> () const</td></tr>
 <tr class="separator:a63f0adc5d9cb0337f10501822c79c6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3ab078753fcb8309f0bd35324071ae"><td class="memItemLeft" align="right" valign="top"><a id="aac3ab078753fcb8309f0bd35324071ae"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> () const</td></tr>
+<tr class="separator:aac3ab078753fcb8309f0bd35324071ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f8f8ee2a824938ea98dc6e50b6cf236"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;std::is_base_of_v&lt;Component, T&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a8f8f8ee2a824938ea98dc6e50b6cf236"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classturbo_1_1_game_object.html#a8f8f8ee2a824938ea98dc6e50b6cf236">get_component</a> ()</td></tr>
 <tr class="memdesc:a8f8f8ee2a824938ea98dc6e50b6cf236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the component object.  <a href="classturbo_1_1_game_object.html#a8f8f8ee2a824938ea98dc6e50b6cf236">More...</a><br /></td></tr>
@@ -165,6 +171,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4b8ce4931567c9f342efbc566bfb6b91"><td class="memItemLeft" align="right" valign="top"><a id="a4b8ce4931567c9f342efbc566bfb6b91"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> = true</td></tr>
 <tr class="separator:a4b8ce4931567c9f342efbc566bfb6b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814a85ef7541494b2649cb70e444820a"><td class="memItemLeft" align="right" valign="top"><a id="a814a85ef7541494b2649cb70e444820a"></a>
+std::vector&lt; <a class="el" href="classturbo_1_1_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>childs</b> {}</td></tr>
+<tr class="separator:a814a85ef7541494b2649cb70e444820a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1caef7bbb01bfdffef793c4f9c97722"><td class="memItemLeft" align="right" valign="top"><a id="ae1caef7bbb01bfdffef793c4f9c97722"></a>
+std::vector&lt; <a class="el" href="classturbo_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>components</b> {}</td></tr>
+<tr class="separator:ae1caef7bbb01bfdffef793c4f9c97722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
