@@ -69,9 +69,9 @@ namespace turbo {
 
         bool show = true;
         std::vector<GameObject*> childs{};
+        std::vector<Component*> components{};
 
     private:
-        std::vector<Component*> components{};
         GameObject* parent = nullptr;
         std::string name;
         Drawable* drawable = nullptr;

@@ -11,6 +11,7 @@
     #include "debug_menus/SceneManagerDebug.hpp"
 
     #define ONLYIMGUI(expr) expr;
+
 #else
     #define ONLYIMGUI(expr)
 #endif

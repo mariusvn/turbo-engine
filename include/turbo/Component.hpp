@@ -64,9 +64,12 @@ namespace turbo {
          */
         bool is_enabled();
 
+        const char* get_name() const;
+
     protected:
         GameObject* gameObject = nullptr;
         bool enabled = true;
+        const char *name = "Unknown";
     };
 }
 

@@ -9,6 +9,7 @@ public:
     bool toRight = true;
 
     void load() override {
+        this->name = "Test Component";
     }
 
     void unload() override {

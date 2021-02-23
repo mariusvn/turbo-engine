@@ -3,6 +3,7 @@
 
 namespace turbo::component {
     void SimpleControl::load() {
+        this->name = "Simple Control";
         this->velocity.reset();
     }
 

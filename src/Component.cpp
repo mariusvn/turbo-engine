@@ -22,4 +22,8 @@ namespace turbo {
         return this->enabled;
     }
 
+    const char* Component::get_name() const {
+        return this->name;
+    }
+
 }

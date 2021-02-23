@@ -128,6 +128,7 @@ namespace turbo {
             ImGui::CreateContext();
             ImGui::StyleColorsDark();
             ImGui_ImplAllegro5_Init(this->display);
+            debug::DebugWindow::set_color_theme();
             this->debug.update_win_size(turbo::Vector2(width, height));
         );
     }

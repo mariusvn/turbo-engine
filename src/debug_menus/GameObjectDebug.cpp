@@ -34,6 +34,14 @@ namespace debug {
         ImGui::Text("Has drawable: %s", (this->gameobject->get_drawable() == nullptr) ? "false" : "true");
         ImGui::Text("Components: %d", this->gameobject->get_component_amount());
 
+        if (ImGui::TreeNode("Component list")) {
+            for (turbo::Component* comp : this->gameobject->components) {
+                ImGui::Text("%s", comp->get_name());
+            }
+            ImGui::TreePop();
+        }
+        ImGui::Separator();
+
         turbo::Vector2<float> o_pos = this->gameobject->get_position();
         float pos[2] = {o_pos.x, o_pos.y};
         ImGui::InputFloat2("Position", pos);
