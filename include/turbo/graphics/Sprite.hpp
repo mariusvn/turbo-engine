@@ -26,16 +26,16 @@ namespace turbo {
          * @return unsigned int height
          */
         unsigned int get_height() const;
+        /**
+         * @brief Target texture region
+         */
+        Rectangle<> rect = Rectangle<>();
 
     protected:
         /**
          * @brief Target texture
          */
         Texture* texture;
-        /**
-         * @brief Target texture region
-         */
-        Rectangle<> rect = Rectangle<>();
     };
 }
 
