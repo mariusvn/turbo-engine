@@ -1,5 +1,4 @@
 <map id="turbo::Component" name="turbo::Component">
-<area shape="rect" id="node1" title="Components who defines the behaviour of a GameObject." alt="" coords="94,5,246,36"/>
-<area shape="rect" id="node2" href="$class_test_component.html" title=" " alt="" coords="5,93,140,124"/>
-<area shape="rect" id="node3" href="$classturbo_1_1component_1_1_simple_control.html" title=" " alt="" coords="165,84,373,133"/>
+<area shape="rect" id="node1" title="Components who defines the behaviour of a GameObject." alt="" coords="33,5,185,36"/>
+<area shape="rect" id="node2" href="$classturbo_1_1component_1_1_simple_control.html" title=" " alt="" coords="5,84,213,133"/>
 </map>

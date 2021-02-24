@@ -1,8 +1,0 @@
-<map id="TestComponent" name="TestComponent">
-<area shape="rect" id="node1" title=" " alt="" coords="126,379,261,409"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_component.html" title="Components who defines the behaviour of a GameObject." alt="" coords="117,299,269,329"/>
-<area shape="rect" id="node3" href="$classturbo_1_1_game_object.html" title="Basic scene object." alt="" coords="114,201,273,232"/>
-<area shape="rect" id="node4" href="$classturbo_1_1_transform.html" title=" " alt="" coords="122,121,265,152"/>
-<area shape="rect" id="node5" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="5,5,179,36"/>
-<area shape="rect" id="node6" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="203,5,389,36"/>
-</map>
