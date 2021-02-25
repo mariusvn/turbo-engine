@@ -118,31 +118,34 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">bool</span> update = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        ALLEGRO_EVENT_QUEUE* event_queue = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        ALLEGRO_TIMER* fps_timer = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        ALLEGRO_DISPLAY* display = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        ALLEGRO_EVENT_QUEUE* event_queue = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">bool</span> main_loop = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        ALLEGRO_DISPLAY* display = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _loop_time = clock();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">float</span> loop_time = 0;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> fps_actualizer = clock();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    };</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">bool</span> main_loop = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">double</span> _loop_time = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">double</span> loop_time = 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> loop_amount = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> fps_actualizer = clock();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    };</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="ttc" id="aclassdebug_1_1_engine_debug_html"><div class="ttname"><a href="classdebug_1_1_engine_debug.html">debug::EngineDebug</a></div><div class="ttdef"><b>Definition:</b> EngineDebug.hpp:17</div></div>
 <div class="ttc" id="aclassturbo_1_1_engine_html"><div class="ttname"><a href="classturbo_1_1_engine.html">turbo::Engine</a></div><div class="ttdoc">Main engine class.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:27</div></div>
-<div class="ttc" id="aclassturbo_1_1_engine_html_a118c4861f44b0dbe5e92606b4ad325c8"><div class="ttname"><a href="classturbo_1_1_engine.html#a118c4861f44b0dbe5e92606b4ad325c8">turbo::Engine::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Starts main loop.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:40</div></div>
-<div class="ttc" id="aclassturbo_1_1_engine_html_a460af8998d8bd6c3db87286ba6a68bf8"><div class="ttname"><a href="classturbo_1_1_engine.html#a460af8998d8bd6c3db87286ba6a68bf8">turbo::Engine::force_logic</a></div><div class="ttdeci">void force_logic()</div><div class="ttdoc">Force the engine to tick as soon as possible.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:157</div></div>
-<div class="ttc" id="aclassturbo_1_1_engine_html_a461a9a2bc961fc65ce438494c4b77dfc"><div class="ttname"><a href="classturbo_1_1_engine.html#a461a9a2bc961fc65ce438494c4b77dfc">turbo::Engine::force_render</a></div><div class="ttdeci">void force_render()</div><div class="ttdoc">Force the engine to render as soon as possible.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:153</div></div>
-<div class="ttc" id="aclassturbo_1_1_engine_html_a9f2223519a1eab8bcaea56ed6b93dc6f"><div class="ttname"><a href="classturbo_1_1_engine.html#a9f2223519a1eab8bcaea56ed6b93dc6f">turbo::Engine::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Stops the main loop and close the window.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:161</div></div>
+<div class="ttc" id="aclassturbo_1_1_engine_html_a118c4861f44b0dbe5e92606b4ad325c8"><div class="ttname"><a href="classturbo_1_1_engine.html#a118c4861f44b0dbe5e92606b4ad325c8">turbo::Engine::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Starts main loop.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:46</div></div>
+<div class="ttc" id="aclassturbo_1_1_engine_html_a460af8998d8bd6c3db87286ba6a68bf8"><div class="ttname"><a href="classturbo_1_1_engine.html#a460af8998d8bd6c3db87286ba6a68bf8">turbo::Engine::force_logic</a></div><div class="ttdeci">void force_logic()</div><div class="ttdoc">Force the engine to tick as soon as possible.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:168</div></div>
+<div class="ttc" id="aclassturbo_1_1_engine_html_a461a9a2bc961fc65ce438494c4b77dfc"><div class="ttname"><a href="classturbo_1_1_engine.html#a461a9a2bc961fc65ce438494c4b77dfc">turbo::Engine::force_render</a></div><div class="ttdeci">void force_render()</div><div class="ttdoc">Force the engine to render as soon as possible.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:164</div></div>
+<div class="ttc" id="aclassturbo_1_1_engine_html_a9f2223519a1eab8bcaea56ed6b93dc6f"><div class="ttname"><a href="classturbo_1_1_engine.html#a9f2223519a1eab8bcaea56ed6b93dc6f">turbo::Engine::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Stops the main loop and close the window.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:172</div></div>
 <div class="ttc" id="aclassturbo_1_1_engine_html_acccd8c2ce7145cf2800ce5ebc24a6181"><div class="ttname"><a href="classturbo_1_1_engine.html#acccd8c2ce7145cf2800ce5ebc24a6181">turbo::Engine::version</a></div><div class="ttdeci">static const std::string version</div><div class="ttdoc">Engine version.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:69</div></div>
-<div class="ttc" id="aclassturbo_1_1_engine_html_ae0267aca6f819bc82d398964a851be51"><div class="ttname"><a href="classturbo_1_1_engine.html#ae0267aca6f819bc82d398964a851be51">turbo::Engine::Engine</a></div><div class="ttdeci">Engine()</div><div class="ttdoc">Initialize a new engine.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:10</div></div>
+<div class="ttc" id="aclassturbo_1_1_engine_html_ae0267aca6f819bc82d398964a851be51"><div class="ttname"><a href="classturbo_1_1_engine.html#ae0267aca6f819bc82d398964a851be51">turbo::Engine::Engine</a></div><div class="ttdeci">Engine()</div><div class="ttdoc">Initialize a new engine.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:11</div></div>
 <div class="ttc" id="aclassturbo_1_1_event_html"><div class="ttname"><a href="classturbo_1_1_event.html">turbo::Event</a></div><div class="ttdef"><b>Definition:</b> Event.hpp:16</div></div>
-<div class="ttc" id="aclassturbo_1_1_input_html"><div class="ttname"><a href="classturbo_1_1_input.html">turbo::Input</a></div><div class="ttdef"><b>Definition:</b> Input.hpp:18</div></div>
+<div class="ttc" id="aclassturbo_1_1_input_html"><div class="ttname"><a href="classturbo_1_1_input.html">turbo::Input</a></div><div class="ttdoc">Input helper util.</div><div class="ttdef"><b>Definition:</b> Input.hpp:18</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_manager_html"><div class="ttname"><a href="classturbo_1_1_scene_manager.html">turbo::SceneManager</a></div><div class="ttdef"><b>Definition:</b> SceneManager.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

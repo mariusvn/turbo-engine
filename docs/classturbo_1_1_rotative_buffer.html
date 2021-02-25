@@ -57,17 +57,27 @@ $(function() {
 <div class="title">turbo::RotativeBuffer&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Simple cirular buffer implementation.  
+ <a href="classturbo_1_1_rotative_buffer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_rotative_buffer_8hpp_source.html">RotativeBuffer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af769d2719882eb1b39faab839dbf56e4"><td class="memItemLeft" align="right" valign="top"><a id="af769d2719882eb1b39faab839dbf56e4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RotativeBuffer</b> (const T &amp;initial_value, unsigned short size)</td></tr>
-<tr class="separator:af769d2719882eb1b39faab839dbf56e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a611b32bd122ef461299afe6c373fe0e6"><td class="memItemLeft" align="right" valign="top"><a id="a611b32bd122ef461299afe6c373fe0e6"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_data</b> (unsigned short position) const</td></tr>
+<tr class="memitem:a1868a0d0941ccfa7488aab056d8feea0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_rotative_buffer.html#a1868a0d0941ccfa7488aab056d8feea0">RotativeBuffer</a> (T initial_value, unsigned short size)</td></tr>
+<tr class="memdesc:a1868a0d0941ccfa7488aab056d8feea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the cirular buffer.  <a href="classturbo_1_1_rotative_buffer.html#a1868a0d0941ccfa7488aab056d8feea0">More...</a><br /></td></tr>
+<tr class="separator:a1868a0d0941ccfa7488aab056d8feea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493498677eed8f35da7711b738f851ba"><td class="memItemLeft" align="right" valign="top"><a id="a493498677eed8f35da7711b738f851ba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_rotative_buffer.html#a493498677eed8f35da7711b738f851ba">RotativeBuffer</a> ()</td></tr>
+<tr class="memdesc:a493498677eed8f35da7711b738f851ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a cirular buffer of size 10 and the default value of the type as memset. <br /></td></tr>
+<tr class="separator:a493498677eed8f35da7711b738f851ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611b32bd122ef461299afe6c373fe0e6"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_rotative_buffer.html#a611b32bd122ef461299afe6c373fe0e6">get_data</a> (unsigned short position) const</td></tr>
+<tr class="memdesc:a611b32bd122ef461299afe6c373fe0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get an item of the circular buffer  <a href="classturbo_1_1_rotative_buffer.html#a611b32bd122ef461299afe6c373fe0e6">More...</a><br /></td></tr>
 <tr class="separator:a611b32bd122ef461299afe6c373fe0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a065f4463bdf6520dcaab0df8cc2bd137"><td class="memItemLeft" align="right" valign="top"><a id="a065f4463bdf6520dcaab0df8cc2bd137"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>get_array</b> () const</td></tr>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classturbo_1_1_rotative_buffer.html#a065f4463bdf6520dcaab0df8cc2bd137">get_array</a> () const</td></tr>
+<tr class="memdesc:a065f4463bdf6520dcaab0df8cc2bd137"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the buffer rotated by the buffer position <br /></td></tr>
 <tr class="separator:a065f4463bdf6520dcaab0df8cc2bd137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f13206368fe1820aa1b5e8656fb095"><td class="memItemLeft" align="right" valign="top"><a id="aa6f13206368fe1820aa1b5e8656fb095"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>turn</b> ()</td></tr>
@@ -100,6 +110,102 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></t
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = 0</td></tr>
 <tr class="separator:a1981d02abab78939f303c67c3582cb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T = unsigned char&gt;<br />
+class turbo::RotativeBuffer&lt; T &gt;</h3>
+
+<p>Simple cirular buffer implementation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>content type </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1868a0d0941ccfa7488aab056d8feea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1868a0d0941ccfa7488aab056d8feea0">&#9670;&nbsp;</a></span>RotativeBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = unsigned char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_rotative_buffer.html">turbo::RotativeBuffer</a>&lt; T &gt;::<a class="el" href="classturbo_1_1_rotative_buffer.html">RotativeBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>initial_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the cirular buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_value</td><td>value to memset </td></tr>
+    <tr><td class="paramname">size</td><td>size of the circular buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a611b32bd122ef461299afe6c373fe0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611b32bd122ef461299afe6c373fe0e6">&#9670;&nbsp;</a></span>get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = unsigned char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classturbo_1_1_rotative_buffer.html">turbo::RotativeBuffer</a>&lt; T &gt;::get_data </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get an item of the circular buffer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>position in the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/turbo/<a class="el" href="_rotative_buffer_8hpp_source.html">RotativeBuffer.hpp</a></li>
 </ul>

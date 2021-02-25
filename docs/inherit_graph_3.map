@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classturbo_1_1_component.html" title="Components who defines the behaviour of a GameObject." alt="" coords="5,15,157,45"/>
-<area shape="rect" id="node2" href="$classturbo_1_1component_1_1_simple_control.html" title=" " alt="" coords="205,5,413,55"/>
+<area shape="rect" id="node2" href="$classturbo_1_1component_1_1_simple_control.html" title="Simple pre&#45;made component used handle an 8&#45;direction movement with the arrow keys." alt="" coords="205,5,413,55"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="turbo::component::SimpleControl" name="turbo::component::SimpleControl">
-<area shape="rect" id="node1" title=" " alt="" coords="133,379,341,428"/>
+<area shape="rect" id="node1" title="Simple pre&#45;made component used handle an 8&#45;direction movement with the arrow keys." alt="" coords="133,379,341,428"/>
 <area shape="rect" id="node2" href="$classturbo_1_1_component.html" title="Components who defines the behaviour of a GameObject." alt="" coords="103,299,255,329"/>
 <area shape="rect" id="node3" href="$classturbo_1_1_game_object.html" title="Basic scene object." alt="" coords="89,201,247,232"/>
 <area shape="rect" id="node4" href="$classturbo_1_1_transform.html" title=" " alt="" coords="97,121,239,152"/>

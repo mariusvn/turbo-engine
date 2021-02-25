@@ -1,6 +1,6 @@
 <map id="turbo::Engine" name="turbo::Engine">
 <area shape="rect" id="node1" title="Main engine class." alt="" coords="162,121,282,152"/>
-<area shape="rect" id="node2" href="$classturbo_1_1_input.html" title=" " alt="" coords="5,5,111,36"/>
+<area shape="rect" id="node2" href="$classturbo_1_1_input.html" title="Input helper util." alt="" coords="5,5,111,36"/>
 <area shape="rect" id="node3" href="$classturbo_1_1_event.html" title=" " alt="" coords="135,5,309,36"/>
 <area shape="rect" id="node4" href="$classturbo_1_1_scene_manager.html" title=" " alt="" coords="333,5,513,36"/>
 </map>
