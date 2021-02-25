@@ -1,6 +1,8 @@
 #include <turbo/Input.hpp>
-#include <stdlib.h>
+#include <cstdlib>
 #include <iostream>
+#include <allegro5/allegro.h>
+#include <turbo/Engine.hpp>
 
 namespace turbo {
     Input::Input() {
@@ -21,10 +23,41 @@ namespace turbo {
         this->key[event->keyboard.keycode] &= __TURBO_KEY_RELEASED;
     }
 
+    void Input::internal_set_display(void* display) {
+        this->display = (ALLEGRO_DISPLAY*) display;
+    }
+
+    void Input::internal_update_mouse_position(int& x, int& y) {
+        this->mouse_position.x = x;
+        this->mouse_position.y = y;
+    }
+
     bool Input::is_key_pressed(int key) const {
         if (this->key[key])
             return true;
         else
             return false;
+    }
+
+    void Input::set_mouse_position(const Vector2<int>& pos) {
+        this->set_mouse_position(pos.x, pos.y);
+    }
+
+    void Input::set_mouse_position(int x, int y) {
+        if (!this->display)
+            return;
+        al_set_mouse_xy(this->display, x, y);
+        this->mouse_position.x = x;
+        this->mouse_position.y = y;
+    }
+
+    const Vector2<int>& Input::get_mouse_position() const {
+        return this->mouse_position;
+    }
+
+    bool Input::is_mouse_button_pressed(enum mouse_buttons button) const {
+        ALLEGRO_MOUSE_STATE state;
+        al_get_mouse_state(&state);
+        return al_mouse_button_down(&state, (int)button);
     }
 }

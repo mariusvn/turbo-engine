@@ -2,6 +2,7 @@
 #ifndef __TURBO_INPUT_HPP__
 #define __TURBO_INPUT_HPP__
 
+#include "Vector2.hpp"
 #include <allegro5/keyboard.h>
 
 /*
@@ -12,6 +13,12 @@
 #define __TURBO_KEY_RELEASED 2
 
 namespace turbo {
+
+    enum mouse_buttons {
+        LEFT_CLICK = 0,
+        RIGHT_CLICK = 1
+    };
+
     /**
      * @brief Input helper util
      */
@@ -21,14 +28,22 @@ namespace turbo {
         void process_timer_event();
         void process_key_down_event(ALLEGRO_EVENT* event);
         void process_key_up_event(ALLEGRO_EVENT* event);
+        void internal_set_display(void* display);
+        void internal_update_mouse_position(int& x, int& y);
         /**
          * @brief check if a key is currently pressed
          * @param key turbo::KEY
          */
-        bool is_key_pressed(int key) const;
+        [[nodiscard]] bool is_key_pressed(int key) const;
+        void set_mouse_position(const Vector2<int>& pos);
+        void set_mouse_position(int x, int y);
+        [[nodiscard]] const Vector2<int>& get_mouse_position() const;
+        [[nodiscard]] bool is_mouse_button_pressed(enum mouse_buttons button) const;
 
     private:
         unsigned char key[ALLEGRO_KEY_MAX];
+        Vector2<int> mouse_position = Vector2<int>(0,0);
+        ALLEGRO_DISPLAY* display = nullptr;
     };
 
     enum

@@ -5,6 +5,7 @@
     #include <turbo/DebugImgui.hpp>
     #include <string>
     #include <turbo/Engine.hpp>
+    #include <turbo/Vector2.hpp>
 
 namespace debug
 {
@@ -14,11 +15,13 @@ namespace debug
 
     void EngineDebug::render()
     {
+        const turbo::Vector2<int> &mouse_cursor = turbo::Engine::input.get_mouse_position();
         ImGui::Begin("Engine##MainWin", 0, ImGuiWindowFlags_AlwaysAutoResize);
         std::string fps_txt = std::to_string(this->fps);
         float* fps_history = this->fps_buffer.get_array();
         ImGui::PlotLines(("FPS: " + fps_txt).c_str(), fps_history, this->fps_buffer.get_size());
         ImGui::Text("%s: {x: %d, y: %d}", "Window size", this->win_size.x, this->win_size.y);
+        ImGui::Text("%s: {x: %d, y: %d}", "Mouse position", mouse_cursor.x, mouse_cursor.y);
         if (ImGui::Button("Scene Manager")) {
             this->engine->scene_manager.debug.open();
         }

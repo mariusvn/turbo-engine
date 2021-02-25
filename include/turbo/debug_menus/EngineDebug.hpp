@@ -16,7 +16,7 @@ namespace debug {
 
     class EngineDebug: public DebugWindow {
     public:
-        EngineDebug(turbo::Engine* engine);
+        explicit EngineDebug(turbo::Engine* engine);
 
         void render() override;
         void register_fps_time(float fps);
