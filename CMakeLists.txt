@@ -106,4 +106,4 @@ target_link_libraries(turbo_engine ${req_libs})
 ### DEMO PROJECT ###
 
 add_executable(demo main.cpp)
-target_link_libraries(demo debug turbo_engine)
+target_link_libraries(demo turbo_engine)
