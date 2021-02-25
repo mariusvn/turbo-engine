@@ -5,6 +5,7 @@
 #include <functional>
 #include <turbo/graphics/Shader.hpp>
 #include <turbo/DebugImgui.hpp>
+#include <chrono>
 
 namespace turbo {
     Engine::Engine() {
@@ -13,12 +14,16 @@ namespace turbo {
         al_install_keyboard();
         al_init_font_addon();
         al_init_ttf_addon();
-        al_install_mouse();
+        if (!al_install_mouse()) {
+            std::cerr << "Cannot initialize mouse" << std::endl;
+            exit(1);
+        }
         al_init_image_addon();
         al_init_primitives_addon();
 
         this->render_timer = al_create_timer(1.0 / 60.0);
         this->update_timer = al_create_timer(1.0 / 60.0);
+        this->fps_timer = al_create_timer(1.0 / 10);
 
         this->event_queue = al_create_event_queue();
 
@@ -30,6 +35,7 @@ namespace turbo {
         al_register_event_source(this->event_queue, al_get_mouse_event_source());
         al_register_event_source(this->event_queue, al_get_timer_event_source(this->render_timer));
         al_register_event_source(this->event_queue, al_get_timer_event_source(this->update_timer));
+        al_register_event_source(this->event_queue, al_get_timer_event_source(this->fps_timer));
 
         this->render_tick += [this] { on_render_tick(); };
         this->update_tick += [this] { on_update_tick(); };
@@ -42,6 +48,7 @@ namespace turbo {
 
         al_start_timer(this->render_timer);
         al_start_timer(this->update_timer);
+        al_start_timer(this->fps_timer);
 
         while (this->main_loop) {
 
@@ -56,6 +63,13 @@ namespace turbo {
                     this->force_render();
                 } else if (event.timer.source == this->update_timer) {
                     this->force_logic();
+                } else if (event.timer.source == this->fps_timer) {
+                    double time = al_get_time();
+                    this->loop_time = (time - this->_loop_time) / this->loop_amount;
+                    this->_loop_time = time;
+                    float fps = 1.0f / (this->loop_time);
+                    ONLYIMGUI(this->debug.register_fps_time(fps));
+                    this->loop_amount = 0;
                 }
 
             } else if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
@@ -79,11 +93,8 @@ namespace turbo {
                 }
 
                 if (this->render) {
-                    this->loop_time = (float) (((double)(clock() - this->_loop_time)) / CLOCKS_PER_SEC);
-                    this->_loop_time = clock();
-
+                    this->loop_amount++;
                     ONLYIMGUI(
-                        this->debug.register_fps_time(1 / this->loop_time);
                         ImGui_ImplAllegro5_NewFrame();
                         ImGui::NewFrame();
                         );
@@ -170,7 +181,9 @@ namespace turbo {
 
     void Engine::on_update_tick() {
         if (((float)(clock() - fps_actualizer)) / CLOCKS_PER_SEC >= 0.2) {
-            ONLYIMGUI(this->debug.update_fps((int)(1.0f / (float)this->loop_time)));
+            if (this->loop_time > 0.0f) {
+                ONLYIMGUI(this->debug.update_fps((int) (1.0f / (float) this->loop_time)));
+            }
             this->fps_actualizer = clock();
         }
         Engine::input.process_timer_event();

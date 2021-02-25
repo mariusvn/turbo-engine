@@ -103,6 +103,11 @@ namespace turbo {
         bool update = false;
 
         /**
+         * @brief Timer for the second counter
+         */
+        ALLEGRO_TIMER* fps_timer = nullptr;
+
+        /**
          * @brief Main loop event queue
          */
         ALLEGRO_EVENT_QUEUE* event_queue = nullptr;
@@ -117,8 +122,9 @@ namespace turbo {
          */
         bool main_loop = true;
 
-        unsigned long _loop_time = clock();
-        float loop_time = 0;
+        double _loop_time = 0;
+        double loop_time = 0;
+        unsigned long loop_amount = 0;
         unsigned long fps_actualizer = clock();
     };
 }

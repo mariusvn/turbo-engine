@@ -38,12 +38,13 @@ target_include_directories(turbo_engine PUBLIC ./include)
 # Required allegro libs
 set(req_libs allegro allegro_ttf allegro_font allegro_image allegro_primitives)
 
-# Adding allegro include directory
-target_include_directories(turbo_engine PUBLIC ${LIBALLEG_PATH}/include)
+if(WIN32)
+    # Adding allegro include directory
+    target_include_directories(turbo_engine PUBLIC ${LIBALLEG_PATH}/include)
 
-# Adding allegro library directory
-target_link_directories(turbo_engine PUBLIC ${LIBALLEG_PATH}/lib)
-
+    # Adding allegro library directory
+    target_link_directories(turbo_engine PUBLIC ${LIBALLEG_PATH}/lib)
+endif()
 
 ### POST BUILD DLL MOVING COMMANDS ###
 
@@ -77,9 +78,13 @@ string(TOLOWER "${CMAKE_BUILD_TYPE}" CMAKE_BUILD_TYPE_LOWER)
 # Only if we're in debug
 if ("${CMAKE_BUILD_TYPE_LOWER}" STREQUAL "debug")
     # Getting the imgui binary path
-    file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${LIBIMGUI_PATH}/bin/libimgui.dll" libfile)
+    if (WIN32)
+        file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${LIBIMGUI_PATH}/bin/libimgui.dll" libfile)
+    else()
+        file(TO_NATIVE_PATH "${CMAKE_SOURCE_DIR}/${LIBIMGUI_PATH}/lib/libimgui.so" libfile)
+    endif()
     # OwO OMG! again a message, so so cute UwU
-    message("Debug mode deltected, implement IMGUI")
+    message("Debug mode detected, implement IMGUI")
     # Notify the compiler that it should define the imgui macro
     add_compile_definitions(__TURBO_USE_IMGUI__)
     # Add the include directory to the project
@@ -101,4 +106,4 @@ target_link_libraries(turbo_engine ${req_libs})
 ### DEMO PROJECT ###
 
 add_executable(demo main.cpp)
-target_link_libraries(demo turbo_engine)
+target_link_libraries(demo debug turbo_engine)

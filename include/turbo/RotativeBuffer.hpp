@@ -8,10 +8,19 @@
 #include <string.h>
 
 namespace turbo {
+    /**
+     * @brief Simple cirular buffer implementation
+     * @tparam T content type
+     */
     template<typename T = unsigned char>
     class RotativeBuffer {
     public:
-        RotativeBuffer(const T &initial_value, unsigned short size) {
+        /**
+         * @brief Initialize the cirular buffer
+         * @param initial_value value to memset
+         * @param size size of the circular buffer
+         */
+        RotativeBuffer(T initial_value, unsigned short size) {
             if (size <= 0) {
                 throw std::runtime_error("Rotative buffer size must be >= 0");
             }
@@ -21,14 +30,23 @@ namespace turbo {
                 this->buffer[i] = initial_value;
             }
         }
+        /**
+         * @brief Initialize a cirular buffer of size 10
+         * and the default value of the type as memset
+         */
         RotativeBuffer() {
             this->size = 10;
             this->buffer = new T[10]();
         }
         ~RotativeBuffer() {
-            delete this->buffer;
+            delete[] this->buffer;
+            this->buffer = nullptr;
         }
 
+        /**
+         * @brief get an item of the circular buffer
+         * @param position position in the buffer
+         */
         T &get_data(unsigned short position) const {
             if (position >= size) {
                 throw std::out_of_range("Rotative buffer is too small");
@@ -37,6 +55,10 @@ namespace turbo {
             }
             return this->buffer[position];
         }
+
+        /**
+         * @brief get the buffer rotated by the buffer position
+         */
         T* get_array() const {
             T* res = new T[size];
             unsigned short ptr = 0;

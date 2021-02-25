@@ -14,15 +14,15 @@ namespace debug
 
     void EngineDebug::render()
     {
-        ImGui::Begin("Engine", 0, ImGuiWindowFlags_AlwaysAutoResize);
+        ImGui::Begin("Engine##MainWin", 0, ImGuiWindowFlags_AlwaysAutoResize);
         std::string fps_txt = std::to_string(this->fps);
         float* fps_history = this->fps_buffer.get_array();
-        const char* buf_log = this->fps_buffer;
         ImGui::PlotLines(("FPS: " + fps_txt).c_str(), fps_history, this->fps_buffer.get_size());
         ImGui::Text("%s: {x: %d, y: %d}", "Window size", this->win_size.x, this->win_size.y);
         if (ImGui::Button("Scene Manager")) {
             this->engine->scene_manager.debug.open();
         }
+        delete fps_history;
         ImGui::End();
     }
 
