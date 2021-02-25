@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.9.1"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Turbo Engine: Member List</title>
+        <title>Turbo Engine: include/turbo/sound/Audio.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -45,23 +45,31 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>turbo</b></li><li class="navelem"><a class="el" href="classturbo_1_1_input.html">Input</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a class="el" href="dir_65e21eb9c1f389c05e2dae8458f802c4.html">sound</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">turbo::Input Member List</div>  </div>
+<div class="title">Audio.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classturbo_1_1_input.html">turbo::Input</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Input</b>() (defined in <a class="el" href="classturbo_1_1_input.html">turbo::Input</a>)</td><td class="entry"><a class="el" href="classturbo_1_1_input.html">turbo::Input</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classturbo_1_1_input.html#a87a26fb9bff6649132596ddcf391b58e">is_key_pressed</a>(int key) const</td><td class="entry"><a class="el" href="classturbo_1_1_input.html">turbo::Input</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>process_key_down_event</b>(ALLEGRO_EVENT *event) (defined in <a class="el" href="classturbo_1_1_input.html">turbo::Input</a>)</td><td class="entry"><a class="el" href="classturbo_1_1_input.html">turbo::Input</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>process_key_up_event</b>(ALLEGRO_EVENT *event) (defined in <a class="el" href="classturbo_1_1_input.html">turbo::Input</a>)</td><td class="entry"><a class="el" href="classturbo_1_1_input.html">turbo::Input</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>process_timer_event</b>() (defined in <a class="el" href="classturbo_1_1_input.html">turbo::Input</a>)</td><td class="entry"><a class="el" href="classturbo_1_1_input.html">turbo::Input</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __TURBO_ENGINE_AUDIO_HPP__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __TURBO_ENGINE_AUDIO_HPP__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>turbo {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classturbo_1_1_audio.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classturbo_1_1_audio.html">Audio</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> play() = 0;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> pause() = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset() = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_playing() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassturbo_1_1_audio_html"><div class="ttname"><a href="classturbo_1_1_audio.html">turbo::Audio</a></div><div class="ttdef"><b>Definition:</b> Audio.hpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

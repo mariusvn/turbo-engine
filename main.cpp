@@ -1,6 +1,6 @@
 #include <iostream>
 #include <turbo/Engine.hpp>
-#include <turbo/components/SimpleControl.hpp>
+#include <turbo/sound/MusicStream.hpp>
 
 
 class TestScene: public turbo::Scene {
@@ -39,6 +39,7 @@ public:
 
 private:
     turbo::Texture* texture;
+
 };
 
 int main() {

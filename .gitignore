@@ -7,3 +7,4 @@ build.bat
 build.sh
 CMakeSettings.json
 cmake-build-*
+*.ogg

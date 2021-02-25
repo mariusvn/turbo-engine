@@ -5,21 +5,55 @@
 #include <functional>
 #include <turbo/graphics/Shader.hpp>
 #include <turbo/DebugImgui.hpp>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
 #include <chrono>
 
 namespace turbo {
     Engine::Engine() {
         turbo::Engine::engine = this;
-        al_init();
-        al_install_keyboard();
-        al_init_font_addon();
-        al_init_ttf_addon();
-        if (!al_install_mouse()) {
-            std::cerr << "Cannot initialize mouse" << std::endl;
-            exit(1);
+
+        this->logger.info("Initializing system");
+        if (!al_init()) {
+            this->logger.error("Cannot initialize system");
+            return;
         }
-        al_init_image_addon();
-        al_init_primitives_addon();
+
+        std::function<bool()> initializers[] = {
+            al_install_keyboard,
+            al_init_acodec_addon,
+            al_install_audio,
+            al_init_font_addon,
+            al_init_ttf_addon,
+            al_install_mouse,
+            al_init_image_addon,
+            al_init_primitives_addon,
+            nullptr
+        };
+
+        std::string initializer_names[] = {
+            "keyboard",
+            "audio codecs",
+            "audio",
+            "font",
+            "fft",
+            "mouse",
+            "image",
+            "primitives",
+            ""
+        };
+
+        for (unsigned short i = 0; initializers[i]; i++) {
+            auto& func = initializers[i];
+            this->logger.info("Initializing " + initializer_names[i]);
+            if (!func()) {
+                this->logger.error("Cannot initialize " + initializer_names[i]);
+                exit(1);
+                return;
+            }
+        }
+
+        al_reserve_samples(16);
 
         this->render_timer = al_create_timer(1.0 / 60.0);
         this->update_timer = al_create_timer(1.0 / 60.0);

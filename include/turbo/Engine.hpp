@@ -77,6 +77,7 @@ namespace turbo {
         void on_render_tick();
         Event<> update_tick = Event<>();
         Event<> render_tick = Event<>();
+        Logger logger = Logger("Turbo Engine");
 
         ONLYIMGUI(debug::EngineDebug debug = debug::EngineDebug(this));
 

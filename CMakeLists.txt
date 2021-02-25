@@ -36,7 +36,7 @@ target_include_directories(turbo_engine PUBLIC ./include)
 ### DEFINING LIBRARIES ###
 
 # Required allegro libs
-set(req_libs allegro allegro_ttf allegro_font allegro_image allegro_primitives)
+set(req_libs allegro allegro_ttf allegro_font allegro_image allegro_primitives allegro_audio allegro_acodec)
 
 if(WIN32)
     # Adding allegro include directory

@@ -4,6 +4,8 @@
 #include <allegro5/allegro.h>
 #include <turbo/Engine.hpp>
 
+// TODO add camera mouse input
+
 namespace turbo {
     Input::Input() {
         memset(this->key, 0, sizeof(this->key));
@@ -23,13 +25,13 @@ namespace turbo {
         this->key[event->keyboard.keycode] &= __TURBO_KEY_RELEASED;
     }
 
-    void Input::internal_set_display(void* display) {
-        this->display = (ALLEGRO_DISPLAY*) display;
+    void Input::internal::set_display(Input* self, void* display) {
+        self->display = (ALLEGRO_DISPLAY*) display;
     }
 
-    void Input::internal_update_mouse_position(int& x, int& y) {
-        this->mouse_position.x = x;
-        this->mouse_position.y = y;
+    void Input::internal::update_mouse_position(Input* self, int& x, int& y) {
+        self->mouse_position.x = x;
+        self->mouse_position.y = y;
     }
 
     bool Input::is_key_pressed(int key) const {

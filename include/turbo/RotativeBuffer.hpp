@@ -39,7 +39,7 @@ namespace turbo {
             this->buffer = new T[10]();
         }
         ~RotativeBuffer() {
-            delete[] this->buffer;
+            //delete[] this->buffer; TODO fix this
             this->buffer = nullptr;
         }
 

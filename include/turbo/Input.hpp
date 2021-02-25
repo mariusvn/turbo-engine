@@ -28,8 +28,6 @@ namespace turbo {
         void process_timer_event();
         void process_key_down_event(ALLEGRO_EVENT* event);
         void process_key_up_event(ALLEGRO_EVENT* event);
-        void internal_set_display(void* display);
-        void internal_update_mouse_position(int& x, int& y);
         /**
          * @brief check if a key is currently pressed
          * @param key turbo::KEY
@@ -39,6 +37,13 @@ namespace turbo {
         void set_mouse_position(int x, int y);
         [[nodiscard]] const Vector2<int>& get_mouse_position() const;
         [[nodiscard]] bool is_mouse_button_pressed(enum mouse_buttons button) const;
+
+        /** @cond */
+        struct internal {
+            void set_display(Input* self, void* display);
+            void update_mouse_position(Input* self, int& x, int& y);
+        };
+        /** @cond */
 
     private:
         unsigned char key[ALLEGRO_KEY_MAX];

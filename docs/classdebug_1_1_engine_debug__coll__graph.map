@@ -3,8 +3,8 @@
 <area shape="rect" id="node2" href="$classdebug_1_1_debug_window.html" title=" " alt="" coords="367,5,551,36"/>
 <area shape="rect" id="node3" href="$classturbo_1_1_vector2.html" title=" " alt="" coords="356,60,563,109"/>
 <area shape="rect" id="node4" href="$classturbo_1_1_engine.html" title="Main engine class." alt="" coords="399,176,519,207"/>
-<area shape="rect" id="node5" href="$classturbo_1_1_input.html" title="Input helper util." alt="" coords="43,108,148,139"/>
-<area shape="rect" id="node6" href="$classturbo_1_1_event.html" title=" " alt="" coords="9,176,182,207"/>
-<area shape="rect" id="node7" href="$classturbo_1_1_scene_manager.html" title=" " alt="" coords="5,231,185,261"/>
+<area shape="rect" id="node5" href="$classturbo_1_1_event.html" title=" " alt="" coords="9,121,182,152"/>
+<area shape="rect" id="node6" href="$classturbo_1_1_scene_manager.html" title=" " alt="" coords="5,176,185,207"/>
+<area shape="rect" id="node7" href="$classturbo_1_1_logger.html" title="The logger class is used to clarify the logging of the engine." alt="" coords="35,231,155,261"/>
 <area shape="rect" id="node8" href="$classturbo_1_1_rotative_buffer.html" title=" " alt="" coords="374,231,545,280"/>
 </map>

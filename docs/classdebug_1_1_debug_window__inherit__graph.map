@@ -1,7 +1,6 @@
 <map id="debug::DebugWindow" name="debug::DebugWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,88,189,119"/>
-<area shape="rect" id="node2" href="$classdebug_1_1_component_debug.html" title=" " alt="" coords="251,5,459,36"/>
-<area shape="rect" id="node3" href="$classdebug_1_1_engine_debug.html" title=" " alt="" coords="267,60,443,91"/>
-<area shape="rect" id="node4" href="$classdebug_1_1_game_object_debug.html" title=" " alt="" coords="248,115,463,145"/>
-<area shape="rect" id="node5" href="$classdebug_1_1_scene_manager_debug.html" title=" " alt="" coords="237,169,473,200"/>
+<area shape="rect" id="node1" title=" " alt="" coords="233,5,417,36"/>
+<area shape="rect" id="node2" href="$classdebug_1_1_component_debug.html" title=" " alt="" coords="5,84,213,115"/>
+<area shape="rect" id="node3" href="$classdebug_1_1_engine_debug.html" title=" " alt="" coords="237,84,413,115"/>
+<area shape="rect" id="node4" href="$classdebug_1_1_scene_manager_debug.html" title=" " alt="" coords="438,84,674,115"/>
 </map>
