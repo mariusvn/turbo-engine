@@ -13,7 +13,7 @@
 
 namespace turbo {
     /**
-     * Input helper util
+     * @brief Input helper util
      */
     class Input final {
     public:

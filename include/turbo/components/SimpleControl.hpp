@@ -8,7 +8,7 @@
 
 namespace turbo::component {
     /**
-     * Simple pre-made component used handle an 8-direction movement with the arrow keys
+     * @brief Simple pre-made component used handle an 8-direction movement with the arrow keys
      */
     class SimpleControl : public ::turbo::Component {
     public:
