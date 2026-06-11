@@ -4,10 +4,11 @@ on:
   push:
   pull_request:
 
-# vcpkg builds Allegro 5 + transitive deps from source; cache the resulting
-# binary packages across runs so CI doesn't rebuild them every time.
 env:
-  VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
+  # vcpkg builds Allegro 5 + transitive deps from source. Point its binary
+  # cache at a fixed directory so actions/cache can persist the compiled
+  # packages across runs (see the "Cache vcpkg packages" step below).
+  VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}/vcpkg_cache
   # The runners ship CMake 4.x, which rejects projects whose
   # cmake_minimum_required predates 3.5 (e.g. the physfs port pulled in by
   # Allegro). This restores compatibility for every nested vcpkg sub-build.
@@ -25,13 +26,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Wire up vcpkg's GitHub Actions binary cache (read by VCPKG_BINARY_SOURCES).
-      - name: Set up vcpkg binary caching
-        uses: actions/github-script@v7
+      # Persist vcpkg's compiled packages across runs. The key changes only when
+      # the manifest or vcpkg pin does, so day-to-day pushes restore the whole
+      # dependency set instead of rebuilding Allegro & co. from source.
+      - name: Cache vcpkg packages
+        uses: actions/cache@v4
         with:
-          script: |
-            core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
-            core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
+          path: ${{ github.workspace }}/vcpkg_cache
+          key: vcpkg-${{ matrix.os }}-${{ hashFiles('vcpkg.json', 'CMakeLists.txt') }}
+          restore-keys: |
+            vcpkg-${{ matrix.os }}-
+
+      # vcpkg requires its binary-cache directory to exist beforehand.
+      - name: Prepare vcpkg cache directory
+        run: cmake -E make_directory ${{ github.workspace }}/vcpkg_cache
 
       # System packages vcpkg needs to build Allegro 5 from source on Linux
       # (X11/OpenGL/audio dev headers + autotools-based deps).

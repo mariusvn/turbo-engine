@@ -147,6 +147,24 @@ if(TURBO_ENABLE_IMGUI)
 endif()
 
 # ---------------------------------------------------------------------------
+#  macOS specifics
+#
+#  Allegro's "magic main" remaps the program's main() to _al_mangled_main on
+#  macOS; the real entry point lives in the allegro_main addon, which must be
+#  linked into the final executable. OpenAL-soft's CoreAudio backend (Allegro's
+#  audio driver) likewise needs the matching Apple frameworks, which are not
+#  propagated transitively from the static archive.
+# ---------------------------------------------------------------------------
+if(APPLE)
+    target_link_libraries(turbo_engine PUBLIC
+        Allegro::allegro_main
+        "-framework CoreAudio"
+        "-framework AudioToolbox"
+        "-framework AudioUnit"
+        "-framework CoreFoundation")
+endif()
+
+# ---------------------------------------------------------------------------
 #  Demo executable
 # ---------------------------------------------------------------------------
 add_executable(demo main.cpp)
