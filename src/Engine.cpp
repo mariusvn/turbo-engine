@@ -118,7 +118,7 @@ namespace turbo {
                 al_acknowledge_resize(display);
                 ONLYIMGUI(ImGui_ImplAllegro5_CreateDeviceObjects());
             } else if (event.type == ALLEGRO_EVENT_MOUSE_AXES) {
-                Engine::input.internal_update_mouse_position(event.mouse.x, event.mouse.y);
+                Input::internal().update_mouse_position(&Engine::input, event.mouse.x, event.mouse.y);
             }
 
             if (this->main_loop && al_is_event_queue_empty(this->event_queue)) {
@@ -166,7 +166,7 @@ namespace turbo {
         this->display = al_create_display(width, height);
         if (!this->display)
             throw std::runtime_error("Cannot open window");
-        turbo::Engine::input.internal_set_display(this->display);
+        turbo::Input::internal().set_display(&turbo::Engine::input, this->display);
         al_set_window_title(this->display, win_name);
         al_register_event_source(this->event_queue, al_get_display_event_source(this->display));
         Shader::init_shaders();

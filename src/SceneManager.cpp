@@ -6,8 +6,7 @@ namespace turbo {
     }
 
     void SceneManager::register_scene(Scene* scene, const char* name) {
-        Scene* test = this->scenes["test"];
-        if (!this->scenes.empty() && this->scenes.find(name) != this->scenes.end()) {
+        if (this->scenes.find(name) != this->scenes.end()) {
             throw std::runtime_error(std::string("The scene \"") + name + "\" already exists");
         }
         this->scenes[name] = scene;

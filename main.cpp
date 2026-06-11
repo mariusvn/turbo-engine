@@ -9,9 +9,6 @@ public:
 
     void load() override {
         turbo::Path* path = turbo::Path::get_resources_path();
-        path->drop_tail();
-        path->drop_tail();
-        path->drop_tail();
         path->append_component("assets/demo");
         path->set_filename("png-test.png");
 

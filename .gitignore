@@ -1,5 +1,7 @@
-out/build
+out/
 !.gitkeep
+vcpkg_installed/
+CMakeUserPresets.json
 .vscode
 .vs
 .idea

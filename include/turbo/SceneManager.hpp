@@ -39,7 +39,7 @@ namespace turbo {
 
     private:
         Scene* active_scene = nullptr;
-        std::map<const char*, Scene*> scenes = {};
+        std::map<std::string, Scene*> scenes = {};
     };
 }
 
