@@ -39,7 +39,11 @@ private:
 
 };
 
-int main() {
+// Note: the (argc, argv) signature is required for Allegro's "magic main" on
+// macOS, which renames main to _al_mangled_main(int, char**). Standard and
+// harmless on Windows/Linux.
+int main(int argc, char** argv) {
+    (void)argc; (void)argv;
     turbo::Engine engine = turbo::Engine();
     TestScene* test_scene = new TestScene();
     engine.scene_manager.register_scene(test_scene, "test scene");
