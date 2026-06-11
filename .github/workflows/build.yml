@@ -1,88 +1,57 @@
 name: build
 
-on: [push]
+on:
+  push:
+  pull_request:
 
+# vcpkg builds Allegro 5 + transitive deps from source; cache the resulting
+# binary packages across runs so CI doesn't rebuild them every time.
 env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Release
+  VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
 
 jobs:
-  build-ubuntu:
-    runs-on: ubuntu-latest
+  build:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Create Build Environment
-      run: cmake -E make_directory ${{github.workspace}}/out/build/standard
-      
-    - name: Install Dependencies
-      shell: bash
-      run: sudo add-apt-repository ppa:allegro/5.2 && sudo apt-get install liballegro*5.2 liballegro*5-dev
+      # Wire up vcpkg's GitHub Actions binary cache (read by VCPKG_BINARY_SOURCES).
+      - name: Set up vcpkg binary caching
+        uses: actions/github-script@v7
+        with:
+          script: |
+            core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
+            core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
 
-    - name: Configure CMake
-      shell: bash
-      working-directory: ${{github.workspace}}/out/build/standard
-      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      # System packages vcpkg needs to build Allegro 5 from source on Linux
+      # (X11/OpenGL/audio dev headers + autotools-based deps).
+      - name: Install Linux build prerequisites
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            autoconf automake autoconf-archive libtool pkg-config nasm \
+            libx11-dev libxcursor-dev libxinerama-dev libxrandr-dev libxi-dev \
+            libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev
 
-    - name: Build
-      working-directory: ${{github.workspace}}/out/build/standard
-      shell: bash
-      run: cmake --build . --config $BUILD_TYPE
-      
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: lib-files-ubuntu
-        path: ${{github.workspace}}/out/build/standard/libturbo_engine.so
+      # CMake (>=3.21) and Ninja ship preinstalled on the GitHub runners.
+      # The CMakeLists bootstraps a pinned vcpkg itself, so no toolchain setup
+      # is required here -- a classic configure/build works on every platform.
+      - name: Configure
+        run: cmake -B build
 
-  build-windows:
-    runs-on: windows-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-      
-    - name: Create Build Environment
-      run: cmake -E make_directory ${{github.workspace}}/out/build/standard
-      
-    - name: Install Dependencies
-      shell: pwsh
-      run: |
-        Invoke-WebRequest https://github.com/liballeg/allegro5/releases/download/5.2.6.0/allegro-x86_64-w64-mingw32-gcc-9.2.0-posix-seh-dynamic-5.2.6.0.zip -OutFile ./allegro.zip && 7z x allegro.zip -oallegro
-      working-directory: ${{github.workspace}}/out/build/standard
-      
-    - name: Configure CMake
-      shell: pwsh
-      working-directory: ${{github.workspace}}/out/build/standard
-      run: cmake ${{github.workspace}} -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DLIBALLEG_PATH="out/build/standard/allegro/allegro" -G "MinGW Makefiles"
-      
-    - name: Build
-      working-directory: ${{github.workspace}}/out/build/standard
-      shell: pwsh
-      run: |
-        cmake --build . --config $BUILD_TYPE
-      
-    - name: Processing files
-      working-directory: ${{github.workspace}}/out/build/standard
-      shell: pwsh
-      run: |
-        mkdir res
-        mkdir res/include
-        cp -r allegro/allegro/include/* res/include
-        cp -r ../../../include/* res/include
-        mkdir res/bin
-        cp *.dll res/bin
-        mkdir res/lib
-        cp *.a res/lib
-        ls res
-        ls res/bin
-        ls res/include
-        ls res/lib
-        mv res turbo-engine-win
-    
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: lib-files-win
-        path: |
-          ${{github.workspace}}/out/build/standard/turbo-engine-win
+      - name: Build
+        run: cmake --build build
+
+      - name: Upload demo
+        uses: actions/upload-artifact@v4
+        with:
+          name: turbo-demo-${{ matrix.os }}
+          path: build/bin/
+          if-no-files-found: error

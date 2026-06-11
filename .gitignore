@@ -2,6 +2,7 @@ out/
 !.gitkeep
 vcpkg_installed/
 CMakeUserPresets.json
+AGENT_NOTES.md
 .vscode
 .vs
 .idea

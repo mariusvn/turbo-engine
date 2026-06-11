@@ -6,8 +6,11 @@
 #  No manual library download or path configuration is required.
 #
 #  Quick start:
-#      cmake --preset default
-#      cmake --build --preset default
+#      cmake -B build
+#      cmake --build build
+#
+#  Dear ImGui debug overlay is OFF by default. Enable it explicitly:
+#      cmake -B build -DTURBO_ENABLE_IMGUI=ON
 # ===========================================================================
 cmake_minimum_required(VERSION 3.21)
 
@@ -41,7 +44,7 @@ endif()
 
 # Dear ImGui debug overlay is optional; selecting it pulls the matching feature
 # from vcpkg.json. Must be set before project() so manifest install sees it.
-option(TURBO_ENABLE_IMGUI "Build with the Dear ImGui debug overlay" ON)
+option(TURBO_ENABLE_IMGUI "Build with the Dear ImGui debug overlay" OFF)
 if(TURBO_ENABLE_IMGUI)
     list(APPEND VCPKG_MANIFEST_FEATURES "imgui")
 endif()
