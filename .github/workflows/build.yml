@@ -8,6 +8,10 @@ on:
 # binary packages across runs so CI doesn't rebuild them every time.
 env:
   VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
+  # The runners ship CMake 4.x, which rejects projects whose
+  # cmake_minimum_required predates 3.5 (e.g. the physfs port pulled in by
+  # Allegro). This restores compatibility for every nested vcpkg sub-build.
+  CMAKE_POLICY_VERSION_MINIMUM: "3.5"
 
 jobs:
   build:
