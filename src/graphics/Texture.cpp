@@ -10,6 +10,10 @@ namespace turbo {
         }
     }
 
+    Texture::~Texture() {
+        al_destroy_bitmap(this->bitmap);
+    }
+
     unsigned int Texture::get_width() const {
         return al_get_bitmap_width(this->bitmap);
     }

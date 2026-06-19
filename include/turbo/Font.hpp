@@ -18,6 +18,15 @@ namespace turbo {
          */
         Font(const Path& path, unsigned short size);
 
+        /**
+         * @brief Destroy the Font and free the underlying Allegro font
+         */
+        ~Font();
+
+        // A Font owns its Allegro font; copying would double-free it.
+        Font(const Font&) = delete;
+        Font& operator=(const Font&) = delete;
+
     #ifndef DOXYGEN_SHOUL_SKIP_THIS
         void* __get_font() const;
     #endif

@@ -35,10 +35,16 @@ namespace turbo {
          */
         Scene* get_active_scene() const;
 
+        /**
+         * @brief Name under which the active scene was registered (empty if none)
+         */
+        const std::string& get_active_scene_name() const;
+
         ONLYIMGUI(debug::SceneManagerDebug debug);
 
     private:
         Scene* active_scene = nullptr;
+        std::string active_scene_name = {};
         std::map<std::string, Scene*> scenes = {};
     };
 }

@@ -22,6 +22,7 @@ namespace turbo {
         Scene* tmp = this->scenes[name];
         tmp->load();
         this->active_scene = tmp;
+        this->active_scene_name = name;
         ONLYIMGUI(
             this->debug.scene_name = name;
             this->debug.set_root_gameobject(this->active_scene->get_root_gameobject());
@@ -30,5 +31,9 @@ namespace turbo {
 
     Scene* SceneManager::get_active_scene() const {
         return this->active_scene;
+    }
+
+    const std::string& SceneManager::get_active_scene_name() const {
+        return this->active_scene_name;
     }
 }

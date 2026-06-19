@@ -8,6 +8,7 @@ namespace turbo {
                      const unsigned short& border_offset) {
         this->texture = new Texture(path);
         this->size = tile_size;
+        this->tile_amount = tiles_nbr;
         this->margin = margin;
         this->border_offset = border_offset;
         this->init_sprites();
@@ -50,7 +51,7 @@ namespace turbo {
             for (unsigned short y = 0; y < this->tile_amount.y; y++) {
                 Sprite* to_add = new Sprite(this->texture);
                 to_add->rect.x = this->border_offset + x * (this->size.x + this->margin);
-                to_add->rect.x = this->border_offset + y * (this->size.y + this->margin);
+                to_add->rect.y = this->border_offset + y * (this->size.y + this->margin);
                 to_add->rect.width = this->size.x;
                 to_add->rect.height = this->size.y;
                 this->sprites[x].push_back(to_add);

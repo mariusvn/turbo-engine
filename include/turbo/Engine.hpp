@@ -3,12 +3,14 @@
 #define __TURBO_ENGINE_HPP__
 
 #include <string>
+#include <memory>
 #include <allegro5/allegro.h>
 #include "Path.hpp"
 #include "Logger.hpp"
 #include "GameObject.hpp"
 #include "Component.hpp"
 #include "graphics/Graphics.hpp"
+#include "graphics/ShaderLibrary.hpp"
 #include "Rectangle.hpp"
 #include "Scene.hpp"
 #include "Event.hpp"
@@ -19,8 +21,11 @@
 #include "Input.hpp"
 #include "DebugImgui.hpp"
 #include "RotativeBuffer.hpp"
+#include "editor/Editor.hpp"
 
 namespace turbo {
+    namespace script { class ScriptEngine; }
+
     /**
      * @brief Main engine class
      */
@@ -63,38 +68,71 @@ namespace turbo {
         void close();
 
         /**
+         * @brief Whether scene logic (component updates) is currently running.
+         * When false the engine still renders and processes input, but the
+         * active scene is not ticked — this is the editor "edit mode".
+         */
+        bool is_simulating() const { return this->simulating; }
+
+        /**
+         * @brief Enable/disable scene logic ticking (editor Play/Pause).
+         */
+        void set_simulating(bool value) { this->simulating = value; }
+
+        /**
          * @brief Engine version
          * @note This string is hard writter read only
          */
-        inline static const std::string version = "0.2";
+        inline static const std::string version = "0.3";
 
         static inline Engine* engine = nullptr;
 
         SceneManager scene_manager;
         static inline Input input = Input();
 
+        /**
+         * @brief Engine-wide registry of shader programs and materials.
+         * Populated once the GL context exists (see start_window).
+         */
+        ShaderLibrary shaders;
+
+        /**
+         * @brief The Lua scripting VM (owns the engine-API bindings).
+         */
+        script::ScriptEngine* scripts() const { return this->script_engine.get(); }
+
+        /**
+         * @brief Run a line of Lua against the shared state (editor REPL). Thin
+         * forwarder so callers don't need the sol2 headers.
+         */
+        void run_script_repl(const std::string& code);
+
         void on_update_tick();
         void on_render_tick();
+
+        /**
+         * @brief Register the built-in shader programs/materials. Requires a GL
+         * context, so it runs from start_window after the display is created.
+         */
+        void init_shader_library();
+
+        /**
+         * @brief Create the ImGui context, load the UI + monospace fonts and
+         * apply the theme. No-op when built without ImGui.
+         */
+        void init_imgui();
         Event<> update_tick = Event<>();
         Event<> render_tick = Event<>();
         Logger logger = Logger("Turbo Engine");
 
-        ONLYIMGUI(debug::EngineDebug debug = debug::EngineDebug(this));
+        ONLYIMGUI(editor::Editor editor = editor::Editor(this));
 
     private:
+        /** @brief Fixed logic timestep in milliseconds (60 Hz). */
+        static constexpr int UPDATE_DELTA_MS = 1000 / 60;
 
         /**
-         * @brief Timer for the render frames
-         */
-        ALLEGRO_TIMER* render_timer = nullptr;
-
-        /**
-         * @brief Render on next main loop turn
-         */
-        bool render = false;
-
-        /**
-         * @brief Timer for the logic frames
+         * @brief Timer driving the fixed-rate logic ticks (60 Hz).
          */
         ALLEGRO_TIMER* update_timer = nullptr;
 
@@ -102,11 +140,6 @@ namespace turbo {
          * @brief Update on the next main loop turn
          */
         bool update = false;
-
-        /**
-         * @brief Timer for the second counter
-         */
-        ALLEGRO_TIMER* fps_timer = nullptr;
 
         /**
          * @brief Main loop event queue
@@ -123,10 +156,16 @@ namespace turbo {
          */
         bool main_loop = true;
 
-        double _loop_time = 0;
-        double loop_time = 0;
-        unsigned long loop_amount = 0;
-        unsigned long fps_actualizer = clock();
+        /**
+         * @brief When false the active scene is not ticked (editor edit mode)
+         */
+        bool simulating = false;
+
+        /**
+         * @brief Lua VM, created at construction (forward-declared to keep sol2
+         * out of this header).
+         */
+        std::unique_ptr<script::ScriptEngine> script_engine;
     };
 }
 

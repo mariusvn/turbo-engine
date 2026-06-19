@@ -39,8 +39,51 @@ namespace turbo {
             this->buffer = new T[10]();
         }
         ~RotativeBuffer() {
-            //delete[] this->buffer; TODO fix this
+            delete[] this->buffer;
             this->buffer = nullptr;
+        }
+
+        RotativeBuffer(const RotativeBuffer& other): size(other.size), position(other.position) {
+            this->buffer = new T[other.size];
+            for (unsigned short i = 0; i < other.size; i++) {
+                this->buffer[i] = other.buffer[i];
+            }
+        }
+
+        RotativeBuffer& operator=(const RotativeBuffer& other) {
+            if (this == &other) {
+                return *this;
+            }
+            T* new_buffer = new T[other.size];
+            for (unsigned short i = 0; i < other.size; i++) {
+                new_buffer[i] = other.buffer[i];
+            }
+            delete[] this->buffer;
+            this->buffer = new_buffer;
+            this->size = other.size;
+            this->position = other.position;
+            return *this;
+        }
+
+        RotativeBuffer(RotativeBuffer&& other) noexcept
+            : buffer(other.buffer), size(other.size), position(other.position) {
+            other.buffer = nullptr;
+            other.size = 0;
+            other.position = 0;
+        }
+
+        RotativeBuffer& operator=(RotativeBuffer&& other) noexcept {
+            if (this == &other) {
+                return *this;
+            }
+            delete[] this->buffer;
+            this->buffer = other.buffer;
+            this->size = other.size;
+            this->position = other.position;
+            other.buffer = nullptr;
+            other.size = 0;
+            other.position = 0;
+            return *this;
         }
 
         /**
@@ -74,7 +117,7 @@ namespace turbo {
         }
         void turn() {
             this->position++;
-            if (this->position > size)
+            if (this->position >= size)
                 this->position = 0;
         }
         void set_first(const T &val) {
@@ -109,9 +152,10 @@ namespace turbo {
             if (position != 0)
                 strstr << this->buffer[position - 1];
             strstr << "}";
-            const char* ret = strstr.str().c_str();
-            ret = strdup(ret);
-            return ret;
+            // Keep the string alive in a named variable: calling c_str() on the
+            // temporary returned by str() would dangle once the statement ends.
+            const std::string str = strstr.str();
+            return strdup(str.c_str());
         }
 
     protected:

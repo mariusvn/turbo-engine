@@ -10,4 +10,7 @@ build.bat
 build.sh
 CMakeSettings.json
 cmake-build-*
+build/
+build*/
+vcpkg_cache/
 *.ogg

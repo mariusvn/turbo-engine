@@ -10,6 +10,10 @@ namespace turbo {
         }
     }
 
+    Font::~Font() {
+        al_destroy_font(this->font);
+    }
+
     void* Font::__get_font() const {
         return this->font;
     }

@@ -1,4 +1,6 @@
 #include <turbo/GameObject.hpp>
+#include <turbo/graphics/Material.hpp>
+#include <turbo/graphics/Shader.hpp>
 #include <stdexcept>
 #include <iostream>
 #include <algorithm>
@@ -16,10 +18,15 @@ namespace turbo {
         }
     }
     GameObject::~GameObject() {
+        // A GameObject owns its subtree: destroying it recursively destroys its
+        // children (previously leaked), its drawable and its components.
+        for (GameObject* child : this->childs)
+            delete child;
+        this->childs.clear();
         delete this->drawable;
         for (Component* comp: this->components)
             delete comp;
-        this->components = std::vector<Component*>();
+        this->components.clear();
     }
 
     void GameObject::add_component(Component* comp) {
@@ -36,20 +43,25 @@ namespace turbo {
     void GameObject::render(void* p_transform) {
         if (this->show) {
             ALLEGRO_TRANSFORM* transform = this->get_transformer();
-            ALLEGRO_TRANSFORM* t_holder = new ALLEGRO_TRANSFORM();
-            al_copy_transform(t_holder, transform);
-            al_use_transform(t_holder);
+            ALLEGRO_TRANSFORM t_holder;
+            al_copy_transform(&t_holder, transform);
             if (p_transform) {
-                al_compose_transform(t_holder, static_cast<ALLEGRO_TRANSFORM*>(p_transform));
+                al_compose_transform(&t_holder, static_cast<ALLEGRO_TRANSFORM*>(p_transform));
             }
-            al_use_transform(t_holder);
+            al_use_transform(&t_holder);
             if (this->drawable) {
+                if (this->material)
+                    this->material->bind_at(static_cast<float>(al_get_time()));
                 this->drawable->draw();
+                if (this->material) {
+                    // Restore the scene-wide default shader for the next object.
+                    if (Shader* def = Shader::get_active_shader())
+                        def->use();
+                }
             }
             for (GameObject *go : this->childs) {
-                go->render(t_holder);
+                go->render(&t_holder);
             }
-            delete t_holder;
         }
     }
 
@@ -63,11 +75,50 @@ namespace turbo {
     }
 
     void GameObject::set_drawable(Drawable* drawable) {
+        if (this->drawable != drawable)
+            delete this->drawable;
         this->drawable = drawable;
     }
 
     Drawable* GameObject::get_drawable() const {
         return this->drawable;
+    }
+
+    void GameObject::set_material(Material* material) {
+        this->material = material;
+    }
+
+    Material* GameObject::get_material() const {
+        return this->material;
+    }
+
+    GameObject* GameObject::get_parent() const {
+        return this->parent;
+    }
+
+    void GameObject::attach_to(GameObject* new_parent) {
+        if (this->parent == new_parent)
+            return;
+        if (this->parent) {
+            std::vector<GameObject*>& siblings = this->parent->childs;
+            siblings.erase(std::remove(siblings.begin(), siblings.end(), this), siblings.end());
+        }
+        this->parent = new_parent;
+        if (new_parent)
+            new_parent->childs.push_back(this);
+    }
+
+    bool GameObject::set_name(const std::string& new_name) {
+        if (new_name.empty())
+            return false;
+        if (this->parent) {
+            for (GameObject* sibling : this->parent->childs) {
+                if (sibling != this && sibling->name == new_name)
+                    return false;
+            }
+        }
+        this->name = new_name;
+        return true;
     }
 
     std::string GameObject::get_name() const {

@@ -27,6 +27,10 @@ namespace turbo {
          */
         unsigned int get_height() const;
         /**
+         * @brief Get the source texture (not owned by the sprite)
+         */
+        Texture* get_texture() const { return this->texture; }
+        /**
          * @brief Target texture region
          */
         Rectangle<> rect = Rectangle<>();

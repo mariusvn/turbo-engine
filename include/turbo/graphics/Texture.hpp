@@ -19,6 +19,15 @@ namespace turbo {
         Texture(Path* path);
 
         /**
+         * @brief Destroy the Texture and free the underlying bitmap
+         */
+        ~Texture();
+
+        // A Texture owns its Allegro bitmap; copying would double-free it.
+        Texture(const Texture&) = delete;
+        Texture& operator=(const Texture&) = delete;
+
+        /**
          * @brief Get the width of the texture
          * @return unsigned int width
          */

@@ -25,7 +25,7 @@ namespace debug
         if (ImGui::Button("Scene Manager")) {
             this->engine->scene_manager.debug.open();
         }
-        delete fps_history;
+        delete[] fps_history;
         ImGui::End();
     }
 

@@ -49,7 +49,7 @@ if(TURBO_ENABLE_IMGUI)
     list(APPEND VCPKG_MANIFEST_FEATURES "imgui")
 endif()
 
-project(turbo_engine VERSION 0.2.0 LANGUAGES CXX)
+project(turbo_engine VERSION 0.3.0 LANGUAGES CXX)
 
 # ---------------------------------------------------------------------------
 #  Global settings
@@ -73,6 +73,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 #  Dependencies (resolved by vcpkg)
 # ---------------------------------------------------------------------------
 find_package(Allegro CONFIG REQUIRED)
+find_package(Lua REQUIRED)
+find_package(sol2 CONFIG REQUIRED)
 if(TURBO_ENABLE_IMGUI)
     find_package(imgui CONFIG REQUIRED)
 endif()
@@ -96,13 +98,19 @@ set(TURBO_SOURCES
     src/debug_menus/EngineDebug.cpp
     src/debug_menus/GameObjectDebug.cpp
     src/debug_menus/SceneManagerDebug.cpp
+    src/editor/Editor.cpp
+    src/editor/Gizmo.cpp
     src/graphics/CircleShape.cpp
+    src/graphics/Material.cpp
     src/graphics/RectangleShape.cpp
     src/graphics/Shader.cpp
+    src/graphics/ShaderLibrary.cpp
     src/graphics/Sprite.cpp
     src/graphics/Text.cpp
     src/graphics/Texture.cpp
     src/graphics/Tileset.cpp
+    src/script/ScriptEngine.cpp
+    src/script/LuaComponent.cpp
     src/sound/MusicStream.cpp
     src/sound/Sound.cpp
 )
@@ -126,6 +134,10 @@ target_link_libraries(turbo_engine PUBLIC
     Allegro::allegro_audio
     Allegro::allegro_acodec
 )
+
+# Lua scripting (sol2 is header-only; it needs the Lua library + headers).
+target_link_libraries(turbo_engine PUBLIC sol2 ${LUA_LIBRARIES})
+target_include_directories(turbo_engine PUBLIC ${LUA_INCLUDE_DIR})
 
 # ---------------------------------------------------------------------------
 #  Dear ImGui debug overlay (optional)

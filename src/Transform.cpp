@@ -28,10 +28,6 @@ namespace turbo {
             this->center.y = centerY;
         }
 
-    Transform::~Transform() {
-        delete this->transform;
-    }
-
     void Transform::translate(float x, float y) {
         this->position.x += x;
         this->position.y += y;
@@ -112,13 +108,13 @@ namespace turbo {
 
     ALLEGRO_TRANSFORM *Transform::get_transformer() {
         if (this->property_has_changed) {
-            al_identity_transform(transform);
-            al_scale_transform(transform, this->scale.x, this->scale.y);
-            al_translate_transform(transform, -1 * this->center.x, -1 * this->center.y);
-            al_rotate_transform(transform, DEGTORAD(this->angle));
-            al_translate_transform(transform, this->center.x + this->position.x, this->center.y + this->position.y);
+            al_identity_transform(&transform);
+            al_scale_transform(&transform, this->scale.x, this->scale.y);
+            al_translate_transform(&transform, -1 * this->center.x, -1 * this->center.y);
+            al_rotate_transform(&transform, DEGTORAD(this->angle));
+            al_translate_transform(&transform, this->center.x + this->position.x, this->center.y + this->position.y);
             this->property_has_changed = false;
         }
-        return transform;
+        return &transform;
     }
 }

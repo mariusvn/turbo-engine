@@ -26,7 +26,7 @@ namespace turbo {
         Transform() = default;
         Transform(const Vector2<float> &position, float angle = 0, const Vector2<float> &scale = Vector2<float>(1, 1), const Vector2<int> &center = Vector2<int>());
         Transform(float x, float y = 0, int scaleX = 1, int scaleY = 1, float angle = 0, int centerX = 0, int centerY = 0);
-        ~Transform();
+        ~Transform() = default;
 
         /**
          * @brief Translate the object in 2D
@@ -127,7 +127,7 @@ namespace turbo {
         Vector2<float> position = Vector2<float>();
         Vector2<float> scale = Vector2<float>(1, 1);
         Vector2<int> center = Vector2<int>();
-        ALLEGRO_TRANSFORM *transform = new ALLEGRO_TRANSFORM();
+        ALLEGRO_TRANSFORM transform{};
         bool property_has_changed = true;
         ALLEGRO_TRANSFORM *get_transformer();
         static inline ALLEGRO_TRANSFORM default_transform = ALLEGRO_TRANSFORM();
