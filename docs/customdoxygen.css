@@ -221,3 +221,33 @@ dl.todo, dl.remark { border-left: 4px solid var(--tb-num) !important; }
 ::-webkit-scrollbar-track { background: var(--tb-bg); }
 ::-webkit-scrollbar-thumb { background: var(--tb-surface-3); border-radius: 6px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--tb-accent); }
+
+/* ===========================================================================
+   Fixes — doxygen draws section/header "end caps" with box-shadows that assume
+   a pure-black page background, which leaves black/yellow squares on our warm
+   background. Remove them, and align the page title with the content.
+   =========================================================================== */
+h1.groupheader, h2.groupheader, div.groupHeader, hr,
+.memtitle, .memitem, .memproto, dl.reflist dt {
+    box-shadow: none !important;
+}
+hr { height: 0 !important; }
+.memtitle { background: var(--tb-surface-2) !important; }
+
+/* breadcrumb: flat, no black background or rotated arrow caps */
+#nav-path { background: var(--tb-surface) !important; }
+.navpath li.navelem { background: var(--tb-surface) !important; }
+.navpath li.navelem::after, .navpath li.navelem::before { display: none !important; }
+.navpath li.navelem a, .navpath li.navelem a:visited {
+    color: var(--tb-text-dim) !important; text-shadow: none !important;
+}
+.navpath li.navelem a:hover { color: var(--tb-accent) !important; }
+
+/* page title aligned with .contents (both padded 18px) */
+div.header {
+    background: var(--tb-bg) !important;
+    padding: 14px 18px 4px 18px !important;
+    border-bottom: 1px solid var(--tb-border) !important;
+}
+div.headertitle { padding: 0 !important; }
+.headertitle .title, div.title { margin: 0 !important; }

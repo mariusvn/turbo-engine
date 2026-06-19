@@ -1,6 +1,7 @@
 var classturbo_1_1_engine =
 [
     [ "Engine", "classturbo_1_1_engine.html#ae0267aca6f819bc82d398964a851be51", null ],
+    [ "~Engine", "classturbo_1_1_engine.html#a9db0c6b9ee3aef5cd86a974163b3e91b", null ],
     [ "close", "classturbo_1_1_engine.html#a9f2223519a1eab8bcaea56ed6b93dc6f", null ],
     [ "force_logic", "classturbo_1_1_engine.html#a460af8998d8bd6c3db87286ba6a68bf8", null ],
     [ "force_render", "classturbo_1_1_engine.html#a461a9a2bc961fc65ce438494c4b77dfc", null ],
@@ -8,9 +9,22 @@ var classturbo_1_1_engine =
     [ "init_shader_library", "classturbo_1_1_engine.html#a67ad354bf63e0a4c81d6944a77c19dfb", null ],
     [ "is_simulating", "classturbo_1_1_engine.html#a8283b6394d66defacc705967dfd00387", null ],
     [ "loop", "classturbo_1_1_engine.html#a118c4861f44b0dbe5e92606b4ad325c8", null ],
+    [ "on_render_tick", "classturbo_1_1_engine.html#af0a515827460cd5f55adf65a869891a0", null ],
+    [ "on_update_tick", "classturbo_1_1_engine.html#a28d85f9657889e1c01500e44ae59234c", null ],
+    [ "ONLYIMGUI", "classturbo_1_1_engine.html#ac1f5671e9583e0d65ebee09b2cea17e0", null ],
     [ "run_script_repl", "classturbo_1_1_engine.html#af17e0c04bdf2a000f20c12ab16eeb9de", null ],
     [ "scripts", "classturbo_1_1_engine.html#afecb227304e276a0cdbfbd84d58b40f9", null ],
     [ "set_simulating", "classturbo_1_1_engine.html#a8103f832b057f646f5ba09d300fca854", null ],
+    [ "set_window_size", "classturbo_1_1_engine.html#ad7fb8263f3ee2e31090bac69ea441e15", null ],
+    [ "set_window_title", "classturbo_1_1_engine.html#ac3f585811823c96441fefb78525a4ed7", null ],
+    [ "start_window", "classturbo_1_1_engine.html#ac69dbd1798e7ccfac959a270749fc522", null ],
+    [ "stop_window", "classturbo_1_1_engine.html#a0adf9186f1ae4383a591ed43b292bdc8", null ],
+    [ "engine", "classturbo_1_1_engine.html#a1f64dc1a42a1086c0f8e74d783f45d66", null ],
+    [ "input", "classturbo_1_1_engine.html#a509c9610ccf2873ba1b35cda6d53cb93", null ],
+    [ "logger", "classturbo_1_1_engine.html#a902ea25721dfda03698d3bf7f3f89240", null ],
+    [ "render_tick", "classturbo_1_1_engine.html#a48e9d9d98bbbdf6544c2c937bb6ce63a", null ],
+    [ "scene_manager", "classturbo_1_1_engine.html#afc195c7e42fa56ea6b488e7df51641e7", null ],
     [ "shaders", "classturbo_1_1_engine.html#af9fe1978098889a2784868f4d2f21146", null ],
+    [ "update_tick", "classturbo_1_1_engine.html#a35851bd3f46b88bc4826be106628b15d", null ],
     [ "version", "classturbo_1_1_engine.html#acccd8c2ce7145cf2800ce5ebc24a6181", null ]
 ];

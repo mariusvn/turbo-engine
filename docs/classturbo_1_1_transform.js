@@ -1,9 +1,14 @@
 var classturbo_1_1_transform =
 [
+    [ "Transform", "classturbo_1_1_transform.html#a7e523190c02a6d78465cc01b33f2edea", null ],
+    [ "Transform", "classturbo_1_1_transform.html#a3dd610e56173688161155f92392d46f5", null ],
+    [ "Transform", "classturbo_1_1_transform.html#a8013369ad75bb517894d15108aa44649", null ],
+    [ "~Transform", "classturbo_1_1_transform.html#a6259441a70079488b974ef30a8df912c", null ],
     [ "get_angle", "classturbo_1_1_transform.html#a025f66f672b971dc473c632b2f4054ec", null ],
     [ "get_center", "classturbo_1_1_transform.html#af7c9eb96b9ecc4d48346105543a665a5", null ],
     [ "get_position", "classturbo_1_1_transform.html#a094ebd7956db223289847745cc91710c", null ],
     [ "get_scale", "classturbo_1_1_transform.html#adda4bda3cad4f56d4341a0a5c7098a99", null ],
+    [ "get_transformer", "classturbo_1_1_transform.html#a4bee71daeee27e85438b1226ccecded3", null ],
     [ "rotate", "classturbo_1_1_transform.html#acd220679ba39c1ace9fe9579f198dc9e", null ],
     [ "set_center", "classturbo_1_1_transform.html#af8d66b912a1721fe3c43dd671be2b7c7", null ],
     [ "set_center", "classturbo_1_1_transform.html#a72c1e4e3c711e19922dfcde383d0d3a2", null ],
@@ -14,5 +19,11 @@ var classturbo_1_1_transform =
     [ "set_scale", "classturbo_1_1_transform.html#ad69cb45c941b49ba07ab0d9d44f3d84a", null ],
     [ "translate", "classturbo_1_1_transform.html#ad45f23449c585e31178232831ab681da", null ],
     [ "translate", "classturbo_1_1_transform.html#a63c37bae0c7e17244ce69e235bac5cce", null ],
-    [ "angle", "classturbo_1_1_transform.html#a39cb0fd02d274d0b72977d013f6a7136", null ]
+    [ "angle", "classturbo_1_1_transform.html#a39cb0fd02d274d0b72977d013f6a7136", null ],
+    [ "center", "classturbo_1_1_transform.html#a108d722aba39bf70a2c3411502e7f5dd", null ],
+    [ "default_transform", "classturbo_1_1_transform.html#a4595b7fbcb301a1e2de107a978084ce9", null ],
+    [ "position", "classturbo_1_1_transform.html#a06a26fba0227905fa50f42c01a06c8c8", null ],
+    [ "property_has_changed", "classturbo_1_1_transform.html#ad7330dc3e8091d248f69d463dd706cec", null ],
+    [ "scale", "classturbo_1_1_transform.html#afac989383789908376e43c1aefc347c1", null ],
+    [ "transform", "classturbo_1_1_transform.html#aa59d31a90c4f950353504856597d3c15", null ]
 ];

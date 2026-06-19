@@ -77,80 +77,90 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_logger_8hpp_s
   <div class="headertitle"><div class="title">Logger.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_logger_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef __TURBO_LOGGER_HPP__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define __TURBO_LOGGER_HPP__</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>turbo {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceturbo.html">turbo</a> {</div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">Logger</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">   25</a></span>        <a class="code hl_function" href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">Logger</a>(std::string name): name(name) {}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">   25</a></span>        <a class="code hl_function" href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">Logger</a>(std::string <a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a>): <a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a>(<a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a>) {}</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span> ... Rest&gt;</div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#ac359573e01a687455e8233a333696c40">   31</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ac359573e01a687455e8233a333696c40">info</a>(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;name &lt;&lt; <span class="stringliteral">&quot;][info] &quot;</span> &lt;&lt; data;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            Logger::print(rest...);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a> &lt;&lt; <span class="stringliteral">&quot;][info] &quot;</span> &lt;&lt; data;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(rest...);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ac359573e01a687455e8233a333696c40">info</a>() { Logger::print(); }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#ad173edabaaeadb0cad96d53376db3177">   35</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ad173edabaaeadb0cad96d53376db3177">info</a>() { <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(); }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span> ... Rest&gt;</div>
 <div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#ae52404339d2ec15bac54bcf28bda4961">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ae52404339d2ec15bac54bcf28bda4961">warn</a>(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;name &lt;&lt; <span class="stringliteral">&quot;][warn] &quot;</span> &lt;&lt; data;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            Logger::print(rest...);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a> &lt;&lt; <span class="stringliteral">&quot;][warn] &quot;</span> &lt;&lt; data;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(rest...);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ae52404339d2ec15bac54bcf28bda4961">warn</a>() { Logger::print(); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#ada54c072b655d81f24216c84801b6b56">   45</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ada54c072b655d81f24216c84801b6b56">warn</a>() { <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(); }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span> ... Rest&gt;</div>
 <div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a3f809a8572057a96e63624a9dbeadcb9">   51</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a3f809a8572057a96e63624a9dbeadcb9">error</a>(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;name &lt;&lt; <span class="stringliteral">&quot;][error] &quot;</span> &lt;&lt; data;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            Logger::print(rest...);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a> &lt;&lt; <span class="stringliteral">&quot;][error] &quot;</span> &lt;&lt; data;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(rest...);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a3f809a8572057a96e63624a9dbeadcb9">error</a>() { Logger::print(); }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a476a8ee4414ecdc50cae0af2f9edf3c1">   55</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a476a8ee4414ecdc50cae0af2f9edf3c1">error</a>() { <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(); }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span> ... Rest&gt;</div>
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#ad45a24c6304d4e896a07d4dffc0e0cc9">   61</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ad45a24c6304d4e896a07d4dffc0e0cc9">log</a>(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[Generic] &quot;</span> &lt;&lt; data;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            Logger::print(rest...);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(rest...);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#ad45a24c6304d4e896a07d4dffc0e0cc9">log</a>() { std::cout &lt;&lt; std::endl; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a9e0621eb576d826b6ab34bb1a2f0cf49">   65</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a9e0621eb576d826b6ab34bb1a2f0cf49">log</a>() { std::cout &lt;&lt; std::endl; }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span> ... Rest&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> print(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a63e915c5fbdb91521a93808cc7f87420">   69</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a63e915c5fbdb91521a93808cc7f87420">print</a>(First data, <span class="keyword">const</span> Rest&amp;... rest) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; data;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            Logger::print(rest...);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">Logger::print</a>(rest...);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> print() { std::cout &lt;&lt; std::endl; }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::string name;</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">   73</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">print</a>() { std::cout &lt;&lt; std::endl; }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">   74</a></span>        std::string <a class="code hl_variable" href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">name</a>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_a389918be863bcf9d26f54e09c82af20a"><div class="ttname"><a href="classturbo_1_1_logger.html#a389918be863bcf9d26f54e09c82af20a">turbo::Logger::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> Logger.hpp:74</div></div>
 <div class="ttc" id="aclassturbo_1_1_logger_html_a3f809a8572057a96e63624a9dbeadcb9"><div class="ttname"><a href="classturbo_1_1_logger.html#a3f809a8572057a96e63624a9dbeadcb9">turbo::Logger::error</a></div><div class="ttdeci">void error(First data, const Rest &amp;... rest)</div><div class="ttdoc">Log an error-level text.</div><div class="ttdef"><b>Definition</b> Logger.hpp:51</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_a476a8ee4414ecdc50cae0af2f9edf3c1"><div class="ttname"><a href="classturbo_1_1_logger.html#a476a8ee4414ecdc50cae0af2f9edf3c1">turbo::Logger::error</a></div><div class="ttdeci">void error()</div><div class="ttdef"><b>Definition</b> Logger.hpp:55</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_a502b7374d3d8f6cfc986a5fc4521453f"><div class="ttname"><a href="classturbo_1_1_logger.html#a502b7374d3d8f6cfc986a5fc4521453f">turbo::Logger::print</a></div><div class="ttdeci">static void print()</div><div class="ttdef"><b>Definition</b> Logger.hpp:73</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_a63e915c5fbdb91521a93808cc7f87420"><div class="ttname"><a href="classturbo_1_1_logger.html#a63e915c5fbdb91521a93808cc7f87420">turbo::Logger::print</a></div><div class="ttdeci">static void print(First data, const Rest &amp;... rest)</div><div class="ttdef"><b>Definition</b> Logger.hpp:69</div></div>
 <div class="ttc" id="aclassturbo_1_1_logger_html_a7dcc30c3588f9e6bb0297f644f318048"><div class="ttname"><a href="classturbo_1_1_logger.html#a7dcc30c3588f9e6bb0297f644f318048">turbo::Logger::Logger</a></div><div class="ttdeci">Logger(std::string name)</div><div class="ttdoc">Create a new logger.</div><div class="ttdef"><b>Definition</b> Logger.hpp:25</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_a9e0621eb576d826b6ab34bb1a2f0cf49"><div class="ttname"><a href="classturbo_1_1_logger.html#a9e0621eb576d826b6ab34bb1a2f0cf49">turbo::Logger::log</a></div><div class="ttdeci">static void log()</div><div class="ttdef"><b>Definition</b> Logger.hpp:65</div></div>
 <div class="ttc" id="aclassturbo_1_1_logger_html_ac359573e01a687455e8233a333696c40"><div class="ttname"><a href="classturbo_1_1_logger.html#ac359573e01a687455e8233a333696c40">turbo::Logger::info</a></div><div class="ttdeci">void info(First data, const Rest &amp;... rest)</div><div class="ttdoc">Log an info-level text.</div><div class="ttdef"><b>Definition</b> Logger.hpp:31</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_ad173edabaaeadb0cad96d53376db3177"><div class="ttname"><a href="classturbo_1_1_logger.html#ad173edabaaeadb0cad96d53376db3177">turbo::Logger::info</a></div><div class="ttdeci">void info()</div><div class="ttdef"><b>Definition</b> Logger.hpp:35</div></div>
 <div class="ttc" id="aclassturbo_1_1_logger_html_ad45a24c6304d4e896a07d4dffc0e0cc9"><div class="ttname"><a href="classturbo_1_1_logger.html#ad45a24c6304d4e896a07d4dffc0e0cc9">turbo::Logger::log</a></div><div class="ttdeci">static void log(First data, const Rest &amp;... rest)</div><div class="ttdoc">Log a generic-level text.</div><div class="ttdef"><b>Definition</b> Logger.hpp:61</div></div>
+<div class="ttc" id="aclassturbo_1_1_logger_html_ada54c072b655d81f24216c84801b6b56"><div class="ttname"><a href="classturbo_1_1_logger.html#ada54c072b655d81f24216c84801b6b56">turbo::Logger::warn</a></div><div class="ttdeci">void warn()</div><div class="ttdef"><b>Definition</b> Logger.hpp:45</div></div>
 <div class="ttc" id="aclassturbo_1_1_logger_html_ae52404339d2ec15bac54bcf28bda4961"><div class="ttname"><a href="classturbo_1_1_logger.html#ae52404339d2ec15bac54bcf28bda4961">turbo::Logger::warn</a></div><div class="ttdeci">void warn(First data, const Rest &amp;... rest)</div><div class="ttdoc">Log a warn-level text.</div><div class="ttdef"><b>Definition</b> Logger.hpp:41</div></div>
+<div class="ttc" id="anamespaceturbo_html"><div class="ttname"><a href="namespaceturbo.html">turbo</a></div><div class="ttdef"><b>Definition</b> Component.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>turbo</b></li><li class="navelem"><b>Logger.hpp</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a href="_logger_8hpp.html">Logger.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

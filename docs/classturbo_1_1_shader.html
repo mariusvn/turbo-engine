@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
   <div class="headertitle"><div class="title">turbo::Shader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A GLSL shader program (vertex + pixel) with build-error reporting and uniform setters. Usually owned and shared through a <a class="el" href="classturbo_1_1_shader_library.html" title="Owns named shader programs and materials.">ShaderLibrary</a> and referenced by a <a class="el" href="classturbo_1_1_material.html" title="A shader program plus a named set of uniform values.">Material</a> rather than used directly.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_8hpp_source.html">Shader.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for turbo::Shader:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -89,34 +94,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a90f876b1a2d3415b584f175644630910" id="r_a90f876b1a2d3415b584f175644630910"><td class="memItemLeft"><a id="a90f876b1a2d3415b584f175644630910" name="a90f876b1a2d3415b584f175644630910"></a>
-&#160;</td><td class="memItemRight"><b>Shader</b> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;pixel_shader_path, const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;vertex_shader_path)</td></tr>
-<tr class="memitem:a52b3369822d72ae9a6f83bae6176fe2c" id="r_a52b3369822d72ae9a6f83bae6176fe2c"><td class="memItemLeft"><a id="a52b3369822d72ae9a6f83bae6176fe2c" name="a52b3369822d72ae9a6f83bae6176fe2c"></a>
-bool&#160;</td><td class="memItemRight"><b>valid</b> () const</td></tr>
-<tr class="memdesc:a52b3369822d72ae9a6f83bae6176fe2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the last build (compile + link) succeeded. <br /></td></tr>
-<tr class="memitem:afff31e77fd9a2f4c22da17a586ed6543" id="r_afff31e77fd9a2f4c22da17a586ed6543"><td class="memItemLeft"><a id="afff31e77fd9a2f4c22da17a586ed6543" name="afff31e77fd9a2f4c22da17a586ed6543"></a>
-const std::string &amp;&#160;</td><td class="memItemRight"><b>log</b> () const</td></tr>
-<tr class="memdesc:afff31e77fd9a2f4c22da17a586ed6543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver log of the last build (empty on success on most drivers). <br /></td></tr>
-<tr class="memitem:a2120df6668454916c3e26790496bce03" id="r_a2120df6668454916c3e26790496bce03"><td class="memItemLeft"><a id="a2120df6668454916c3e26790496bce03" name="a2120df6668454916c3e26790496bce03"></a>
-bool&#160;</td><td class="memItemRight"><b>use</b> () const</td></tr>
-<tr class="memdesc:a2120df6668454916c3e26790496bce03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind this shader as the active one on the current display. <br /></td></tr>
-<tr class="memitem:a18cdd2f2bbb82fe75ae49f31823edec6" id="r_a18cdd2f2bbb82fe75ae49f31823edec6"><td class="memItemLeft"><a id="a18cdd2f2bbb82fe75ae49f31823edec6" name="a18cdd2f2bbb82fe75ae49f31823edec6"></a>
-ALLEGRO_SHADER *&#160;</td><td class="memItemRight"><b>native</b> () const</td></tr>
-<tr class="memdesc:a18cdd2f2bbb82fe75ae49f31823edec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying Allegro shader handle. <br /></td></tr>
-<tr class="memitem:aca0ca816d376bf6aac165a77be539850" id="r_aca0ca816d376bf6aac165a77be539850"><td class="memItemLeft"><a id="aca0ca816d376bf6aac165a77be539850" name="aca0ca816d376bf6aac165a77be539850"></a>
-bool&#160;</td><td class="memItemRight"><b>set_float</b> (const char *name, float v)</td></tr>
-<tr class="memitem:aa0dd541878079c59d2257f1fc3302d95" id="r_aa0dd541878079c59d2257f1fc3302d95"><td class="memItemLeft"><a id="aa0dd541878079c59d2257f1fc3302d95" name="aa0dd541878079c59d2257f1fc3302d95"></a>
-bool&#160;</td><td class="memItemRight"><b>set_int</b> (const char *name, int v)</td></tr>
-<tr class="memitem:abb53e5c06f176f92bd8f7198dee3d41e" id="r_abb53e5c06f176f92bd8f7198dee3d41e"><td class="memItemLeft"><a id="abb53e5c06f176f92bd8f7198dee3d41e" name="abb53e5c06f176f92bd8f7198dee3d41e"></a>
-bool&#160;</td><td class="memItemRight"><b>set_bool</b> (const char *name, bool v)</td></tr>
-<tr class="memitem:a8e07e44203b02276b9475ddc4bd9c2db" id="r_a8e07e44203b02276b9475ddc4bd9c2db"><td class="memItemLeft"><a id="a8e07e44203b02276b9475ddc4bd9c2db" name="a8e07e44203b02276b9475ddc4bd9c2db"></a>
-bool&#160;</td><td class="memItemRight"><b>set_vec2</b> (const char *name, float x, float y)</td></tr>
-<tr class="memitem:a154cc3c2b797dbcf51b5934cf311e8f7" id="r_a154cc3c2b797dbcf51b5934cf311e8f7"><td class="memItemLeft"><a id="a154cc3c2b797dbcf51b5934cf311e8f7" name="a154cc3c2b797dbcf51b5934cf311e8f7"></a>
-bool&#160;</td><td class="memItemRight"><b>set_vec3</b> (const char *name, float x, float y, float z)</td></tr>
-<tr class="memitem:a06e5ccc8b98b7b81879b65f157df82ef" id="r_a06e5ccc8b98b7b81879b65f157df82ef"><td class="memItemLeft"><a id="a06e5ccc8b98b7b81879b65f157df82ef" name="a06e5ccc8b98b7b81879b65f157df82ef"></a>
-bool&#160;</td><td class="memItemRight"><b>set_vec4</b> (const char *name, float x, float y, float z, float w)</td></tr>
-<tr class="memitem:a51af34429527265c015a109f0575c7d3" id="r_a51af34429527265c015a109f0575c7d3"><td class="memItemLeft"><a id="a51af34429527265c015a109f0575c7d3" name="a51af34429527265c015a109f0575c7d3"></a>
-bool&#160;</td><td class="memItemRight"><b>set_sampler</b> (const char *name, <a class="el" href="classturbo_1_1_texture.html">Texture</a> *texture, int unit)</td></tr>
+<tr class="memitem:a90f876b1a2d3415b584f175644630910" id="r_a90f876b1a2d3415b584f175644630910"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;pixel_shader_path, const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;vertex_shader_path)</td></tr>
+<tr class="memitem:abf1246b3cbf96a34564e40bb17a4a5e8" id="r_abf1246b3cbf96a34564e40bb17a4a5e8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abf1246b3cbf96a34564e40bb17a4a5e8">Shader</a> ()</td></tr>
+<tr class="memitem:a849428f379bba30a8cf98a90a19350b1" id="r_a849428f379bba30a8cf98a90a19350b1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a849428f379bba30a8cf98a90a19350b1">~Shader</a> ()</td></tr>
+<tr class="memitem:a52b3369822d72ae9a6f83bae6176fe2c" id="r_a52b3369822d72ae9a6f83bae6176fe2c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a52b3369822d72ae9a6f83bae6176fe2c">valid</a> () const</td></tr>
+<tr class="memdesc:a52b3369822d72ae9a6f83bae6176fe2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the last build (compile + link) succeeded.  <br /></td></tr>
+<tr class="memitem:afff31e77fd9a2f4c22da17a586ed6543" id="r_afff31e77fd9a2f4c22da17a586ed6543"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afff31e77fd9a2f4c22da17a586ed6543">log</a> () const</td></tr>
+<tr class="memdesc:afff31e77fd9a2f4c22da17a586ed6543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver log of the last build (empty on success on most drivers).  <br /></td></tr>
+<tr class="memitem:a2120df6668454916c3e26790496bce03" id="r_a2120df6668454916c3e26790496bce03"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2120df6668454916c3e26790496bce03">use</a> () const</td></tr>
+<tr class="memdesc:a2120df6668454916c3e26790496bce03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind this shader as the active one on the current display.  <br /></td></tr>
+<tr class="memitem:a18cdd2f2bbb82fe75ae49f31823edec6" id="r_a18cdd2f2bbb82fe75ae49f31823edec6"><td class="memItemLeft">ALLEGRO_SHADER *&#160;</td><td class="memItemRight"><a class="el" href="#a18cdd2f2bbb82fe75ae49f31823edec6">native</a> () const</td></tr>
+<tr class="memdesc:a18cdd2f2bbb82fe75ae49f31823edec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying Allegro shader handle.  <br /></td></tr>
+<tr class="memitem:aca0ca816d376bf6aac165a77be539850" id="r_aca0ca816d376bf6aac165a77be539850"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aca0ca816d376bf6aac165a77be539850">set_float</a> (const char *name, float v)</td></tr>
+<tr class="memitem:aa0dd541878079c59d2257f1fc3302d95" id="r_aa0dd541878079c59d2257f1fc3302d95"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa0dd541878079c59d2257f1fc3302d95">set_int</a> (const char *name, int v)</td></tr>
+<tr class="memitem:abb53e5c06f176f92bd8f7198dee3d41e" id="r_abb53e5c06f176f92bd8f7198dee3d41e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abb53e5c06f176f92bd8f7198dee3d41e">set_bool</a> (const char *name, bool v)</td></tr>
+<tr class="memitem:a8e07e44203b02276b9475ddc4bd9c2db" id="r_a8e07e44203b02276b9475ddc4bd9c2db"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8e07e44203b02276b9475ddc4bd9c2db">set_vec2</a> (const char *name, float x, float y)</td></tr>
+<tr class="memitem:a154cc3c2b797dbcf51b5934cf311e8f7" id="r_a154cc3c2b797dbcf51b5934cf311e8f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a154cc3c2b797dbcf51b5934cf311e8f7">set_vec3</a> (const char *name, float x, float y, float z)</td></tr>
+<tr class="memitem:a06e5ccc8b98b7b81879b65f157df82ef" id="r_a06e5ccc8b98b7b81879b65f157df82ef"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a06e5ccc8b98b7b81879b65f157df82ef">set_vec4</a> (const char *name, float x, float y, float z, float w)</td></tr>
+<tr class="memitem:a51af34429527265c015a109f0575c7d3" id="r_a51af34429527265c015a109f0575c7d3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a51af34429527265c015a109f0575c7d3">set_sampler</a> (const char *name, <a class="el" href="classturbo_1_1_texture.html">Texture</a> *texture, int unit)</td></tr>
 <tr class="memitem:a516e40f5c5cacc2f35713c46b86b964c" id="r_a516e40f5c5cacc2f35713c46b86b964c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a516e40f5c5cacc2f35713c46b86b964c">set_vertex_shader</a> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;vertex_shader_path)</td></tr>
 <tr class="memitem:a2084edc41c1587251a9a0b56992dc757" id="r_a2084edc41c1587251a9a0b56992dc757"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2084edc41c1587251a9a0b56992dc757">set_pixel_shader</a> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;pixel_shader_path)</td></tr>
 <tr class="memitem:aab3f60231d668edd41ce0b3b0d6b20b5" id="r_aab3f60231d668edd41ce0b3b0d6b20b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab3f60231d668edd41ce0b3b0d6b20b5">remove_vertex_shader</a> ()</td></tr>
@@ -124,42 +119,119 @@ bool&#160;</td><td class="memItemRight"><b>set_sampler</b> (const char *name, <a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6be5b5dc88d9abfaeb99893dc3313a0b" id="r_a6be5b5dc88d9abfaeb99893dc3313a0b"><td class="memItemLeft">static Shader *&#160;</td><td class="memItemRight"><a class="el" href="#a6be5b5dc88d9abfaeb99893dc3313a0b">from_source</a> (const std::string &amp;vertex_src, const std::string &amp;pixel_src)</td></tr>
+<tr class="memitem:a6be5b5dc88d9abfaeb99893dc3313a0b" id="r_a6be5b5dc88d9abfaeb99893dc3313a0b"><td class="memItemLeft">static <a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6be5b5dc88d9abfaeb99893dc3313a0b">from_source</a> (const std::string &amp;vertex_src, const std::string &amp;pixel_src)</td></tr>
 <tr class="memdesc:a6be5b5dc88d9abfaeb99893dc3313a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a shader directly from GLSL source strings.  <br /></td></tr>
 <tr class="memitem:a91fee595f66db723c54621adacef50e2" id="r_a91fee595f66db723c54621adacef50e2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a91fee595f66db723c54621adacef50e2">init_shaders</a> ()</td></tr>
-<tr class="memitem:acb969cb62fc4add8258a4b50f83a7121" id="r_acb969cb62fc4add8258a4b50f83a7121"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acb969cb62fc4add8258a4b50f83a7121">set_active_shader</a> (Shader *shader)</td></tr>
-<tr class="memitem:af11adf67ae28db58229e777d9f9a16bc" id="r_af11adf67ae28db58229e777d9f9a16bc"><td class="memItemLeft">static Shader *&#160;</td><td class="memItemRight"><a class="el" href="#af11adf67ae28db58229e777d9f9a16bc">get_active_shader</a> ()</td></tr>
+<tr class="memitem:acb969cb62fc4add8258a4b50f83a7121" id="r_acb969cb62fc4add8258a4b50f83a7121"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acb969cb62fc4add8258a4b50f83a7121">set_active_shader</a> (<a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> *shader)</td></tr>
+<tr class="memitem:af11adf67ae28db58229e777d9f9a16bc" id="r_af11adf67ae28db58229e777d9f9a16bc"><td class="memItemLeft">static <a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af11adf67ae28db58229e777d9f9a16bc">get_active_shader</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aaa0ec24b9cd42bf879d8f370458b487b" id="r_aaa0ec24b9cd42bf879d8f370458b487b"><td class="memItemLeft"><a id="aaa0ec24b9cd42bf879d8f370458b487b" name="aaa0ec24b9cd42bf879d8f370458b487b"></a>
-bool&#160;</td><td class="memItemRight"><b>build</b> ()</td></tr>
-<tr class="memdesc:aaa0ec24b9cd42bf879d8f370458b487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)link the shader and capture <a class="el" href="#a52b3369822d72ae9a6f83bae6176fe2c" title="Whether the last build (compile + link) succeeded.">valid()</a>/log(). <br /></td></tr>
+<tr class="memitem:aaa0ec24b9cd42bf879d8f370458b487b" id="r_aaa0ec24b9cd42bf879d8f370458b487b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaa0ec24b9cd42bf879d8f370458b487b">build</a> ()</td></tr>
+<tr class="memdesc:aaa0ec24b9cd42bf879d8f370458b487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)link the shader and capture <a class="el" href="#a52b3369822d72ae9a6f83bae6176fe2c" title="Whether the last build (compile + link) succeeded.">valid()</a>/log().  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-static-methods" class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1be494adc12a9e392c5ed46747661d80" id="r_a1be494adc12a9e392c5ed46747661d80"><td class="memItemLeft"><a id="a1be494adc12a9e392c5ed46747661d80" name="a1be494adc12a9e392c5ed46747661d80"></a>
-static std::string&#160;</td><td class="memItemRight"><b>read_file</b> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;path)</td></tr>
+<tr class="memitem:a1be494adc12a9e392c5ed46747661d80" id="r_a1be494adc12a9e392c5ed46747661d80"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a1be494adc12a9e392c5ed46747661d80">read_file</a> (const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;path)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abbadf7c2773ef0ec30c70ef1e4013ae7" id="r_abbadf7c2773ef0ec30c70ef1e4013ae7"><td class="memItemLeft"><a id="abbadf7c2773ef0ec30c70ef1e4013ae7" name="abbadf7c2773ef0ec30c70ef1e4013ae7"></a>
-ALLEGRO_SHADER *&#160;</td><td class="memItemRight"><b>shader</b> = nullptr</td></tr>
-<tr class="memitem:a90409d4faf17d728a169d3b502db0bb4" id="r_a90409d4faf17d728a169d3b502db0bb4"><td class="memItemLeft"><a id="a90409d4faf17d728a169d3b502db0bb4" name="a90409d4faf17d728a169d3b502db0bb4"></a>
-std::string&#160;</td><td class="memItemRight"><b>pixel_shader_src</b></td></tr>
-<tr class="memitem:a0ad63167225af8d8de497231b5978dc3" id="r_a0ad63167225af8d8de497231b5978dc3"><td class="memItemLeft"><a id="a0ad63167225af8d8de497231b5978dc3" name="a0ad63167225af8d8de497231b5978dc3"></a>
-std::string&#160;</td><td class="memItemRight"><b>vertex_shader_src</b></td></tr>
-<tr class="memitem:a03b644566c2770276c641d89fb392f60" id="r_a03b644566c2770276c641d89fb392f60"><td class="memItemLeft"><a id="a03b644566c2770276c641d89fb392f60" name="a03b644566c2770276c641d89fb392f60"></a>
-bool&#160;</td><td class="memItemRight"><b>valid_</b> = false</td></tr>
-<tr class="memitem:ae71cded41ea3858d60aa35ba95159877" id="r_ae71cded41ea3858d60aa35ba95159877"><td class="memItemLeft"><a id="ae71cded41ea3858d60aa35ba95159877" name="ae71cded41ea3858d60aa35ba95159877"></a>
-std::string&#160;</td><td class="memItemRight"><b>log_</b></td></tr>
+<tr class="memitem:abbadf7c2773ef0ec30c70ef1e4013ae7" id="r_abbadf7c2773ef0ec30c70ef1e4013ae7"><td class="memItemLeft">ALLEGRO_SHADER *&#160;</td><td class="memItemRight"><a class="el" href="#abbadf7c2773ef0ec30c70ef1e4013ae7">shader</a> = nullptr</td></tr>
+<tr class="memitem:a90409d4faf17d728a169d3b502db0bb4" id="r_a90409d4faf17d728a169d3b502db0bb4"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a90409d4faf17d728a169d3b502db0bb4">pixel_shader_src</a></td></tr>
+<tr class="memitem:a0ad63167225af8d8de497231b5978dc3" id="r_a0ad63167225af8d8de497231b5978dc3"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a0ad63167225af8d8de497231b5978dc3">vertex_shader_src</a></td></tr>
+<tr class="memitem:a03b644566c2770276c641d89fb392f60" id="r_a03b644566c2770276c641d89fb392f60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a03b644566c2770276c641d89fb392f60">valid_</a> = false</td></tr>
+<tr class="memitem:ae71cded41ea3858d60aa35ba95159877" id="r_ae71cded41ea3858d60aa35ba95159877"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ae71cded41ea3858d60aa35ba95159877">log_</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a9a953ff8001cb2134881f833b231fad8" id="r_a9a953ff8001cb2134881f833b231fad8"><td class="memItemLeft"><a id="a9a953ff8001cb2134881f833b231fad8" name="a9a953ff8001cb2134881f833b231fad8"></a>
-static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullptr</td></tr>
+<tr class="memitem:a9a953ff8001cb2134881f833b231fad8" id="r_a9a953ff8001cb2134881f833b231fad8"><td class="memItemLeft">static <a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9a953ff8001cb2134881f833b231fad8">current_shader</a> = nullptr</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A GLSL shader program (vertex + pixel) with build-error reporting and uniform setters. Usually owned and shared through a <a class="el" href="classturbo_1_1_shader_library.html" title="Owns named shader programs and materials.">ShaderLibrary</a> and referenced by a <a class="el" href="classturbo_1_1_material.html" title="A shader program plus a named set of uniform values.">Material</a> rather than used directly. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a90f876b1a2d3415b584f175644630910" name="a90f876b1a2d3415b584f175644630910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f876b1a2d3415b584f175644630910">&#9670;&#160;</a></span>Shader() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Shader::Shader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pixel_shader_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vertex_shader_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1246b3cbf96a34564e40bb17a4a5e8" name="abf1246b3cbf96a34564e40bb17a4a5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1246b3cbf96a34564e40bb17a4a5e8">&#9670;&#160;</a></span>Shader() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Shader::Shader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a849428f379bba30a8cf98a90a19350b1" name="a849428f379bba30a8cf98a90a19350b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849428f379bba30a8cf98a90a19350b1">&#9670;&#160;</a></span>~Shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Shader::~Shader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aaa0ec24b9cd42bf879d8f370458b487b" name="aaa0ec24b9cd42bf879d8f370458b487b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa0ec24b9cd42bf879d8f370458b487b">&#9670;&#160;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::build </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Re)link the shader and capture <a class="el" href="#a52b3369822d72ae9a6f83bae6176fe2c" title="Whether the last build (compile + link) succeeded.">valid()</a>/log(). </p>
+
+</div>
+</div>
 <a id="a6be5b5dc88d9abfaeb99893dc3313a0b" name="a6be5b5dc88d9abfaeb99893dc3313a0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6be5b5dc88d9abfaeb99893dc3313a0b">&#9670;&#160;</a></span>from_source()</h2>
 
@@ -170,7 +242,7 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Shader * turbo::Shader::from_source </td>
+          <td class="memname"><a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> * turbo::Shader::from_source </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vertex_src</em></span>, </td>
         </tr>
@@ -202,7 +274,7 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Shader * turbo::Shader::get_active_shader </td>
+          <td class="memname"><a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> * turbo::Shader::get_active_shader </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -241,6 +313,85 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
 </table>
 </div><div class="memdoc">
 <p>already initialized internally, do not call this </p>
+
+</div>
+</div>
+<a id="afff31e77fd9a2f4c22da17a586ed6543" name="afff31e77fd9a2f4c22da17a586ed6543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff31e77fd9a2f4c22da17a586ed6543">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; turbo::Shader::log </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Driver log of the last build (empty on success on most drivers). </p>
+
+</div>
+</div>
+<a id="a18cdd2f2bbb82fe75ae49f31823edec6" name="a18cdd2f2bbb82fe75ae49f31823edec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18cdd2f2bbb82fe75ae49f31823edec6">&#9670;&#160;</a></span>native()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_SHADER * turbo::Shader::native </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Underlying Allegro shader handle. </p>
+
+</div>
+</div>
+<a id="a1be494adc12a9e392c5ed46747661d80" name="a1be494adc12a9e392c5ed46747661d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be494adc12a9e392c5ed46747661d80">&#9670;&#160;</a></span>read_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string turbo::Shader::read_file </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classturbo_1_1_path.html">Path</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -292,7 +443,7 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
         <tr>
           <td class="memname">void turbo::Shader::set_active_shader </td>
           <td>(</td>
-          <td class="paramtype">Shader *</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a> *</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -308,6 +459,69 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="abb53e5c06f176f92bd8f7198dee3d41e" name="abb53e5c06f176f92bd8f7198dee3d41e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb53e5c06f176f92bd8f7198dee3d41e">&#9670;&#160;</a></span>set_bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_bool </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca0ca816d376bf6aac165a77be539850" name="aca0ca816d376bf6aac165a77be539850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0ca816d376bf6aac165a77be539850">&#9670;&#160;</a></span>set_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_float </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0dd541878079c59d2257f1fc3302d95" name="aa0dd541878079c59d2257f1fc3302d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dd541878079c59d2257f1fc3302d95">&#9670;&#160;</a></span>set_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_int </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -334,6 +548,125 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
 
 </div>
 </div>
+<a id="a51af34429527265c015a109f0575c7d3" name="a51af34429527265c015a109f0575c7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51af34429527265c015a109f0575c7d3">&#9670;&#160;</a></span>set_sampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_sampler </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classturbo_1_1_texture.html">Texture</a> *</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>unit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e07e44203b02276b9475ddc4bd9c2db" name="a8e07e44203b02276b9475ddc4bd9c2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e07e44203b02276b9475ddc4bd9c2db">&#9670;&#160;</a></span>set_vec2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_vec2 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a154cc3c2b797dbcf51b5934cf311e8f7" name="a154cc3c2b797dbcf51b5934cf311e8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154cc3c2b797dbcf51b5934cf311e8f7">&#9670;&#160;</a></span>set_vec3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_vec3 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06e5ccc8b98b7b81879b65f157df82ef" name="a06e5ccc8b98b7b81879b65f157df82ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e5ccc8b98b7b81879b65f157df82ef">&#9670;&#160;</a></span>set_vec4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::set_vec4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a516e40f5c5cacc2f35713c46b86b964c" name="a516e40f5c5cacc2f35713c46b86b964c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a516e40f5c5cacc2f35713c46b86b964c">&#9670;&#160;</a></span>set_vertex_shader()</h2>
 
@@ -357,9 +690,188 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
 
 </div>
 </div>
+<a id="a2120df6668454916c3e26790496bce03" name="a2120df6668454916c3e26790496bce03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2120df6668454916c3e26790496bce03">&#9670;&#160;</a></span>use()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::use </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind this shader as the active one on the current display. </p>
+
+</div>
+</div>
+<a id="a52b3369822d72ae9a6f83bae6176fe2c" name="a52b3369822d72ae9a6f83bae6176fe2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b3369822d72ae9a6f83bae6176fe2c">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::valid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the last build (compile + link) succeeded. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a9a953ff8001cb2134881f833b231fad8" name="a9a953ff8001cb2134881f833b231fad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a953ff8001cb2134881f833b231fad8">&#9670;&#160;</a></span>current_shader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a90f876b1a2d3415b584f175644630910">Shader</a>* turbo::Shader::current_shader = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae71cded41ea3858d60aa35ba95159877" name="ae71cded41ea3858d60aa35ba95159877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71cded41ea3858d60aa35ba95159877">&#9670;&#160;</a></span>log_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string turbo::Shader::log_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90409d4faf17d728a169d3b502db0bb4" name="a90409d4faf17d728a169d3b502db0bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90409d4faf17d728a169d3b502db0bb4">&#9670;&#160;</a></span>pixel_shader_src</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string turbo::Shader::pixel_shader_src</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbadf7c2773ef0ec30c70ef1e4013ae7" name="abbadf7c2773ef0ec30c70ef1e4013ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbadf7c2773ef0ec30c70ef1e4013ae7">&#9670;&#160;</a></span>shader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_SHADER* turbo::Shader::shader = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b644566c2770276c641d89fb392f60" name="a03b644566c2770276c641d89fb392f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b644566c2770276c641d89fb392f60">&#9670;&#160;</a></span>valid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Shader::valid_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ad63167225af8d8de497231b5978dc3" name="a0ad63167225af8d8de497231b5978dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad63167225af8d8de497231b5978dc3">&#9670;&#160;</a></span>vertex_shader_src</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string turbo::Shader::vertex_shader_src</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/turbo/graphics/<a class="el" href="_shader_8hpp_source.html">Shader.hpp</a></li>
-<li>src/graphics/<b>Shader.cpp</b></li>
+<li>src/graphics/<a class="el" href="_shader_8cpp.html">Shader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -374,7 +886,7 @@ static Shader *&#160;</td><td class="memItemRight"><b>current_shader</b> = nullp
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><a href="classturbo_1_1_shader.html">Shader</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="classturbo_1_1_shader.html">Shader</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

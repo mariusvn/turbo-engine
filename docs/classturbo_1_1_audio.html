@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
   <div class="headertitle"><div class="title">turbo::Audio Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface for playable audio (implemented by <a class="el" href="classturbo_1_1_sound.html" title="A short sound effect, loaded fully into memory and playable on demand. For longer tracks streamed fro...">Sound</a> and <a class="el" href="classturbo_1_1_music_stream.html" title="A music track streamed (decoded on the fly) from a file, for audio too long to keep fully in memory....">MusicStream</a>).  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_audio_8hpp_source.html">Audio.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for turbo::Audio:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -91,15 +96,134 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acc5e9fcbf66635d300e2fb0ab707e29c" id="r_acc5e9fcbf66635d300e2fb0ab707e29c"><td class="memItemLeft"><a id="acc5e9fcbf66635d300e2fb0ab707e29c" name="acc5e9fcbf66635d300e2fb0ab707e29c"></a>
-virtual void&#160;</td><td class="memItemRight"><b>play</b> ()=0</td></tr>
-<tr class="memitem:a289fd342b09149733baa1415e1d4012f" id="r_a289fd342b09149733baa1415e1d4012f"><td class="memItemLeft"><a id="a289fd342b09149733baa1415e1d4012f" name="a289fd342b09149733baa1415e1d4012f"></a>
-virtual void&#160;</td><td class="memItemRight"><b>pause</b> ()=0</td></tr>
-<tr class="memitem:a144ce5bae52d661337a449e7b216e9d2" id="r_a144ce5bae52d661337a449e7b216e9d2"><td class="memItemLeft"><a id="a144ce5bae52d661337a449e7b216e9d2" name="a144ce5bae52d661337a449e7b216e9d2"></a>
-virtual void&#160;</td><td class="memItemRight"><b>reset</b> ()=0</td></tr>
-<tr class="memitem:a2b531ab651e77e91ce0d0d2bcad9df72" id="r_a2b531ab651e77e91ce0d0d2bcad9df72"><td class="memItemLeft"><a id="a2b531ab651e77e91ce0d0d2bcad9df72" name="a2b531ab651e77e91ce0d0d2bcad9df72"></a>
-virtual bool&#160;</td><td class="memItemRight"><b>is_playing</b> () const =0</td></tr>
+<tr class="memitem:acc5e9fcbf66635d300e2fb0ab707e29c" id="r_acc5e9fcbf66635d300e2fb0ab707e29c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acc5e9fcbf66635d300e2fb0ab707e29c">play</a> ()=0</td></tr>
+<tr class="memdesc:acc5e9fcbf66635d300e2fb0ab707e29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start, or resume, playback.  <br /></td></tr>
+<tr class="memitem:a289fd342b09149733baa1415e1d4012f" id="r_a289fd342b09149733baa1415e1d4012f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a289fd342b09149733baa1415e1d4012f">pause</a> ()=0</td></tr>
+<tr class="memdesc:a289fd342b09149733baa1415e1d4012f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause playback, keeping the current position.  <br /></td></tr>
+<tr class="memitem:a144ce5bae52d661337a449e7b216e9d2" id="r_a144ce5bae52d661337a449e7b216e9d2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a144ce5bae52d661337a449e7b216e9d2">reset</a> ()=0</td></tr>
+<tr class="memdesc:a144ce5bae52d661337a449e7b216e9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop playback and rewind to the beginning.  <br /></td></tr>
+<tr class="memitem:a2b531ab651e77e91ce0d0d2bcad9df72" id="r_a2b531ab651e77e91ce0d0d2bcad9df72"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a2b531ab651e77e91ce0d0d2bcad9df72">is_playing</a> () const =0</td></tr>
+<tr class="memdesc:a2b531ab651e77e91ce0d0d2bcad9df72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the audio is currently playing.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for playable audio (implemented by <a class="el" href="classturbo_1_1_sound.html" title="A short sound effect, loaded fully into memory and playable on demand. For longer tracks streamed fro...">Sound</a> and <a class="el" href="classturbo_1_1_music_stream.html" title="A music track streamed (decoded on the fly) from a file, for audio too long to keep fully in memory....">MusicStream</a>). </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2b531ab651e77e91ce0d0d2bcad9df72" name="a2b531ab651e77e91ce0d0d2bcad9df72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b531ab651e77e91ce0d0d2bcad9df72">&#9670;&#160;</a></span>is_playing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool turbo::Audio::is_playing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the audio is currently playing. </p>
+
+<p>Implemented in <a class="el" href="classturbo_1_1_music_stream.html#a5f767686c3bf7498cfb49f957b7269e0">turbo::MusicStream</a>, and <a class="el" href="classturbo_1_1_sound.html#ab4db0df7a70bfc438fbee39bfd81a267">turbo::Sound</a>.</p>
+
+</div>
+</div>
+<a id="a289fd342b09149733baa1415e1d4012f" name="a289fd342b09149733baa1415e1d4012f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289fd342b09149733baa1415e1d4012f">&#9670;&#160;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void turbo::Audio::pause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pause playback, keeping the current position. </p>
+
+<p>Implemented in <a class="el" href="classturbo_1_1_music_stream.html#a97113e2c753e0d30fe2e4cfa56118d45">turbo::MusicStream</a>, and <a class="el" href="classturbo_1_1_sound.html#a3ddce27018bf58fb0fb9c2a613359b6f">turbo::Sound</a>.</p>
+
+</div>
+</div>
+<a id="acc5e9fcbf66635d300e2fb0ab707e29c" name="acc5e9fcbf66635d300e2fb0ab707e29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5e9fcbf66635d300e2fb0ab707e29c">&#9670;&#160;</a></span>play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void turbo::Audio::play </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start, or resume, playback. </p>
+
+<p>Implemented in <a class="el" href="classturbo_1_1_music_stream.html#aead9d5eaf9e961616cf27b67d281065a">turbo::MusicStream</a>, and <a class="el" href="classturbo_1_1_sound.html#ae3584977b838d2ad93623056e7e65909">turbo::Sound</a>.</p>
+
+</div>
+</div>
+<a id="a144ce5bae52d661337a449e7b216e9d2" name="a144ce5bae52d661337a449e7b216e9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144ce5bae52d661337a449e7b216e9d2">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void turbo::Audio::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop playback and rewind to the beginning. </p>
+
+<p>Implemented in <a class="el" href="classturbo_1_1_music_stream.html#aa4abfefac71089f1e53d42c890ae09f3">turbo::MusicStream</a>, and <a class="el" href="classturbo_1_1_sound.html#abee813a4046dc2a212fdb061de7ecf5b">turbo::Sound</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/turbo/sound/<a class="el" href="_audio_8hpp_source.html">Audio.hpp</a></li>
 </ul>
@@ -116,7 +240,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>is_playing</b> () const =0</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><a href="classturbo_1_1_audio.html">Audio</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="classturbo_1_1_audio.html">Audio</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

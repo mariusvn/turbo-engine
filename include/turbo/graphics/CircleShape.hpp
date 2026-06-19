@@ -12,6 +12,11 @@ namespace turbo {
      */
     class CircleShape: public Shape {
     public:
+        /**
+         * @brief Construct a circle shape.
+         * @param radius radius in pixels
+         * @param color fill/outline colour
+         */
         CircleShape(unsigned short radius = 10, const Color& color = Color());
         void draw() const override;
 

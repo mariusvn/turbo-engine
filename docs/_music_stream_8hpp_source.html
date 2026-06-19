@@ -77,43 +77,53 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_music_stream_
   <div class="headertitle"><div class="title">MusicStream.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_music_stream_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef __TURBO_ENGINE_MUSIC_HPP__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define __TURBO_ENGINE_MUSIC_HPP__</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../Path.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Audio.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_path_8hpp.html">../Path.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_audio_8hpp.html">Audio.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>turbo {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classturbo_1_1_music_stream.html">   12</a></span>    <span class="keyword">class </span>MusicStream : <span class="keyword">public</span> <a class="code hl_class" href="classturbo_1_1_audio.html">Audio</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">explicit</span> MusicStream(<a class="code hl_class" href="classturbo_1_1_path.html">Path</a>* path);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        ~MusicStream();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> play() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> pause() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">void</span> reset() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        [[nodiscard]] <span class="keywordtype">bool</span> is_playing() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        ALLEGRO_AUDIO_STREAM* stream = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceturbo.html">turbo</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classturbo_1_1_music_stream.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classturbo_1_1_music_stream.html#a19317515246e1f4bc813132852c6ebaf">MusicStream</a> : <span class="keyword">public</span> <a class="code hl_class" href="classturbo_1_1_audio.html">Audio</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classturbo_1_1_music_stream.html#a19317515246e1f4bc813132852c6ebaf">MusicStream</a>(<a class="code hl_class" href="classturbo_1_1_path.html">Path</a>* path);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classturbo_1_1_music_stream.html#a636e91b2bfe3cfbafd73a62eed53b70c">~MusicStream</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_music_stream.html#aead9d5eaf9e961616cf27b67d281065a">play</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_music_stream.html#a97113e2c753e0d30fe2e4cfa56118d45">pause</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_music_stream.html#aa4abfefac71089f1e53d42c890ae09f3">reset</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classturbo_1_1_music_stream.html#a5f767686c3bf7498cfb49f957b7269e0">is_playing</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classturbo_1_1_music_stream.html#a4eb51719e9f31d2700d6316945ba9e8b">   30</a></span>        ALLEGRO_AUDIO_STREAM* <a class="code hl_variable" href="classturbo_1_1_music_stream.html#a4eb51719e9f31d2700d6316945ba9e8b">stream</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    };</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassturbo_1_1_audio_html"><div class="ttname"><a href="classturbo_1_1_audio.html">turbo::Audio</a></div><div class="ttdef"><b>Definition</b> Audio.hpp:6</div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_audio_8hpp_html"><div class="ttname"><a href="_audio_8hpp.html">Audio.hpp</a></div></div>
+<div class="ttc" id="a_path_8hpp_html"><div class="ttname"><a href="_path_8hpp.html">Path.hpp</a></div></div>
+<div class="ttc" id="aclassturbo_1_1_audio_html"><div class="ttname"><a href="classturbo_1_1_audio.html">turbo::Audio</a></div><div class="ttdoc">Interface for playable audio (implemented by Sound and MusicStream).</div><div class="ttdef"><b>Definition</b> Audio.hpp:9</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_a19317515246e1f4bc813132852c6ebaf"><div class="ttname"><a href="classturbo_1_1_music_stream.html#a19317515246e1f4bc813132852c6ebaf">turbo::MusicStream::MusicStream</a></div><div class="ttdeci">MusicStream(Path *path)</div><div class="ttdoc">Open an audio file as a stream.</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:6</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_a4eb51719e9f31d2700d6316945ba9e8b"><div class="ttname"><a href="classturbo_1_1_music_stream.html#a4eb51719e9f31d2700d6316945ba9e8b">turbo::MusicStream::stream</a></div><div class="ttdeci">ALLEGRO_AUDIO_STREAM * stream</div><div class="ttdef"><b>Definition</b> MusicStream.hpp:30</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_a5f767686c3bf7498cfb49f957b7269e0"><div class="ttname"><a href="classturbo_1_1_music_stream.html#a5f767686c3bf7498cfb49f957b7269e0">turbo::MusicStream::is_playing</a></div><div class="ttdeci">bool is_playing() const override</div><div class="ttdoc">Whether the audio is currently playing.</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:35</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_a636e91b2bfe3cfbafd73a62eed53b70c"><div class="ttname"><a href="classturbo_1_1_music_stream.html#a636e91b2bfe3cfbafd73a62eed53b70c">turbo::MusicStream::~MusicStream</a></div><div class="ttdeci">~MusicStream()</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:16</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_a97113e2c753e0d30fe2e4cfa56118d45"><div class="ttname"><a href="classturbo_1_1_music_stream.html#a97113e2c753e0d30fe2e4cfa56118d45">turbo::MusicStream::pause</a></div><div class="ttdeci">void pause() override</div><div class="ttdoc">Pause playback, keeping the current position.</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:27</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_aa4abfefac71089f1e53d42c890ae09f3"><div class="ttname"><a href="classturbo_1_1_music_stream.html#aa4abfefac71089f1e53d42c890ae09f3">turbo::MusicStream::reset</a></div><div class="ttdeci">void reset() override</div><div class="ttdoc">Stop playback and rewind to the beginning.</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:31</div></div>
+<div class="ttc" id="aclassturbo_1_1_music_stream_html_aead9d5eaf9e961616cf27b67d281065a"><div class="ttname"><a href="classturbo_1_1_music_stream.html#aead9d5eaf9e961616cf27b67d281065a">turbo::MusicStream::play</a></div><div class="ttdeci">void play() override</div><div class="ttdoc">Start, or resume, playback.</div><div class="ttdef"><b>Definition</b> MusicStream.cpp:23</div></div>
 <div class="ttc" id="aclassturbo_1_1_path_html"><div class="ttname"><a href="classturbo_1_1_path.html">turbo::Path</a></div><div class="ttdoc">Path class is used to simplify the edition of paths.</div><div class="ttdef"><b>Definition</b> Path.hpp:13</div></div>
+<div class="ttc" id="anamespaceturbo_html"><div class="ttname"><a href="namespaceturbo.html">turbo</a></div><div class="ttdef"><b>Definition</b> Component.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>turbo</b></li><li class="navelem"><b>sound</b></li><li class="navelem"><b>MusicStream.hpp</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a href="dir_65e21eb9c1f389c05e2dae8458f802c4.html">sound</a></li><li class="navelem"><a href="_music_stream_8hpp.html">MusicStream.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

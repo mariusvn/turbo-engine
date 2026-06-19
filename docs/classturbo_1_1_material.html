@@ -85,45 +85,466 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af21c72adc2bc44e11a47a052d0307190" id="r_af21c72adc2bc44e11a47a052d0307190"><td class="memItemLeft"><a id="af21c72adc2bc44e11a47a052d0307190" name="af21c72adc2bc44e11a47a052d0307190"></a>
-&#160;</td><td class="memItemRight"><b>Material</b> (<a class="el" href="classturbo_1_1_shader.html">Shader</a> *shader)</td></tr>
-<tr class="memitem:ae1f51f2eeb572a8097e7d494e5e4b084" id="r_ae1f51f2eeb572a8097e7d494e5e4b084"><td class="memItemLeft"><a id="ae1f51f2eeb572a8097e7d494e5e4b084" name="ae1f51f2eeb572a8097e7d494e5e4b084"></a>
-void&#160;</td><td class="memItemRight"><b>set_float</b> (const std::string &amp;name, float v)</td></tr>
-<tr class="memitem:a9233445c9490e67b349f87302fef5c4e" id="r_a9233445c9490e67b349f87302fef5c4e"><td class="memItemLeft"><a id="a9233445c9490e67b349f87302fef5c4e" name="a9233445c9490e67b349f87302fef5c4e"></a>
-void&#160;</td><td class="memItemRight"><b>set_int</b> (const std::string &amp;name, int v)</td></tr>
-<tr class="memitem:a130c69995f90df74d4461f5d6e101a6c" id="r_a130c69995f90df74d4461f5d6e101a6c"><td class="memItemLeft"><a id="a130c69995f90df74d4461f5d6e101a6c" name="a130c69995f90df74d4461f5d6e101a6c"></a>
-void&#160;</td><td class="memItemRight"><b>set_bool</b> (const std::string &amp;name, bool v)</td></tr>
-<tr class="memitem:ae0d3079b4513889cdae4a43e26c5b770" id="r_ae0d3079b4513889cdae4a43e26c5b770"><td class="memItemLeft"><a id="ae0d3079b4513889cdae4a43e26c5b770" name="ae0d3079b4513889cdae4a43e26c5b770"></a>
-void&#160;</td><td class="memItemRight"><b>set_vec2</b> (const std::string &amp;name, float x, float y)</td></tr>
-<tr class="memitem:a3910a10597894a2115ca60dfe3ac9e56" id="r_a3910a10597894a2115ca60dfe3ac9e56"><td class="memItemLeft"><a id="a3910a10597894a2115ca60dfe3ac9e56" name="a3910a10597894a2115ca60dfe3ac9e56"></a>
-void&#160;</td><td class="memItemRight"><b>set_vec3</b> (const std::string &amp;name, float x, float y, float z)</td></tr>
-<tr class="memitem:abd1301cb037b0fc04e335035e7d4bb6e" id="r_abd1301cb037b0fc04e335035e7d4bb6e"><td class="memItemLeft"><a id="abd1301cb037b0fc04e335035e7d4bb6e" name="abd1301cb037b0fc04e335035e7d4bb6e"></a>
-void&#160;</td><td class="memItemRight"><b>set_vec4</b> (const std::string &amp;name, float x, float y, float z, float w)</td></tr>
-<tr class="memitem:aaf4816a82dab151fdd94fa5312561bf0" id="r_aaf4816a82dab151fdd94fa5312561bf0"><td class="memItemLeft"><a id="aaf4816a82dab151fdd94fa5312561bf0" name="aaf4816a82dab151fdd94fa5312561bf0"></a>
-void&#160;</td><td class="memItemRight"><b>set_sampler</b> (const std::string &amp;name, <a class="el" href="classturbo_1_1_texture.html">Texture</a> *t, int unit)</td></tr>
-<tr class="memitem:aa2b6cd844894990720e7aad7b067082e" id="r_aa2b6cd844894990720e7aad7b067082e"><td class="memItemLeft"><a id="aa2b6cd844894990720e7aad7b067082e" name="aa2b6cd844894990720e7aad7b067082e"></a>
-bool&#160;</td><td class="memItemRight"><b>bind</b> () const</td></tr>
-<tr class="memdesc:aa2b6cd844894990720e7aad7b067082e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the shader and push every stored uniform. Call before drawing. <br /></td></tr>
-<tr class="memitem:a30f2dbf55952bf94f4539698ff2afee2" id="r_a30f2dbf55952bf94f4539698ff2afee2"><td class="memItemLeft"><a id="a30f2dbf55952bf94f4539698ff2afee2" name="a30f2dbf55952bf94f4539698ff2afee2"></a>
-bool&#160;</td><td class="memItemRight"><b>bind_at</b> (float time)</td></tr>
-<tr class="memdesc:a30f2dbf55952bf94f4539698ff2afee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the "time" uniform (only if the material declares one) then bind. Lets animated shaders advance without pushing a uniform to shaders that don't use it. <br /></td></tr>
-<tr class="memitem:ad744f48b5167fd1d464c6af36314ddb5" id="r_ad744f48b5167fd1d464c6af36314ddb5"><td class="memItemLeft"><a id="ad744f48b5167fd1d464c6af36314ddb5" name="ad744f48b5167fd1d464c6af36314ddb5"></a>
-<a class="el" href="classturbo_1_1_shader.html">Shader</a> *&#160;</td><td class="memItemRight"><b>shader</b> () const</td></tr>
-<tr class="memitem:a6d620c7ba63d408dccb9738c3a236fea" id="r_a6d620c7ba63d408dccb9738c3a236fea"><td class="memItemLeft"><a id="a6d620c7ba63d408dccb9738c3a236fea" name="a6d620c7ba63d408dccb9738c3a236fea"></a>
-const std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>uniforms</b> () const</td></tr>
-<tr class="memitem:a20423135eeddeb41475aaba1a6405c92" id="r_a20423135eeddeb41475aaba1a6405c92"><td class="memItemLeft"><a id="a20423135eeddeb41475aaba1a6405c92" name="a20423135eeddeb41475aaba1a6405c92"></a>
-std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>uniforms</b> ()</td></tr>
-<tr class="memitem:a9ec16389f1874475a2b9847e2a91222a" id="r_a9ec16389f1874475a2b9847e2a91222a"><td class="memItemLeft"><a id="a9ec16389f1874475a2b9847e2a91222a" name="a9ec16389f1874475a2b9847e2a91222a"></a>
-const std::string &amp;&#160;</td><td class="memItemRight"><b>name</b> () const</td></tr>
-<tr class="memitem:aca80462be1582cad31ea08aec00aa685" id="r_aca80462be1582cad31ea08aec00aa685"><td class="memItemLeft"><a id="aca80462be1582cad31ea08aec00aa685" name="aca80462be1582cad31ea08aec00aa685"></a>
-void&#160;</td><td class="memItemRight"><b>set_name</b> (const std::string &amp;name)</td></tr>
+<tr class="memitem:af21c72adc2bc44e11a47a052d0307190" id="r_af21c72adc2bc44e11a47a052d0307190"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af21c72adc2bc44e11a47a052d0307190">Material</a> (<a class="el" href="classturbo_1_1_shader.html">Shader</a> *shader)</td></tr>
+<tr class="memitem:ae1f51f2eeb572a8097e7d494e5e4b084" id="r_ae1f51f2eeb572a8097e7d494e5e4b084"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1f51f2eeb572a8097e7d494e5e4b084">set_float</a> (const std::string &amp;name, float v)</td></tr>
+<tr class="memitem:a9233445c9490e67b349f87302fef5c4e" id="r_a9233445c9490e67b349f87302fef5c4e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9233445c9490e67b349f87302fef5c4e">set_int</a> (const std::string &amp;name, int v)</td></tr>
+<tr class="memitem:a130c69995f90df74d4461f5d6e101a6c" id="r_a130c69995f90df74d4461f5d6e101a6c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a130c69995f90df74d4461f5d6e101a6c">set_bool</a> (const std::string &amp;name, bool v)</td></tr>
+<tr class="memitem:ae0d3079b4513889cdae4a43e26c5b770" id="r_ae0d3079b4513889cdae4a43e26c5b770"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae0d3079b4513889cdae4a43e26c5b770">set_vec2</a> (const std::string &amp;name, float x, float y)</td></tr>
+<tr class="memitem:a3910a10597894a2115ca60dfe3ac9e56" id="r_a3910a10597894a2115ca60dfe3ac9e56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3910a10597894a2115ca60dfe3ac9e56">set_vec3</a> (const std::string &amp;name, float x, float y, float z)</td></tr>
+<tr class="memitem:abd1301cb037b0fc04e335035e7d4bb6e" id="r_abd1301cb037b0fc04e335035e7d4bb6e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abd1301cb037b0fc04e335035e7d4bb6e">set_vec4</a> (const std::string &amp;name, float x, float y, float z, float w)</td></tr>
+<tr class="memitem:aaf4816a82dab151fdd94fa5312561bf0" id="r_aaf4816a82dab151fdd94fa5312561bf0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf4816a82dab151fdd94fa5312561bf0">set_sampler</a> (const std::string &amp;name, <a class="el" href="classturbo_1_1_texture.html">Texture</a> *t, int unit)</td></tr>
+<tr class="memitem:aa2b6cd844894990720e7aad7b067082e" id="r_aa2b6cd844894990720e7aad7b067082e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa2b6cd844894990720e7aad7b067082e">bind</a> () const</td></tr>
+<tr class="memdesc:aa2b6cd844894990720e7aad7b067082e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the shader and push every stored uniform. Call before drawing.  <br /></td></tr>
+<tr class="memitem:a30f2dbf55952bf94f4539698ff2afee2" id="r_a30f2dbf55952bf94f4539698ff2afee2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a30f2dbf55952bf94f4539698ff2afee2">bind_at</a> (float time)</td></tr>
+<tr class="memdesc:a30f2dbf55952bf94f4539698ff2afee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the "time" uniform (only if the material declares one) then bind. Lets animated shaders advance without pushing a uniform to shaders that don't use it.  <br /></td></tr>
+<tr class="memitem:ad744f48b5167fd1d464c6af36314ddb5" id="r_ad744f48b5167fd1d464c6af36314ddb5"><td class="memItemLeft"><a class="el" href="classturbo_1_1_shader.html">Shader</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad744f48b5167fd1d464c6af36314ddb5">shader</a> () const</td></tr>
+<tr class="memitem:a6d620c7ba63d408dccb9738c3a236fea" id="r_a6d620c7ba63d408dccb9738c3a236fea"><td class="memItemLeft">const std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6d620c7ba63d408dccb9738c3a236fea">uniforms</a> () const</td></tr>
+<tr class="memitem:a20423135eeddeb41475aaba1a6405c92" id="r_a20423135eeddeb41475aaba1a6405c92"><td class="memItemLeft">std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a20423135eeddeb41475aaba1a6405c92">uniforms</a> ()</td></tr>
+<tr class="memitem:a9ec16389f1874475a2b9847e2a91222a" id="r_a9ec16389f1874475a2b9847e2a91222a"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9ec16389f1874475a2b9847e2a91222a">name</a> () const</td></tr>
+<tr class="memitem:aca80462be1582cad31ea08aec00aa685" id="r_aca80462be1582cad31ea08aec00aa685"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca80462be1582cad31ea08aec00aa685">set_name</a> (const std::string &amp;name)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A shader program plus a named set of uniform values. </p>
-<p>A <a class="el" href="classturbo_1_1_material.html" title="A shader program plus a named set of uniform values.">Material</a> does not own its <a class="el" href="classturbo_1_1_shader.html">Shader</a> (shaders are shared and owned by the <a class="el" href="classturbo_1_1_shader_library.html" title="Owns named shader programs and materials.">ShaderLibrary</a>). Uniform values are stored and only pushed to the GPU on <a class="el" href="#aa2b6cd844894990720e7aad7b067082e" title="Bind the shader and push every stored uniform. Call before drawing.">bind()</a>, which is the seam an inspector UI will later edit. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p>A <a class="el" href="classturbo_1_1_material.html" title="A shader program plus a named set of uniform values.">Material</a> does not own its <a class="el" href="classturbo_1_1_shader.html" title="A GLSL shader program (vertex + pixel) with build-error reporting and uniform setters....">Shader</a> (shaders are shared and owned by the <a class="el" href="classturbo_1_1_shader_library.html" title="Owns named shader programs and materials.">ShaderLibrary</a>). Uniform values are stored and only pushed to the GPU on <a class="el" href="#aa2b6cd844894990720e7aad7b067082e" title="Bind the shader and push every stored uniform. Call before drawing.">bind()</a>, which is the seam an inspector UI will later edit. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af21c72adc2bc44e11a47a052d0307190" name="af21c72adc2bc44e11a47a052d0307190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21c72adc2bc44e11a47a052d0307190">&#9670;&#160;</a></span>Material()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Material::Material </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classturbo_1_1_shader.html">Shader</a> *</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa2b6cd844894990720e7aad7b067082e" name="aa2b6cd844894990720e7aad7b067082e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b6cd844894990720e7aad7b067082e">&#9670;&#160;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Material::bind </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind the shader and push every stored uniform. Call before drawing. </p>
+
+</div>
+</div>
+<a id="a30f2dbf55952bf94f4539698ff2afee2" name="a30f2dbf55952bf94f4539698ff2afee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f2dbf55952bf94f4539698ff2afee2">&#9670;&#160;</a></span>bind_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool turbo::Material::bind_at </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refresh the "time" uniform (only if the material declares one) then bind. Lets animated shaders advance without pushing a uniform to shaders that don't use it. </p>
+
+</div>
+</div>
+<a id="a9ec16389f1874475a2b9847e2a91222a" name="a9ec16389f1874475a2b9847e2a91222a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec16389f1874475a2b9847e2a91222a">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; turbo::Material::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a130c69995f90df74d4461f5d6e101a6c" name="a130c69995f90df74d4461f5d6e101a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130c69995f90df74d4461f5d6e101a6c">&#9670;&#160;</a></span>set_bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_bool </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1f51f2eeb572a8097e7d494e5e4b084" name="ae1f51f2eeb572a8097e7d494e5e4b084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f51f2eeb572a8097e7d494e5e4b084">&#9670;&#160;</a></span>set_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_float </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9233445c9490e67b349f87302fef5c4e" name="a9233445c9490e67b349f87302fef5c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9233445c9490e67b349f87302fef5c4e">&#9670;&#160;</a></span>set_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_int </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca80462be1582cad31ea08aec00aa685" name="aca80462be1582cad31ea08aec00aa685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca80462be1582cad31ea08aec00aa685">&#9670;&#160;</a></span>set_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf4816a82dab151fdd94fa5312561bf0" name="aaf4816a82dab151fdd94fa5312561bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4816a82dab151fdd94fa5312561bf0">&#9670;&#160;</a></span>set_sampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_sampler </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classturbo_1_1_texture.html">Texture</a> *</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>unit</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d3079b4513889cdae4a43e26c5b770" name="ae0d3079b4513889cdae4a43e26c5b770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d3079b4513889cdae4a43e26c5b770">&#9670;&#160;</a></span>set_vec2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_vec2 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3910a10597894a2115ca60dfe3ac9e56" name="a3910a10597894a2115ca60dfe3ac9e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3910a10597894a2115ca60dfe3ac9e56">&#9670;&#160;</a></span>set_vec3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_vec3 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd1301cb037b0fc04e335035e7d4bb6e" name="abd1301cb037b0fc04e335035e7d4bb6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1301cb037b0fc04e335035e7d4bb6e">&#9670;&#160;</a></span>set_vec4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::Material::set_vec4 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad744f48b5167fd1d464c6af36314ddb5" name="ad744f48b5167fd1d464c6af36314ddb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad744f48b5167fd1d464c6af36314ddb5">&#9670;&#160;</a></span>shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_shader.html">Shader</a> * turbo::Material::shader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20423135eeddeb41475aaba1a6405c92" name="a20423135eeddeb41475aaba1a6405c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20423135eeddeb41475aaba1a6405c92">&#9670;&#160;</a></span>uniforms() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp; turbo::Material::uniforms </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d620c7ba63d408dccb9738c3a236fea" name="a6d620c7ba63d408dccb9738c3a236fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d620c7ba63d408dccb9738c3a236fea">&#9670;&#160;</a></span>uniforms() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; std::string, <a class="el" href="structturbo_1_1_uniform_value.html">UniformValue</a> &gt; &amp; turbo::Material::uniforms </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/turbo/graphics/<a class="el" href="_material_8hpp_source.html">Material.hpp</a></li>
-<li>src/graphics/<b>Material.cpp</b></li>
+<li>src/graphics/<a class="el" href="_material_8cpp.html">Material.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -138,7 +559,7 @@ void&#160;</td><td class="memItemRight"><b>set_name</b> (const std::string &amp;
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><a href="classturbo_1_1_material.html">Material</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="classturbo_1_1_material.html">Material</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

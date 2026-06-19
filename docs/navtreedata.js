@@ -25,19 +25,40 @@
 var NAVTREE =
 [
   [ "Turbo Engine", "index.html", [
-    [ "Turbo Engine Documentation", "index.html", null ],
+    [ "Building", "index.html#gs_build", null ],
+    [ "Running the demo", "index.html#gs_run", null ],
+    [ "Your first scene", "index.html#gs_scene", null ],
+    [ "Components", "index.html#gs_component", null ],
+    [ "Your first Lua script", "index.html#gs_lua", null ],
+    [ "Where to go next", "index.html#gs_next", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ],
     [ "Examples", "examples.html", "examples" ]
   ] ]
@@ -45,8 +66,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_audio_8hpp_source.html",
-"files.html"
+"_audio_8hpp.html",
+"classturbo_1_1_component.html#a3bab879689f2079d7c3641b122f68f4c",
+"classturbo_1_1_lua_component.html#abded79e60d057b8c6a6e81704121b081",
+"classturbo_1_1_shader.html#abb53e5c06f176f92bd8f7198dee3d41e",
+"classturbo_1_1script_1_1_script_engine.html#a7fe19bc8a764e69225cee020619f617a"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

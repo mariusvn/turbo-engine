@@ -60,6 +60,7 @@ namespace turbo {
          * Not owned: materials are shared and owned by the ShaderLibrary.
          */
         void set_material(Material* material);
+        /** @brief Material currently applied to the drawable (null = default). */
         Material* get_material() const;
 
         std::string get_name() const;

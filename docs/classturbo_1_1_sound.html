@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
   <div class="headertitle"><div class="title">turbo::Sound Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A short sound effect, loaded fully into memory and playable on demand. For longer tracks streamed from disk, use <a class="el" href="classturbo_1_1_music_stream.html" title="A music track streamed (decoded on the fly) from a file, for audio too long to keep fully in memory....">MusicStream</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sound_8hpp_source.html">Sound.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for turbo::Sound:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -100,20 +105,76 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d773743f74c4972a086268a6dd4c4bf" id="r_a2d773743f74c4972a086268a6dd4c4bf"><td class="memItemLeft"><a id="a2d773743f74c4972a086268a6dd4c4bf" name="a2d773743f74c4972a086268a6dd4c4bf"></a>
-&#160;</td><td class="memItemRight"><b>Sound</b> (<a class="el" href="classturbo_1_1_path.html">Path</a> *path)</td></tr>
+<tr class="memitem:a2d773743f74c4972a086268a6dd4c4bf" id="r_a2d773743f74c4972a086268a6dd4c4bf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2d773743f74c4972a086268a6dd4c4bf">Sound</a> (<a class="el" href="classturbo_1_1_path.html">Path</a> *path)</td></tr>
+<tr class="memdesc:a2d773743f74c4972a086268a6dd4c4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a sound sample from an audio file.  <br /></td></tr>
+<tr class="memitem:a9e9f363db9889124f4af2638c4cad159" id="r_a9e9f363db9889124f4af2638c4cad159"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9e9f363db9889124f4af2638c4cad159">~Sound</a> ()</td></tr>
 <tr class="memitem:ae3584977b838d2ad93623056e7e65909" id="r_ae3584977b838d2ad93623056e7e65909"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae3584977b838d2ad93623056e7e65909">play</a> () override</td></tr>
+<tr class="memdesc:ae3584977b838d2ad93623056e7e65909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start, or resume, playback.  <br /></td></tr>
 <tr class="memitem:a3ddce27018bf58fb0fb9c2a613359b6f" id="r_a3ddce27018bf58fb0fb9c2a613359b6f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ddce27018bf58fb0fb9c2a613359b6f">pause</a> () override</td></tr>
+<tr class="memdesc:a3ddce27018bf58fb0fb9c2a613359b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause playback, keeping the current position.  <br /></td></tr>
 <tr class="memitem:abee813a4046dc2a212fdb061de7ecf5b" id="r_abee813a4046dc2a212fdb061de7ecf5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abee813a4046dc2a212fdb061de7ecf5b">reset</a> () override</td></tr>
+<tr class="memdesc:abee813a4046dc2a212fdb061de7ecf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop playback and rewind to the beginning.  <br /></td></tr>
 <tr class="memitem:ab4db0df7a70bfc438fbee39bfd81a267" id="r_ab4db0df7a70bfc438fbee39bfd81a267"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab4db0df7a70bfc438fbee39bfd81a267">is_playing</a> () const override</td></tr>
+<tr class="memdesc:ab4db0df7a70bfc438fbee39bfd81a267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the audio is currently playing.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a940b7976a8f4e65f6c1e0ff503f08a04" id="r_a940b7976a8f4e65f6c1e0ff503f08a04"><td class="memItemLeft"><a id="a940b7976a8f4e65f6c1e0ff503f08a04" name="a940b7976a8f4e65f6c1e0ff503f08a04"></a>
-ALLEGRO_SAMPLE *&#160;</td><td class="memItemRight"><b>sample</b> = nullptr</td></tr>
-<tr class="memitem:a16e40ca6a7debaada60536f43a48d3b1" id="r_a16e40ca6a7debaada60536f43a48d3b1"><td class="memItemLeft"><a id="a16e40ca6a7debaada60536f43a48d3b1" name="a16e40ca6a7debaada60536f43a48d3b1"></a>
-ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance</b> = nullptr</td></tr>
+<tr class="memitem:a940b7976a8f4e65f6c1e0ff503f08a04" id="r_a940b7976a8f4e65f6c1e0ff503f08a04"><td class="memItemLeft">ALLEGRO_SAMPLE *&#160;</td><td class="memItemRight"><a class="el" href="#a940b7976a8f4e65f6c1e0ff503f08a04">sample</a> = nullptr</td></tr>
+<tr class="memitem:a16e40ca6a7debaada60536f43a48d3b1" id="r_a16e40ca6a7debaada60536f43a48d3b1"><td class="memItemLeft">ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><a class="el" href="#a16e40ca6a7debaada60536f43a48d3b1">sample_instance</a> = nullptr</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A short sound effect, loaded fully into memory and playable on demand. For longer tracks streamed from disk, use <a class="el" href="classturbo_1_1_music_stream.html" title="A music track streamed (decoded on the fly) from a file, for audio too long to keep fully in memory....">MusicStream</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2d773743f74c4972a086268a6dd4c4bf" name="a2d773743f74c4972a086268a6dd4c4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d773743f74c4972a086268a6dd4c4bf">&#9670;&#160;</a></span>Sound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Sound::Sound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classturbo_1_1_path.html">Path</a> *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load a sound sample from an audio file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>path to the audio file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e9f363db9889124f4af2638c4cad159" name="a9e9f363db9889124f4af2638c4cad159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9f363db9889124f4af2638c4cad159">&#9670;&#160;</a></span>~Sound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Sound::~Sound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ab4db0df7a70bfc438fbee39bfd81a267" name="ab4db0df7a70bfc438fbee39bfd81a267"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4db0df7a70bfc438fbee39bfd81a267">&#9670;&#160;</a></span>is_playing()</h2>
@@ -138,7 +199,9 @@ ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance<
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classturbo_1_1_audio.html">turbo::Audio</a>.</p>
+<p>Whether the audio is currently playing. </p>
+
+<p>Implements <a class="el" href="classturbo_1_1_audio.html#a2b531ab651e77e91ce0d0d2bcad9df72">turbo::Audio</a>.</p>
 
 </div>
 </div>
@@ -165,7 +228,9 @@ ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance<
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classturbo_1_1_audio.html">turbo::Audio</a>.</p>
+<p>Pause playback, keeping the current position. </p>
+
+<p>Implements <a class="el" href="classturbo_1_1_audio.html#a289fd342b09149733baa1415e1d4012f">turbo::Audio</a>.</p>
 
 </div>
 </div>
@@ -192,7 +257,9 @@ ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance<
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classturbo_1_1_audio.html">turbo::Audio</a>.</p>
+<p>Start, or resume, playback. </p>
+
+<p>Implements <a class="el" href="classturbo_1_1_audio.html#acc5e9fcbf66635d300e2fb0ab707e29c">turbo::Audio</a>.</p>
 
 </div>
 </div>
@@ -219,13 +286,60 @@ ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance<
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classturbo_1_1_audio.html">turbo::Audio</a>.</p>
+<p>Stop playback and rewind to the beginning. </p>
+
+<p>Implements <a class="el" href="classturbo_1_1_audio.html#a144ce5bae52d661337a449e7b216e9d2">turbo::Audio</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a940b7976a8f4e65f6c1e0ff503f08a04" name="a940b7976a8f4e65f6c1e0ff503f08a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a940b7976a8f4e65f6c1e0ff503f08a04">&#9670;&#160;</a></span>sample</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_SAMPLE* turbo::Sound::sample = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16e40ca6a7debaada60536f43a48d3b1" name="a16e40ca6a7debaada60536f43a48d3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e40ca6a7debaada60536f43a48d3b1">&#9670;&#160;</a></span>sample_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_SAMPLE_INSTANCE* turbo::Sound::sample_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/turbo/sound/<a class="el" href="_sound_8hpp_source.html">Sound.hpp</a></li>
-<li>src/sound/<b>Sound.cpp</b></li>
+<li>src/sound/<a class="el" href="_sound_8cpp.html">Sound.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -240,7 +354,7 @@ ALLEGRO_SAMPLE_INSTANCE *&#160;</td><td class="memItemRight"><b>sample_instance<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><a href="classturbo_1_1_sound.html">Sound</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="classturbo_1_1_sound.html">Sound</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdebug_1_1
   <div class="headertitle"><div class="title">debug::GameObjectDebug Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_game_object_debug_8hpp_source.html">GameObjectDebug.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for debug::GameObjectDebug:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -94,38 +96,55 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdebug_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad3d4dcd9dc536f6e3b6e2cdcac1e578c" id="r_ad3d4dcd9dc536f6e3b6e2cdcac1e578c"><td class="memItemLeft"><a id="ad3d4dcd9dc536f6e3b6e2cdcac1e578c" name="ad3d4dcd9dc536f6e3b6e2cdcac1e578c"></a>
-&#160;</td><td class="memItemRight"><b>GameObjectDebug</b> (<a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a> *gameobject)</td></tr>
+<tr class="memitem:ad3d4dcd9dc536f6e3b6e2cdcac1e578c" id="r_ad3d4dcd9dc536f6e3b6e2cdcac1e578c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad3d4dcd9dc536f6e3b6e2cdcac1e578c">GameObjectDebug</a> (<a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a> *gameobject)</td></tr>
 <tr class="memitem:a7d16f0688413b63eb2eeb25d20d35512" id="r_a7d16f0688413b63eb2eeb25d20d35512"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d16f0688413b63eb2eeb25d20d35512">render</a> () override</td></tr>
 <tr class="inherit_header pub_methods_classdebug_1_1_debug_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdebug_1_1_debug_window')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdebug_1_1_debug_window.html">debug::DebugWindow</a></td></tr>
-<tr class="memitem:ab01b13cbc757819fe747302a80a4a077 inherit pub_methods_classdebug_1_1_debug_window" id="r_ab01b13cbc757819fe747302a80a4a077"><td class="memItemLeft">
-virtual void&#160;</td><td class="memItemRight"><b>open</b> ()</td></tr>
-<tr class="memitem:a014f159bb97e646f8feee99971208ee0 inherit pub_methods_classdebug_1_1_debug_window" id="r_a014f159bb97e646f8feee99971208ee0"><td class="memItemLeft">
-virtual void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
+<tr class="memitem:ab01b13cbc757819fe747302a80a4a077 inherit pub_methods_classdebug_1_1_debug_window" id="r_ab01b13cbc757819fe747302a80a4a077"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classdebug_1_1_debug_window.html#ab01b13cbc757819fe747302a80a4a077">open</a> ()</td></tr>
+<tr class="memitem:a014f159bb97e646f8feee99971208ee0 inherit pub_methods_classdebug_1_1_debug_window" id="r_a014f159bb97e646f8feee99971208ee0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classdebug_1_1_debug_window.html#a014f159bb97e646f8feee99971208ee0">close</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a28b75f7f6b9606c31805238a75c160c1" id="r_a28b75f7f6b9606c31805238a75c160c1"><td class="memItemLeft"><a id="a28b75f7f6b9606c31805238a75c160c1" name="a28b75f7f6b9606c31805238a75c160c1"></a>
-<a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a> *&#160;</td><td class="memItemRight"><b>gameobject</b></td></tr>
-<tr class="memitem:a86762301340837f238ae5923515b368a" id="r_a86762301340837f238ae5923515b368a"><td class="memItemLeft"><a id="a86762301340837f238ae5923515b368a" name="a86762301340837f238ae5923515b368a"></a>
-<a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a> *&#160;</td><td class="memItemRight"><b>eventHandler</b> = new <a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a>&lt;&gt;([this]{this-&gt;render();})</td></tr>
-<tr class="memitem:a5ee56a3e261342d98d48a680b7a2bc99" id="r_a5ee56a3e261342d98d48a680b7a2bc99"><td class="memItemLeft"><a id="a5ee56a3e261342d98d48a680b7a2bc99" name="a5ee56a3e261342d98d48a680b7a2bc99"></a>
-std::string&#160;</td><td class="memItemRight"><b>win_name</b> = &quot;&quot;</td></tr>
+<tr class="memitem:a28b75f7f6b9606c31805238a75c160c1" id="r_a28b75f7f6b9606c31805238a75c160c1"><td class="memItemLeft"><a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a28b75f7f6b9606c31805238a75c160c1">gameobject</a></td></tr>
+<tr class="memitem:a86762301340837f238ae5923515b368a" id="r_a86762301340837f238ae5923515b368a"><td class="memItemLeft"><a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a86762301340837f238ae5923515b368a">eventHandler</a> = new <a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a>&lt;&gt;([this]{this-&gt;<a class="el" href="#a7d16f0688413b63eb2eeb25d20d35512">render</a>();})</td></tr>
+<tr class="memitem:a5ee56a3e261342d98d48a680b7a2bc99" id="r_a5ee56a3e261342d98d48a680b7a2bc99"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5ee56a3e261342d98d48a680b7a2bc99">win_name</a> = &quot;&quot;</td></tr>
 <tr class="inherit_header pro_attribs_classdebug_1_1_debug_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classdebug_1_1_debug_window')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdebug_1_1_debug_window.html">debug::DebugWindow</a></td></tr>
-<tr class="memitem:a3c5a789a85de454fd7093914c4d89349 inherit pro_attribs_classdebug_1_1_debug_window" id="r_a3c5a789a85de454fd7093914c4d89349"><td class="memItemLeft">
-bool&#160;</td><td class="memItemRight"><b>is_window_open</b> = true</td></tr>
+<tr class="memitem:a3c5a789a85de454fd7093914c4d89349 inherit pro_attribs_classdebug_1_1_debug_window" id="r_a3c5a789a85de454fd7093914c4d89349"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classdebug_1_1_debug_window.html#a3c5a789a85de454fd7093914c4d89349">is_window_open</a> = true</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:af3cf55c5c1ebc6529f9334f007330cd2" id="r_af3cf55c5c1ebc6529f9334f007330cd2"><td class="memItemLeft"><a id="af3cf55c5c1ebc6529f9334f007330cd2" name="af3cf55c5c1ebc6529f9334f007330cd2"></a>
-static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><b>current_instances</b></td></tr>
+<tr class="memitem:af3cf55c5c1ebc6529f9334f007330cd2" id="r_af3cf55c5c1ebc6529f9334f007330cd2"><td class="memItemLeft">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af3cf55c5c1ebc6529f9334f007330cd2">current_instances</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classdebug_1_1_debug_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classdebug_1_1_debug_window')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classdebug_1_1_debug_window.html">debug::DebugWindow</a></td></tr>
-<tr class="memitem:ad3f120c1729f383199eea5936caedb4f inherit pub_static_methods_classdebug_1_1_debug_window" id="r_ad3f120c1729f383199eea5936caedb4f"><td class="memItemLeft">
-static void&#160;</td><td class="memItemRight"><b>set_color_theme</b> ()</td></tr>
+<tr class="memitem:ad3f120c1729f383199eea5936caedb4f inherit pub_static_methods_classdebug_1_1_debug_window" id="r_ad3f120c1729f383199eea5936caedb4f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="classdebug_1_1_debug_window.html#ad3f120c1729f383199eea5936caedb4f">set_color_theme</a> ()</td></tr>
 </table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad3d4dcd9dc536f6e3b6e2cdcac1e578c" name="ad3d4dcd9dc536f6e3b6e2cdcac1e578c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d4dcd9dc536f6e3b6e2cdcac1e578c">&#9670;&#160;</a></span>GameObjectDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">debug::GameObjectDebug::GameObjectDebug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>gameobject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a7d16f0688413b63eb2eeb25d20d35512" name="a7d16f0688413b63eb2eeb25d20d35512"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d16f0688413b63eb2eeb25d20d35512">&#9670;&#160;</a></span>render()</h2>
@@ -150,7 +169,96 @@ static void&#160;</td><td class="memItemRight"><b>set_color_theme</b> ()</td></t
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classdebug_1_1_debug_window.html">debug::DebugWindow</a>.</p>
+<p>Implements <a class="el" href="classdebug_1_1_debug_window.html#a39a59a62fce5bd711bd2b64222e5492f">debug::DebugWindow</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af3cf55c5c1ebc6529f9334f007330cd2" name="af3cf55c5c1ebc6529f9334f007330cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cf55c5c1ebc6529f9334f007330cd2">&#9670;&#160;</a></span>current_instances</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; debug::GameObjectDebug::current_instances</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86762301340837f238ae5923515b368a" name="a86762301340837f238ae5923515b368a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86762301340837f238ae5923515b368a">&#9670;&#160;</a></span>eventHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a>* debug::GameObjectDebug::eventHandler = new <a class="el" href="classturbo_1_1_event_handler.html">turbo::EventHandler</a>&lt;&gt;([this]{this-&gt;<a class="el" href="#a7d16f0688413b63eb2eeb25d20d35512">render</a>();})</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28b75f7f6b9606c31805238a75c160c1" name="a28b75f7f6b9606c31805238a75c160c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b75f7f6b9606c31805238a75c160c1">&#9670;&#160;</a></span>gameobject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_game_object.html">turbo::GameObject</a>* debug::GameObjectDebug::gameobject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ee56a3e261342d98d48a680b7a2bc99" name="a5ee56a3e261342d98d48a680b7a2bc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee56a3e261342d98d48a680b7a2bc99">&#9670;&#160;</a></span>win_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string debug::GameObjectDebug::win_name = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -170,7 +278,7 @@ static void&#160;</td><td class="memItemRight"><b>set_color_theme</b> ()</td></t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>debug</b></li><li class="navelem"><a href="classdebug_1_1_game_object_debug.html">GameObjectDebug</a></li>
+    <li class="navelem"><a href="namespacedebug.html">debug</a></li><li class="navelem"><a href="classdebug_1_1_game_object_debug.html">GameObjectDebug</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

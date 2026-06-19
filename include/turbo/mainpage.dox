@@ -1,0 +1,106 @@
+/**
+@mainpage Turbo Engine
+
+Turbo Engine is a small, self-contained C++17 **2D game engine** built on
+**Allegro 5**, organised around a classic **Scene &rarr; GameObject &rarr; Component**
+model. When built with Dear ImGui it ships a full **editor** (hierarchy, inspector,
+gizmos), a **material / shader system** and **Lua scripting**.
+
+@tableofcontents
+
+@section gs_build Building
+
+Requirements: **CMake &ge; 3.21**, a C++17 compiler and Git. Every dependency
+(Allegro 5, Dear ImGui, Lua, sol2 and their transitive deps) is fetched and built
+automatically through **vcpkg in manifest mode** — no manual setup.
+
+@code{.sh}
+# Engine + demo, editor overlay OFF (default)
+cmake -B build
+cmake --build build
+
+# With the full editor (Dear ImGui)
+cmake -B build -DTURBO_ENABLE_IMGUI=ON
+cmake --build build
+@endcode
+
+The first configure compiles Allegro 5 and the rest from source through vcpkg, so it
+takes a while; later builds reuse vcpkg's binary cache.
+
+@section gs_run Running the demo
+
+Run `demo` from the build's `bin/` directory — assets and the dependency libraries are
+deployed next to the executable, so it launches from anywhere.
+
+@section gs_scene Your first scene
+
+A game is a turbo::Scene that builds a tree of turbo::GameObject. Each object has a
+turbo::Transform and, optionally, a turbo::Drawable (turbo::Sprite, turbo::RectangleShape,
+turbo::CircleShape) and turbo::Component behaviours. The turbo::Engine drives the window
+and the main loop; turbo::SceneManager owns the registered scenes.
+
+@code{.cpp}
+#include <turbo/Engine.hpp>
+#include <turbo/graphics/RectangleShape.hpp>
+
+class MyScene : public turbo::Scene {
+public:
+    void load() override {
+        auto* root = new turbo::GameObject(nullptr, "Root");
+        auto* box  = new turbo::GameObject(root, "Box");
+        box->set_position(400, 300);
+        box->set_drawable(new turbo::RectangleShape(120, 80, turbo::Color(220, 70, 70)));
+        this->root_gameobject = root;
+    }
+    void unload() override { delete this->root_gameobject; this->root_gameobject = nullptr; }
+};
+
+int main(int argc, char** argv) {
+    (void)argc; (void)argv;
+    turbo::Engine engine;
+    auto* scene = new MyScene();
+    engine.scene_manager.register_scene(scene, "Main");
+    engine.scene_manager.set_active_scene("Main");
+    engine.start_window("My Game", 1280, 720);
+    engine.loop();
+    engine.stop_window();
+    return 0;
+}
+@endcode
+
+@section gs_component Components
+
+Behaviour lives in turbo::Component subclasses — override `load()`, `update(int)`,
+`on_enable()`, `on_disable()`, `unload()` — and is attached with
+turbo::GameObject::add_component. The built-in turbo::component::SimpleControl moves an
+object with the arrow keys, for example.
+
+@section gs_lua Your first Lua script
+
+Built with the editor, behaviour can also be written in **Lua**. Drop a file in
+`assets/scripts/` that returns a table with optional lifecycle methods; `self.gameObject`
+is the owning GameObject:
+
+@code{.lua}
+local Rotator = {}
+
+Rotator.speed = 90.0   -- editable in the inspector
+
+function Rotator:update(dt)         -- dt in milliseconds
+    self.gameObject:rotate(self.speed * dt / 1000.0)
+end
+
+return Rotator
+@endcode
+
+Attach it from the inspector (**+ Add Script**) and press **Play**. The bound API
+(spawn / find / destroy, transform, input, materials, &hellip;) is provided by
+turbo::script::ScriptEngine; the component wrapper is turbo::LuaComponent.
+
+@section gs_next Where to go next
+
+- turbo::Engine — main loop, window and subsystems
+- turbo::Scene, turbo::GameObject, turbo::Component — the scene model
+- turbo::ShaderLibrary, turbo::Material, turbo::Shader — the shader / material system
+- turbo::LuaComponent, turbo::script::ScriptEngine — Lua scripting
+*/

@@ -67,6 +67,7 @@ namespace turbo {
          */
         bool is_enabled();
 
+        /** @brief Display name of the component (used by the editor). */
         const char* get_name() const;
 
         /**

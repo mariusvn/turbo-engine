@@ -1,6 +1,7 @@
 var classturbo_1_1_path =
 [
     [ "Path", "classturbo_1_1_path.html#ace5f3b9292a75c68188e3a3190ceafba", null ],
+    [ "~Path", "classturbo_1_1_path.html#a894f793e7409aa682d26351ac7e397c6", null ],
     [ "absolute", "classturbo_1_1_path.html#ace1b90aa89fcb2015355449a357f5614", null ],
     [ "append_component", "classturbo_1_1_path.html#a3ac2247f53d5414f3ced84ba9b03d833", null ],
     [ "c_str", "classturbo_1_1_path.html#af4c9336a297003e5c4ab2135bf5fc32e", null ],
@@ -14,9 +15,12 @@ var classturbo_1_1_path =
     [ "get_resources_path", "classturbo_1_1_path.html#ac66767e41b9e2fa120133b049a1ea7c5", null ],
     [ "get_tail", "classturbo_1_1_path.html#ac3dfc92b43ca9f740f6adb1c7d575b20", null ],
     [ "insert_component", "classturbo_1_1_path.html#abad0f427469912b4970aa7f7b28157b9", null ],
+    [ "operator const char *", "classturbo_1_1_path.html#ad93af89a5e419e3da72f1c31a764cf9c", null ],
+    [ "operator std::string", "classturbo_1_1_path.html#af1bfba6095e04725e3cbfcc887112a5a", null ],
     [ "remove_component", "classturbo_1_1_path.html#a918b222d3891e45433839308f25a753d", null ],
     [ "replace_component", "classturbo_1_1_path.html#add94285454e7a7dd001490a8dc672d60", null ],
     [ "set_drive", "classturbo_1_1_path.html#a6609fe3e4fb7d4c2fc9dcaaf8521d666", null ],
     [ "set_file_extension", "classturbo_1_1_path.html#ae602d9ca7d050884cd944c00711a9b92", null ],
-    [ "set_filename", "classturbo_1_1_path.html#a3efd8aa6cbe925a865b048e1c95a4240", null ]
+    [ "set_filename", "classturbo_1_1_path.html#a3efd8aa6cbe925a865b048e1c95a4240", null ],
+    [ "operator<<", "classturbo_1_1_path.html#a2014da6319bc04b2fd709389bac02eda", null ]
 ];

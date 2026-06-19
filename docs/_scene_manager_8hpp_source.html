@@ -77,21 +77,21 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
   <div class="headertitle"><div class="title">SceneManager.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_scene_manager_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef __TURBO_SCENE_MANAGER_HPP__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define __TURBO_SCENE_MANAGER_HPP__</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Scene.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;DebugImgui.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_scene_8hpp.html">Scene.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_debug_imgui_8hpp.html">DebugImgui.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>turbo {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceturbo.html">turbo</a> {</div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classturbo_1_1_scene_manager.html">   15</a></span>    <span class="keyword">class </span>SceneManager {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classturbo_1_1_scene_manager.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classturbo_1_1_scene_manager.html#a06b8387ff2cce75793acba54c7c0f337">SceneManager</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        SceneManager();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_function" href="classturbo_1_1_scene_manager.html#a06b8387ff2cce75793acba54c7c0f337">SceneManager</a>();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classturbo_1_1_scene_manager.html#a65eff576b80674b9937a80673bb6b677">register_scene</a>(<a class="code hl_class" href="classturbo_1_1_scene.html">Scene</a>* scene, <span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classturbo_1_1_scene_manager.html#a55aecf398bb258d429bfa1faf484b313">get_active_scene_name</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        ONLYIMGUI(<a class="code hl_class" href="classdebug_1_1_scene_manager_debug.html">debug::SceneManagerDebug</a> debug);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classturbo_1_1_scene_manager.html#a296d8f33bbe72131a0cdc7917f99d981">   43</a></span>        <a class="code hl_function" href="classturbo_1_1_scene_manager.html#a296d8f33bbe72131a0cdc7917f99d981">ONLYIMGUI</a>(<a class="code hl_class" href="classdebug_1_1_scene_manager_debug.html">debug::SceneManagerDebug</a> <a class="code hl_namespace" href="namespacedebug.html">debug</a>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="classturbo_1_1_scene.html">Scene</a>* active_scene = <span class="keyword">nullptr</span>;</div>
@@ -112,19 +112,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_debug_imgui_8hpp_html"><div class="ttname"><a href="_debug_imgui_8hpp.html">DebugImgui.hpp</a></div></div>
+<div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
 <div class="ttc" id="aclassdebug_1_1_scene_manager_debug_html"><div class="ttname"><a href="classdebug_1_1_scene_manager_debug.html">debug::SceneManagerDebug</a></div><div class="ttdef"><b>Definition</b> SceneManagerDebug.hpp:11</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_html"><div class="ttname"><a href="classturbo_1_1_scene.html">turbo::Scene</a></div><div class="ttdoc">Basic scene class.</div><div class="ttdef"><b>Definition</b> Scene.hpp:11</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html_a06b8387ff2cce75793acba54c7c0f337"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a06b8387ff2cce75793acba54c7c0f337">turbo::SceneManager::SceneManager</a></div><div class="ttdeci">SceneManager()</div><div class="ttdef"><b>Definition</b> SceneManager.cpp:5</div></div>
+<div class="ttc" id="aclassturbo_1_1_scene_manager_html_a296d8f33bbe72131a0cdc7917f99d981"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a296d8f33bbe72131a0cdc7917f99d981">turbo::SceneManager::ONLYIMGUI</a></div><div class="ttdeci">ONLYIMGUI(debug::SceneManagerDebug debug)</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_manager_html_a55aecf398bb258d429bfa1faf484b313"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a55aecf398bb258d429bfa1faf484b313">turbo::SceneManager::get_active_scene_name</a></div><div class="ttdeci">const std::string &amp; get_active_scene_name() const</div><div class="ttdoc">Name under which the active scene was registered (empty if none).</div><div class="ttdef"><b>Definition</b> SceneManager.cpp:36</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_manager_html_a65eff576b80674b9937a80673bb6b677"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a65eff576b80674b9937a80673bb6b677">turbo::SceneManager::register_scene</a></div><div class="ttdeci">void register_scene(Scene *scene, const char *name)</div><div class="ttdoc">Register a scene in the manager.</div><div class="ttdef"><b>Definition</b> SceneManager.cpp:8</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_manager_html_a8b800d4c17d250b642fdcc1136690b38"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#a8b800d4c17d250b642fdcc1136690b38">turbo::SceneManager::set_active_scene</a></div><div class="ttdeci">void set_active_scene(const char *name)</div><div class="ttdoc">Set the scene currently displayed.</div><div class="ttdef"><b>Definition</b> SceneManager.cpp:15</div></div>
 <div class="ttc" id="aclassturbo_1_1_scene_manager_html_ad8f7715510f3d8eb32dfb7e2fe37093e"><div class="ttname"><a href="classturbo_1_1_scene_manager.html#ad8f7715510f3d8eb32dfb7e2fe37093e">turbo::SceneManager::get_active_scene</a></div><div class="ttdeci">Scene * get_active_scene() const</div><div class="ttdoc">Retrieves the currently displayed scene.</div><div class="ttdef"><b>Definition</b> SceneManager.cpp:32</div></div>
+<div class="ttc" id="anamespacedebug_html"><div class="ttname"><a href="namespacedebug.html">debug</a></div><div class="ttdef"><b>Definition</b> ComponentDebug.hpp:11</div></div>
+<div class="ttc" id="anamespaceturbo_html"><div class="ttname"><a href="namespaceturbo.html">turbo</a></div><div class="ttdef"><b>Definition</b> Component.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>turbo</b></li><li class="navelem"><b>SceneManager.hpp</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a href="_scene_manager_8hpp.html">SceneManager.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

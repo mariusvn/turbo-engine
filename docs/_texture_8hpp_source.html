@@ -77,15 +77,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_texture_8hpp_
   <div class="headertitle"><div class="title">Texture.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_texture_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef __TURBO_TEXTURE_HPP__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define __TURBO_TEXTURE_HPP__</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../Path.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Drawable.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_path_8hpp.html">../Path.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_drawable_8hpp.html">Drawable.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>turbo {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceturbo.html">turbo</a> {</div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classturbo_1_1_texture.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_texture_8hpp_
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="classturbo_1_1_texture.html#af36a55bb9b24ff5ca6afbd02fc86cc05">~Texture</a>();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// A Texture owns its Allegro bitmap; copying would double-free it.</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classturbo_1_1_texture.html#a3e9ae2953afab628de48fa06451747b9">   27</a></span>        <a class="code hl_function" href="classturbo_1_1_texture.html#a3e9ae2953afab628de48fa06451747b9">Texture</a>(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classturbo_1_1_texture.html#a4dd02ed464a8074907cd24ac43e96de0">   28</a></span>        <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp; <a class="code hl_function" href="classturbo_1_1_texture.html#a4dd02ed464a8074907cd24ac43e96de0">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">Texture</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a27a06d932f46c224c31a6a1def31d59f">get_width</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classturbo_1_1_texture.html#a529220c18e1d5c736795db2a796eab6d">get_height</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">    #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span>* __get_texture_bitmap() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span>* <a class="code hl_function" href="classturbo_1_1_texture.html#aa0aa79217dfe1fa5b31def83929a5ac3">__get_texture_bitmap</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">protected</span>:</div>
@@ -111,19 +111,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_texture_8hpp_
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_drawable_8hpp_html"><div class="ttname"><a href="_drawable_8hpp.html">Drawable.hpp</a></div></div>
+<div class="ttc" id="a_path_8hpp_html"><div class="ttname"><a href="_path_8hpp.html">Path.hpp</a></div></div>
 <div class="ttc" id="aclassturbo_1_1_path_html"><div class="ttname"><a href="classturbo_1_1_path.html">turbo::Path</a></div><div class="ttdoc">Path class is used to simplify the edition of paths.</div><div class="ttdef"><b>Definition</b> Path.hpp:13</div></div>
 <div class="ttc" id="aclassturbo_1_1_texture_html_a27a06d932f46c224c31a6a1def31d59f"><div class="ttname"><a href="classturbo_1_1_texture.html#a27a06d932f46c224c31a6a1def31d59f">turbo::Texture::get_width</a></div><div class="ttdeci">unsigned int get_width() const</div><div class="ttdoc">Get the width of the texture.</div><div class="ttdef"><b>Definition</b> Texture.cpp:17</div></div>
 <div class="ttc" id="aclassturbo_1_1_texture_html_a3dd75820ff10ac8e68802d513beccedd"><div class="ttname"><a href="classturbo_1_1_texture.html#a3dd75820ff10ac8e68802d513beccedd">turbo::Texture::bitmap</a></div><div class="ttdeci">ALLEGRO_BITMAP * bitmap</div><div class="ttdoc">Target allegro bitmap.</div><div class="ttdef"><b>Definition</b> Texture.hpp:49</div></div>
+<div class="ttc" id="aclassturbo_1_1_texture_html_a3e9ae2953afab628de48fa06451747b9"><div class="ttname"><a href="classturbo_1_1_texture.html#a3e9ae2953afab628de48fa06451747b9">turbo::Texture::Texture</a></div><div class="ttdeci">Texture(const Texture &amp;)=delete</div></div>
+<div class="ttc" id="aclassturbo_1_1_texture_html_a4dd02ed464a8074907cd24ac43e96de0"><div class="ttname"><a href="classturbo_1_1_texture.html#a4dd02ed464a8074907cd24ac43e96de0">turbo::Texture::operator=</a></div><div class="ttdeci">Texture &amp; operator=(const Texture &amp;)=delete</div></div>
 <div class="ttc" id="aclassturbo_1_1_texture_html_a4ef5b49419b6f502c25542145114ecf9"><div class="ttname"><a href="classturbo_1_1_texture.html#a4ef5b49419b6f502c25542145114ecf9">turbo::Texture::Texture</a></div><div class="ttdeci">Texture(Path *path)</div><div class="ttdoc">Construct a new Texture object.</div><div class="ttdef"><b>Definition</b> Texture.cpp:6</div></div>
 <div class="ttc" id="aclassturbo_1_1_texture_html_a529220c18e1d5c736795db2a796eab6d"><div class="ttname"><a href="classturbo_1_1_texture.html#a529220c18e1d5c736795db2a796eab6d">turbo::Texture::get_height</a></div><div class="ttdeci">unsigned int get_height() const</div><div class="ttdoc">Get the height of the texture.</div><div class="ttdef"><b>Definition</b> Texture.cpp:21</div></div>
+<div class="ttc" id="aclassturbo_1_1_texture_html_aa0aa79217dfe1fa5b31def83929a5ac3"><div class="ttname"><a href="classturbo_1_1_texture.html#aa0aa79217dfe1fa5b31def83929a5ac3">turbo::Texture::__get_texture_bitmap</a></div><div class="ttdeci">void * __get_texture_bitmap() const</div><div class="ttdef"><b>Definition</b> Texture.cpp:26</div></div>
 <div class="ttc" id="aclassturbo_1_1_texture_html_af36a55bb9b24ff5ca6afbd02fc86cc05"><div class="ttname"><a href="classturbo_1_1_texture.html#af36a55bb9b24ff5ca6afbd02fc86cc05">turbo::Texture::~Texture</a></div><div class="ttdeci">~Texture()</div><div class="ttdoc">Destroy the Texture and free the underlying bitmap.</div><div class="ttdef"><b>Definition</b> Texture.cpp:13</div></div>
+<div class="ttc" id="anamespaceturbo_html"><div class="ttname"><a href="namespaceturbo.html">turbo</a></div><div class="ttdef"><b>Definition</b> Component.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>turbo</b></li><li class="navelem"><b>graphics</b></li><li class="navelem"><b>Texture.hpp</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a href="dir_933185c165b3278b8b9600fdfbb235f0.html">graphics</a></li><li class="navelem"><a href="_texture_8hpp.html">Texture.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

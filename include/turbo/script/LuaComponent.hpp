@@ -45,7 +45,9 @@ namespace turbo {
         /** @brief Did the script load and return a table without error? */
         bool valid() const { return this->valid_; }
 
+        /** @brief Path of the .lua file backing this component. */
         const std::string& script_path() const { return this->path; }
+        /** @brief Display name (the script file stem). */
         const std::string& script_name() const { return this->display_name; }
 
         /** @brief Re-read the script file from disk and re-run it. */
@@ -53,8 +55,11 @@ namespace turbo {
 
         /** @brief Public fields (with their current values) for the inspector. */
         std::vector<ScriptField> fields() const;
+        /** @brief Set a public number field on the script instance. */
         void set_number(const std::string& name, double value);
+        /** @brief Set a public boolean field on the script instance. */
         void set_bool(const std::string& name, bool value);
+        /** @brief Set a public string field on the script instance. */
         void set_string(const std::string& name, const std::string& value);
 
     private:

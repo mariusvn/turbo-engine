@@ -77,22 +77,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
   <div class="headertitle"><div class="title">turbo::Tileset Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Loads a tile sheet image and slices it into a grid of Sprites, accessible by their (x, y) coordinates.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tileset_8hpp_source.html">Tileset.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a60c2bb8d7e751e5287dc65cd60dec2aa" id="r_a60c2bb8d7e751e5287dc65cd60dec2aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a60c2bb8d7e751e5287dc65cd60dec2aa">Tileset</a> (<a class="el" href="classturbo_1_1_path.html">Path</a> *path, const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;tile_size, const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;tiles_nbr, const unsigned short &amp;margin=0, const unsigned short &amp;border_offset=0)</td></tr>
-<tr class="memitem:abe412034abade744b1c1838cd238e462" id="r_abe412034abade744b1c1838cd238e462"><td class="memItemLeft"><a id="abe412034abade744b1c1838cd238e462" name="abe412034abade744b1c1838cd238e462"></a>
-<a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><b>get_sprite</b> (const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;coords) const noexcept(false)</td></tr>
-<tr class="memitem:acdfb14f2cce389ead6b19d45bbccd79d" id="r_acdfb14f2cce389ead6b19d45bbccd79d"><td class="memItemLeft"><a id="acdfb14f2cce389ead6b19d45bbccd79d" name="acdfb14f2cce389ead6b19d45bbccd79d"></a>
-<a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><b>get_sprite</b> (unsigned short x, unsigned short y) const noexcept(false)</td></tr>
-<tr class="memitem:a100184861d5c3d847f4f78c62c42037f" id="r_a100184861d5c3d847f4f78c62c42037f"><td class="memItemLeft"><a id="a100184861d5c3d847f4f78c62c42037f" name="a100184861d5c3d847f4f78c62c42037f"></a>
-<a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><b>operator()</b> (const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;coords) const noexcept(false)</td></tr>
-<tr class="memitem:a58030d3fa1db76301bba3dbd1cd39e0f" id="r_a58030d3fa1db76301bba3dbd1cd39e0f"><td class="memItemLeft"><a id="a58030d3fa1db76301bba3dbd1cd39e0f" name="a58030d3fa1db76301bba3dbd1cd39e0f"></a>
-<a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><b>operator()</b> (unsigned short x, unsigned short y) const noexcept(false)</td></tr>
-<tr class="memitem:a64f53e7073bb8afa2f8967b06fd7fd39" id="r_a64f53e7073bb8afa2f8967b06fd7fd39"><td class="memItemLeft"><a id="a64f53e7073bb8afa2f8967b06fd7fd39" name="a64f53e7073bb8afa2f8967b06fd7fd39"></a>
-const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;&#160;</td><td class="memItemRight"><b>get_size</b> () const</td></tr>
+<tr class="memitem:a9176710eae1f2460e95a626af2adb924" id="r_a9176710eae1f2460e95a626af2adb924"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9176710eae1f2460e95a626af2adb924">~Tileset</a> ()</td></tr>
+<tr class="memitem:abe412034abade744b1c1838cd238e462" id="r_abe412034abade744b1c1838cd238e462"><td class="memItemLeft"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abe412034abade744b1c1838cd238e462">get_sprite</a> (const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;coords) const noexcept(false)</td></tr>
+<tr class="memitem:acdfb14f2cce389ead6b19d45bbccd79d" id="r_acdfb14f2cce389ead6b19d45bbccd79d"><td class="memItemLeft"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#acdfb14f2cce389ead6b19d45bbccd79d">get_sprite</a> (unsigned short x, unsigned short y) const noexcept(false)</td></tr>
+<tr class="memitem:a100184861d5c3d847f4f78c62c42037f" id="r_a100184861d5c3d847f4f78c62c42037f"><td class="memItemLeft"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a100184861d5c3d847f4f78c62c42037f">operator()</a> (const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;coords) const noexcept(false)</td></tr>
+<tr class="memitem:a58030d3fa1db76301bba3dbd1cd39e0f" id="r_a58030d3fa1db76301bba3dbd1cd39e0f"><td class="memItemLeft"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a58030d3fa1db76301bba3dbd1cd39e0f">operator()</a> (unsigned short x, unsigned short y) const noexcept(false)</td></tr>
+<tr class="memitem:a64f53e7073bb8afa2f8967b06fd7fd39" id="r_a64f53e7073bb8afa2f8967b06fd7fd39"><td class="memItemLeft">const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a64f53e7073bb8afa2f8967b06fd7fd39">get_size</a> () const</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Loads a tile sheet image and slices it into a grid of Sprites, accessible by their (x, y) coordinates. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a60c2bb8d7e751e5287dc65cd60dec2aa" name="a60c2bb8d7e751e5287dc65cd60dec2aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60c2bb8d7e751e5287dc65cd60dec2aa">&#9670;&#160;</a></span>Tileset()</h2>
 
@@ -147,9 +150,120 @@ const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned 
 
 </div>
 </div>
+<a id="a9176710eae1f2460e95a626af2adb924" name="a9176710eae1f2460e95a626af2adb924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9176710eae1f2460e95a626af2adb924">&#9670;&#160;</a></span>~Tileset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::Tileset::~Tileset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a64f53e7073bb8afa2f8967b06fd7fd39" name="a64f53e7073bb8afa2f8967b06fd7fd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f53e7073bb8afa2f8967b06fd7fd39">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp; turbo::Tileset::get_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe412034abade744b1c1838cd238e462" name="abe412034abade744b1c1838cd238e462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe412034abade744b1c1838cd238e462">&#9670;&#160;</a></span>get_sprite() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> * turbo::Tileset::get_sprite </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>coords</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdfb14f2cce389ead6b19d45bbccd79d" name="acdfb14f2cce389ead6b19d45bbccd79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdfb14f2cce389ead6b19d45bbccd79d">&#9670;&#160;</a></span>get_sprite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> * turbo::Tileset::get_sprite </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a100184861d5c3d847f4f78c62c42037f" name="a100184861d5c3d847f4f78c62c42037f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100184861d5c3d847f4f78c62c42037f">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> * turbo::Tileset::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned short &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>coords</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58030d3fa1db76301bba3dbd1cd39e0f" name="a58030d3fa1db76301bba3dbd1cd39e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58030d3fa1db76301bba3dbd1cd39e0f">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classturbo_1_1_sprite.html">Sprite</a> * turbo::Tileset::operator() </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/turbo/graphics/<a class="el" href="_tileset_8hpp_source.html">Tileset.hpp</a></li>
-<li>src/graphics/<b>Tileset.cpp</b></li>
+<li>src/graphics/<a class="el" href="_tileset_8cpp.html">Tileset.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -164,7 +278,7 @@ const <a class="el" href="classturbo_1_1_vector2.html">Vector2</a>&lt; unsigned 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><a href="classturbo_1_1_tileset.html">Tileset</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="classturbo_1_1_tileset.html">Tileset</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

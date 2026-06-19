@@ -42,9 +42,22 @@ namespace turbo {
         Engine();
         ~Engine();
 
+        /**
+         * @brief Create the display, initialise the renderer (and the editor
+         * overlay when built with ImGui) and start the engine subsystems.
+         * @param win_name window title
+         * @param width window width in pixels
+         * @param height window height in pixels
+         */
         void start_window(const char* win_name, unsigned short width, unsigned short height);
+
+        /** @brief Destroy the display and release the renderer. */
         void stop_window();
+
+        /** @brief Change the window title. */
         void set_window_title(const char* title);
+
+        /** @brief Resize the window. */
         void set_window_size(unsigned short width, unsigned short height);
 
         /**
@@ -85,9 +98,13 @@ namespace turbo {
          */
         inline static const std::string version = "0.3";
 
+        /** @brief The active engine instance (set in the constructor). */
         static inline Engine* engine = nullptr;
 
+        /** @brief Owns the registered scenes and the active scene. */
         SceneManager scene_manager;
+
+        /** @brief Global keyboard/mouse input state. */
         static inline Input input = Input();
 
         /**
@@ -107,7 +124,9 @@ namespace turbo {
          */
         void run_script_repl(const std::string& code);
 
+        /** @brief Tick the active scene's logic (one fixed update step). */
         void on_update_tick();
+        /** @brief Render the active scene (one frame). */
         void on_render_tick();
 
         /**
@@ -121,8 +140,12 @@ namespace turbo {
          * apply the theme. No-op when built without ImGui.
          */
         void init_imgui();
+
+        /** @brief Fired on every logic tick; subscribe to run game logic. */
         Event<> update_tick = Event<>();
+        /** @brief Fired on every rendered frame; subscribe to draw. */
         Event<> render_tick = Event<>();
+        /** @brief Engine-wide logger. */
         Logger logger = Logger("Turbo Engine");
 
         ONLYIMGUI(editor::Editor editor = editor::Editor(this));
@@ -170,10 +193,3 @@ namespace turbo {
 }
 
 #endif
-
-
-/**
- * @mainpage Turbo Engine Documentation
- * <a href="hierarchy.html">Class hierarchy</a>
- * 
- */

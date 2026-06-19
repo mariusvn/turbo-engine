@@ -10,6 +10,10 @@
 #include <vector>
 
 namespace turbo {
+    /**
+     * @brief Loads a tile sheet image and slices it into a grid of Sprites,
+     * accessible by their (x, y) coordinates.
+     */
     class Tileset {
     public:
         /**

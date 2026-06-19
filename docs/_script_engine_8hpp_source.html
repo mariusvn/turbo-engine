@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_script_engine
   <div class="headertitle"><div class="title">ScriptEngine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_script_engine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef __TURBO_SCRIPT_SCRIPTENGINE_HPP__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define __TURBO_SCRIPT_SCRIPTENGINE_HPP__</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -89,15 +89,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_script_engine
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>turbo::script {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceturbo_1_1script.html">turbo::script</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classturbo_1_1script_1_1_script_engine.html">   21</a></span>    <span class="keyword">class </span>ScriptEngine {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classturbo_1_1script_1_1_script_engine.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        ScriptEngine();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        ScriptEngine(<span class="keyword">const</span> ScriptEngine&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        ScriptEngine&amp; operator=(<span class="keyword">const</span> ScriptEngine&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classturbo_1_1script_1_1_script_engine.html#a3e852d60e0eea31b22d93bf1a871af24">   25</a></span>        <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a3e852d60e0eea31b22d93bf1a871af24">ScriptEngine</a>(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classturbo_1_1script_1_1_script_engine.html#a2d1ce0026c62e4b232e3516b51299984">   26</a></span>        <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a>&amp; <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a2d1ce0026c62e4b232e3516b51299984">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classturbo_1_1script_1_1_script_engine.html#a7fe19bc8a764e69225cee020619f617a">   29</a></span>        sol::state&amp; <a class="code hl_function" href="classturbo_1_1script_1_1_script_engine.html#a7fe19bc8a764e69225cee020619f617a">state</a>() { <span class="keywordflow">return</span> this-&gt;lua; }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
@@ -117,17 +117,21 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_script_engine
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a05dcc6acc91a513d81b0d45e6c1dab3d"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a05dcc6acc91a513d81b0d45e6c1dab3d">turbo::script::ScriptEngine::ScriptEngine</a></div><div class="ttdeci">ScriptEngine()</div><div class="ttdef"><b>Definition</b> ScriptEngine.cpp:40</div></div>
+<div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a2d1ce0026c62e4b232e3516b51299984"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a2d1ce0026c62e4b232e3516b51299984">turbo::script::ScriptEngine::operator=</a></div><div class="ttdeci">ScriptEngine &amp; operator=(const ScriptEngine &amp;)=delete</div></div>
 <div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a382d501b7f9a527cdc8e1d6a13f564ad"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a382d501b7f9a527cdc8e1d6a13f564ad">turbo::script::ScriptEngine::defer</a></div><div class="ttdeci">void defer(std::function&lt; void()&gt; fn)</div><div class="ttdoc">Queue a structural change (spawn/destroy) to run after the current update pass, so the scene tree isn...</div><div class="ttdef"><b>Definition</b> ScriptEngine.hpp:35</div></div>
+<div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a3e852d60e0eea31b22d93bf1a871af24"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a3e852d60e0eea31b22d93bf1a871af24">turbo::script::ScriptEngine::ScriptEngine</a></div><div class="ttdeci">ScriptEngine(const ScriptEngine &amp;)=delete</div></div>
 <div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a4b1fbc9a1bf61464c34035b1c513e63d"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a4b1fbc9a1bf61464c34035b1c513e63d">turbo::script::ScriptEngine::run_deferred</a></div><div class="ttdeci">void run_deferred()</div><div class="ttdoc">Execute and clear all queued deferred commands.</div><div class="ttdef"><b>Definition</b> ScriptEngine.cpp:47</div></div>
 <div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_a7fe19bc8a764e69225cee020619f617a"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#a7fe19bc8a764e69225cee020619f617a">turbo::script::ScriptEngine::state</a></div><div class="ttdeci">sol::state &amp; state()</div><div class="ttdoc">The shared Lua state (used by LuaComponent to load scripts).</div><div class="ttdef"><b>Definition</b> ScriptEngine.hpp:29</div></div>
 <div class="ttc" id="aclassturbo_1_1script_1_1_script_engine_html_ab366adf7d68179ef6be48dfa5517d7b4"><div class="ttname"><a href="classturbo_1_1script_1_1_script_engine.html#ab366adf7d68179ef6be48dfa5517d7b4">turbo::script::ScriptEngine::run_string</a></div><div class="ttdeci">void run_string(const std::string &amp;code)</div><div class="ttdoc">Execute a chunk of Lua (the editor REPL). Errors and non-nil results are printed to the console.</div><div class="ttdef"><b>Definition</b> ScriptEngine.cpp:55</div></div>
+<div class="ttc" id="anamespaceturbo_1_1script_html"><div class="ttname"><a href="namespaceturbo_1_1script.html">turbo::script</a></div><div class="ttdef"><b>Definition</b> ScriptEngine.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>turbo</b></li><li class="navelem"><b>script</b></li><li class="navelem"><b>ScriptEngine.hpp</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4291f0bba7a79eb4dbf4241d6ba014e0.html">turbo</a></li><li class="navelem"><a href="dir_7f97f3769295386f641647010a5c6215.html">script</a></li><li class="navelem"><a href="_script_engine_8hpp.html">ScriptEngine.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

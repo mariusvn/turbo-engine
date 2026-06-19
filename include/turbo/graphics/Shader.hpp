@@ -9,6 +9,11 @@
 namespace turbo {
     class Texture;
 
+    /**
+     * @brief A GLSL shader program (vertex + pixel) with build-error reporting
+     * and uniform setters. Usually owned and shared through a ShaderLibrary and
+     * referenced by a Material rather than used directly.
+     */
     class Shader {
     public:
         Shader(const Path& pixel_shader_path, const Path& vertex_shader_path);

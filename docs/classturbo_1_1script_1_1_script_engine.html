@@ -85,29 +85,185 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classturbo_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e852d60e0eea31b22d93bf1a871af24" id="r_a3e852d60e0eea31b22d93bf1a871af24"><td class="memItemLeft"><a id="a3e852d60e0eea31b22d93bf1a871af24" name="a3e852d60e0eea31b22d93bf1a871af24"></a>
-&#160;</td><td class="memItemRight"><b>ScriptEngine</b> (const ScriptEngine &amp;)=delete</td></tr>
-<tr class="memitem:a2d1ce0026c62e4b232e3516b51299984" id="r_a2d1ce0026c62e4b232e3516b51299984"><td class="memItemLeft"><a id="a2d1ce0026c62e4b232e3516b51299984" name="a2d1ce0026c62e4b232e3516b51299984"></a>
-ScriptEngine &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const ScriptEngine &amp;)=delete</td></tr>
-<tr class="memitem:a7fe19bc8a764e69225cee020619f617a" id="r_a7fe19bc8a764e69225cee020619f617a"><td class="memItemLeft"><a id="a7fe19bc8a764e69225cee020619f617a" name="a7fe19bc8a764e69225cee020619f617a"></a>
-sol::state &amp;&#160;</td><td class="memItemRight"><b>state</b> ()</td></tr>
-<tr class="memdesc:a7fe19bc8a764e69225cee020619f617a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shared Lua state (used by <a class="el" href="classturbo_1_1_lua_component.html" title="A component whose behaviour is defined by a Lua script, à la Unity.">LuaComponent</a> to load scripts). <br /></td></tr>
-<tr class="memitem:a382d501b7f9a527cdc8e1d6a13f564ad" id="r_a382d501b7f9a527cdc8e1d6a13f564ad"><td class="memItemLeft"><a id="a382d501b7f9a527cdc8e1d6a13f564ad" name="a382d501b7f9a527cdc8e1d6a13f564ad"></a>
-void&#160;</td><td class="memItemRight"><b>defer</b> (std::function&lt; void()&gt; fn)</td></tr>
-<tr class="memdesc:a382d501b7f9a527cdc8e1d6a13f564ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a structural change (spawn/destroy) to run after the current update pass, so the scene tree isn't mutated while iterated. <br /></td></tr>
-<tr class="memitem:a4b1fbc9a1bf61464c34035b1c513e63d" id="r_a4b1fbc9a1bf61464c34035b1c513e63d"><td class="memItemLeft"><a id="a4b1fbc9a1bf61464c34035b1c513e63d" name="a4b1fbc9a1bf61464c34035b1c513e63d"></a>
-void&#160;</td><td class="memItemRight"><b>run_deferred</b> ()</td></tr>
-<tr class="memdesc:a4b1fbc9a1bf61464c34035b1c513e63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute and clear all queued deferred commands. <br /></td></tr>
-<tr class="memitem:ab366adf7d68179ef6be48dfa5517d7b4" id="r_ab366adf7d68179ef6be48dfa5517d7b4"><td class="memItemLeft"><a id="ab366adf7d68179ef6be48dfa5517d7b4" name="ab366adf7d68179ef6be48dfa5517d7b4"></a>
-void&#160;</td><td class="memItemRight"><b>run_string</b> (const std::string &amp;code)</td></tr>
-<tr class="memdesc:ab366adf7d68179ef6be48dfa5517d7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a chunk of Lua (the editor REPL). Errors and non-nil results are printed to the console. <br /></td></tr>
+<tr class="memitem:a05dcc6acc91a513d81b0d45e6c1dab3d" id="r_a05dcc6acc91a513d81b0d45e6c1dab3d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> ()</td></tr>
+<tr class="memitem:a3e852d60e0eea31b22d93bf1a871af24" id="r_a3e852d60e0eea31b22d93bf1a871af24"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3e852d60e0eea31b22d93bf1a871af24">ScriptEngine</a> (const ScriptEngine &amp;)=delete</td></tr>
+<tr class="memitem:a2d1ce0026c62e4b232e3516b51299984" id="r_a2d1ce0026c62e4b232e3516b51299984"><td class="memItemLeft"><a class="el" href="#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2d1ce0026c62e4b232e3516b51299984">operator=</a> (const <a class="el" href="#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> &amp;)=delete</td></tr>
+<tr class="memitem:a7fe19bc8a764e69225cee020619f617a" id="r_a7fe19bc8a764e69225cee020619f617a"><td class="memItemLeft">sol::state &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7fe19bc8a764e69225cee020619f617a">state</a> ()</td></tr>
+<tr class="memdesc:a7fe19bc8a764e69225cee020619f617a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shared Lua state (used by <a class="el" href="classturbo_1_1_lua_component.html" title="A component whose behaviour is defined by a Lua script, à la Unity.">LuaComponent</a> to load scripts).  <br /></td></tr>
+<tr class="memitem:a382d501b7f9a527cdc8e1d6a13f564ad" id="r_a382d501b7f9a527cdc8e1d6a13f564ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a382d501b7f9a527cdc8e1d6a13f564ad">defer</a> (std::function&lt; void()&gt; fn)</td></tr>
+<tr class="memdesc:a382d501b7f9a527cdc8e1d6a13f564ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a structural change (spawn/destroy) to run after the current update pass, so the scene tree isn't mutated while iterated.  <br /></td></tr>
+<tr class="memitem:a4b1fbc9a1bf61464c34035b1c513e63d" id="r_a4b1fbc9a1bf61464c34035b1c513e63d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4b1fbc9a1bf61464c34035b1c513e63d">run_deferred</a> ()</td></tr>
+<tr class="memdesc:a4b1fbc9a1bf61464c34035b1c513e63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute and clear all queued deferred commands.  <br /></td></tr>
+<tr class="memitem:ab366adf7d68179ef6be48dfa5517d7b4" id="r_ab366adf7d68179ef6be48dfa5517d7b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab366adf7d68179ef6be48dfa5517d7b4">run_string</a> (const std::string &amp;code)</td></tr>
+<tr class="memdesc:ab366adf7d68179ef6be48dfa5517d7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a chunk of Lua (the editor REPL). Errors and non-nil results are printed to the console.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Owns the Lua VM and exposes the engine API to scripts. </p>
 <p>A single Lua state is shared by every <a class="el" href="classturbo_1_1_lua_component.html" title="A component whose behaviour is defined by a Lua script, à la Unity.">LuaComponent</a>; each component runs its script in its own returned table, so instances don't collide. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a05dcc6acc91a513d81b0d45e6c1dab3d" name="a05dcc6acc91a513d81b0d45e6c1dab3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05dcc6acc91a513d81b0d45e6c1dab3d">&#9670;&#160;</a></span>ScriptEngine() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::script::ScriptEngine::ScriptEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e852d60e0eea31b22d93bf1a871af24" name="a3e852d60e0eea31b22d93bf1a871af24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e852d60e0eea31b22d93bf1a871af24">&#9670;&#160;</a></span>ScriptEngine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">turbo::script::ScriptEngine::ScriptEngine </td>
+          <td>(</td>
+          <td class="paramtype">const ScriptEngine &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a382d501b7f9a527cdc8e1d6a13f564ad" name="a382d501b7f9a527cdc8e1d6a13f564ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382d501b7f9a527cdc8e1d6a13f564ad">&#9670;&#160;</a></span>defer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::script::ScriptEngine::defer </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue a structural change (spawn/destroy) to run after the current update pass, so the scene tree isn't mutated while iterated. </p>
+
+</div>
+</div>
+<a id="a2d1ce0026c62e4b232e3516b51299984" name="a2d1ce0026c62e4b232e3516b51299984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1ce0026c62e4b232e3516b51299984">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> &amp; turbo::script::ScriptEngine::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a05dcc6acc91a513d81b0d45e6c1dab3d">ScriptEngine</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b1fbc9a1bf61464c34035b1c513e63d" name="a4b1fbc9a1bf61464c34035b1c513e63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b1fbc9a1bf61464c34035b1c513e63d">&#9670;&#160;</a></span>run_deferred()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::script::ScriptEngine::run_deferred </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute and clear all queued deferred commands. </p>
+
+</div>
+</div>
+<a id="ab366adf7d68179ef6be48dfa5517d7b4" name="ab366adf7d68179ef6be48dfa5517d7b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab366adf7d68179ef6be48dfa5517d7b4">&#9670;&#160;</a></span>run_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turbo::script::ScriptEngine::run_string </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute a chunk of Lua (the editor REPL). Errors and non-nil results are printed to the console. </p>
+
+</div>
+</div>
+<a id="a7fe19bc8a764e69225cee020619f617a" name="a7fe19bc8a764e69225cee020619f617a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe19bc8a764e69225cee020619f617a">&#9670;&#160;</a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sol::state &amp; turbo::script::ScriptEngine::state </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The shared Lua state (used by <a class="el" href="classturbo_1_1_lua_component.html" title="A component whose behaviour is defined by a Lua script, à la Unity.">LuaComponent</a> to load scripts). </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/turbo/script/<a class="el" href="_script_engine_8hpp_source.html">ScriptEngine.hpp</a></li>
-<li>src/script/<b>ScriptEngine.cpp</b></li>
+<li>src/script/<a class="el" href="_script_engine_8cpp.html">ScriptEngine.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -122,7 +278,7 @@ void&#160;</td><td class="memItemRight"><b>run_string</b> (const std::string &am
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>turbo</b></li><li class="navelem"><b>script</b></li><li class="navelem"><a href="classturbo_1_1script_1_1_script_engine.html">ScriptEngine</a></li>
+    <li class="navelem"><a href="namespaceturbo.html">turbo</a></li><li class="navelem"><a href="namespaceturbo_1_1script.html">script</a></li><li class="navelem"><a href="classturbo_1_1script_1_1_script_engine.html">ScriptEngine</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

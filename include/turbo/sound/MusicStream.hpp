@@ -9,8 +9,16 @@
 
 namespace turbo {
 
+    /**
+     * @brief A music track streamed (decoded on the fly) from a file, for
+     * audio too long to keep fully in memory. For short effects, use Sound.
+     */
     class MusicStream : public Audio {
     public:
+        /**
+         * @brief Open an audio file as a stream.
+         * @param path path to the audio file
+         */
         explicit MusicStream(Path* path);
         ~MusicStream();
 
