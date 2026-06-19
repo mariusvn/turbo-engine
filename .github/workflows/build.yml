@@ -9,7 +9,7 @@ env:
   # cache at a fixed directory so actions/cache can persist the compiled
   # packages across runs (see the "Cache vcpkg packages" step below).
   VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}/vcpkg_cache
-  # The runners ship CMake 4.x, which rejects projects whose
+  # Some runners ship CMake 4.x, which rejects projects whose
   # cmake_minimum_required predates 3.5 (e.g. the physfs port pulled in by
   # Allegro). This restores compatibility for every nested vcpkg sub-build.
   CMAKE_POLICY_VERSION_MINIMUM: "3.5"
@@ -21,7 +21,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        # windows-latest has rolled onto the VS 2026 / CMake 4.3 preview image,
+        # where the frozen physfs 3.2.0 port (pulled in by Allegro) fails to
+        # configure. Pin to windows-2022 to keep the proven VS 2022 + CMake 3.31
+        # toolchain. ubuntu/macos still ship CMake 3.31 by default and build fine.
+        os: [ubuntu-latest, windows-2022, macos-latest]
 
     steps:
       - uses: actions/checkout@v4

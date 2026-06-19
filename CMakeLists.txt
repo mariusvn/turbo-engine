@@ -19,12 +19,15 @@ cmake_minimum_required(VERSION 3.21)
 #
 #  Unless a toolchain is explicitly supplied, we fetch and bootstrap a pinned
 #  vcpkg into the build tree, then point CMake at its toolchain. Pinning the
-#  release tag here AND the matching commit in vcpkg.json ("builtin-baseline")
-#  keeps dependency resolution fully deterministic and self-contained -- we do
-#  NOT depend on any vcpkg that happens to be installed on the machine.
-#  This MUST run before the first project() call.
+#  release tag here keeps the vcpkg *tooling* deterministic; the exact
+#  dependency versions are pinned independently via "builtin-baseline" (with a
+#  narrow "overrides" entry) in vcpkg.json. The tool tag is intentionally newer
+#  than the baseline so a single up-to-date port (sol2) is reachable while every
+#  other dependency stays exactly as the baseline resolves it. We do NOT depend
+#  on any vcpkg that happens to be installed on the machine. This MUST run
+#  before the first project() call.
 # ---------------------------------------------------------------------------
-set(VCPKG_TAG "2024.12.16" CACHE STRING "vcpkg release tag used for bootstrap")
+set(VCPKG_TAG "2026.06.01" CACHE STRING "vcpkg release tag used for bootstrap")
 
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     message(STATUS "turbo_engine: bootstrapping vcpkg (${VCPKG_TAG})")
@@ -136,7 +139,9 @@ target_link_libraries(turbo_engine PUBLIC
 )
 
 # Lua scripting (sol2 is header-only; it needs the Lua library + headers).
-target_link_libraries(turbo_engine PUBLIC sol2 ${LUA_LIBRARIES})
+# sol2's CMake config only exports the namespaced target sol2::sol2 -- linking
+# the bare name "sol2" makes CMake pass it to the linker as -lsol2, which fails.
+target_link_libraries(turbo_engine PUBLIC sol2::sol2 ${LUA_LIBRARIES})
 target_include_directories(turbo_engine PUBLIC ${LUA_INCLUDE_DIR})
 
 # ---------------------------------------------------------------------------
