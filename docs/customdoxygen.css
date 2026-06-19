@@ -1,387 +1,223 @@
-h1, .h1, h2, .h2, h3, .h3{
-    font-weight: 200 !important;
+/* ===========================================================================
+   Turbo Engine — documentation theme
+   Matches the editor: washed-black warm surfaces + strong yellow accent.
+   Loaded after doxygen.css (HTML_COLORSTYLE = DARK, hue 47) and overrides it.
+   =========================================================================== */
+
+:root {
+    --tb-bg:        #161614;   /* page background (washed black)      */
+    --tb-surface:   #1c1c19;   /* panels / sidebar / tabs             */
+    --tb-surface-2: #222220;   /* code / inputs / table cells         */
+    --tb-surface-3: #2b2b27;   /* hover                               */
+    --tb-border:    #34342f;   /* subtle borders                      */
+    --tb-text:      #e9e7de;   /* primary text                        */
+    --tb-text-dim:  #908d80;   /* secondary text                      */
+    --tb-accent:    #ffc70d;   /* strong yellow                       */
+    --tb-accent-hi: #ffda45;   /* yellow hover                        */
+    --tb-accent-dk: #3a3209;   /* yellow, very dark (subtle fills)    */
+
+    --tb-kw:   #ffcd46;        /* code: keywords  */
+    --tb-str:  #96cd78;        /* code: strings   */
+    --tb-num:  #82b4ff;        /* code: numbers   */
+    --tb-com:  #707064;        /* code: comments  */
+
+    --tb-radius: 7px;
+    --tb-mono: "Cascadia Code", "JetBrains Mono", "SF Mono", Consolas, Menlo, monospace;
+    --tb-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-#navrow1, #navrow2, #navrow3, #navrow4, #navrow5{
-    border-bottom: 1px solid #EEEEEE;
+/* --- base ----------------------------------------------------------------- */
+html, body, #top, #doc-content, .contents {
+    background-color: var(--tb-bg) !important;
+    color: var(--tb-text) !important;
 }
+body, table, div, p, dl, .contents {
+    font-family: var(--tb-sans) !important;
+}
+body { line-height: 1.55; }
 
-.adjust-right {
-margin-left: 30px !important;
-font-size: 1.15em !important;
-}
-.navbar{
- border: 0px solid #222 !important;
-}
-table{
-    white-space:pre-wrap !important;
-}
-/*
- ===========================
- */
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-html,
-body {
-    height: 100%;
-    /* The html and body elements cannot have any padding or margin. */
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-    min-height: 100%;
-    height: auto;
-    /* Negative indent footer by its height */
-    margin: 0 auto -60px;
-    /* Pad bottom by footer height */
-    padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-    font-size: 0.9em;
-    padding: 8px 0px;
-    background-color: #f5f5f5;
-}
-
-.footer-row {
-    line-height: 44px;
-}
-
-#footer > .container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.footer-follow-icon {
-    margin-left: 3px;
+a, a:visited, a.el, a.elRef, .contents a {
+    color: var(--tb-accent) !important;
     text-decoration: none !important;
 }
+a:hover { color: var(--tb-accent-hi) !important; text-decoration: underline !important; }
 
-.footer-follow-icon img {
-    width: 20px;
-}
+hr, .memSeparator { border: none !important; border-top: 1px solid var(--tb-border) !important; background: none !important; }
 
-.footer-link {
-    padding-top: 5px;
-    display: inline-block;
-    color: #999999;
-    text-decoration: none;
+/* --- headings & page title ------------------------------------------------ */
+h1, h2, h3, h4, .title, div.title, .groupheader, h2.groupheader {
+    color: var(--tb-text) !important;
+    font-weight: 600 !important;
+    border-bottom: none !important;
 }
+.groupheader, h2.groupheader {
+    border-bottom: 2px solid var(--tb-accent) !important;
+    padding-bottom: .25em;
+    color: var(--tb-accent) !important;
+}
+div.headertitle { padding: 10px 0; }
 
-.footer-copyright {
-    text-align: center;
-}
+/* --- top title area + tabs (flatten the gradients) ------------------------ */
+#titlearea, .header { background: var(--tb-bg) !important; border: none !important; }
+#projectname { color: var(--tb-text) !important; font-weight: 700 !important; }
+#projectnumber, #projectbrief { color: var(--tb-accent) !important; }
 
+.tabs, .tabs2, .tabs3, .navpath, #nav-path, .sm-dox, ul.sm-dox {
+    background: var(--tb-surface) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.tablist a, .sm-dox a, #nav-path li a {
+    background: transparent !important;
+    color: var(--tb-text-dim) !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+.tablist a:hover, .sm-dox a:hover { color: var(--tb-accent) !important; background: var(--tb-surface-3) !important; }
+.tablist li.current a, .tablist a.current { color: #161614 !important; background: var(--tb-accent) !important; }
+#nav-path { border-top: 1px solid var(--tb-border) !important; }
 
-@media (min-width: 992px) {
-    .footer-row {
-        text-align: left;
-    }
+/* --- treeview sidebar ----------------------------------------------------- */
+#side-nav, #nav-tree, .ui-resizable { background: var(--tb-surface) !important; }
+#nav-tree { border-right: 1px solid var(--tb-border) !important; }
+#nav-tree .label, #nav-tree a { color: var(--tb-text) !important; }
+#nav-tree .item:hover, #nav-tree a:hover { color: var(--tb-accent) !important; }
+#nav-tree .selected {
+    background: var(--tb-accent-dk) !important;
+    background-image: none !important;
+    border-radius: 4px;
+    text-shadow: none !important;
+}
+#nav-tree .selected a, #nav-tree .selected .label { color: var(--tb-accent-hi) !important; }
+.ui-resizable-e { background: var(--tb-border) !important; }
+#splitbar { background-image: none !important; background: var(--tb-border) !important; }
 
-    .footer-icons {
-        text-align: right;
-    }
+/* --- member declaration tables ------------------------------------------- */
+.memberdecls, table.memberdecls { background: transparent !important; }
+.memberdecls td.glow, .memItemLeft, .memItemRight, .memTemplItemLeft, .memTemplItemRight,
+.mdescLeft, .mdescRight, .memTemplParams {
+    background: var(--tb-surface) !important;
+    border: none !important;
+    color: var(--tb-text) !important;
 }
-@media (max-width: 991px) {
-    .footer-row {
-        text-align: center;
-    }
+.mdescLeft, .mdescRight { color: var(--tb-text-dim) !important; }
+.memItemLeft, .memTemplItemLeft { color: var(--tb-accent) !important; }
+h2.groupheader a, .memberdecls a { color: var(--tb-accent) !important; }
+.inherit_header { color: var(--tb-text-dim) !important; }
 
-    .footer-icons {
-        text-align: center;
-    }
+/* --- member details (memitem) -------------------------------------------- */
+.memitem {
+    border: 1px solid var(--tb-border) !important;
+    border-radius: var(--tb-radius) !important;
+    box-shadow: none !important;
+    overflow: hidden;
+    margin: 16px 0;
 }
-
-/* DOXYGEN Code Styles
------------------------------------ */
-
-
-a.qindex {
-    font-weight: bold;
+.memproto, .memname, .memtitle, dl.reflist dt {
+    background: var(--tb-surface-2) !important;
+    background-image: none !important;
+    color: var(--tb-text) !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
-
-a.qindexHL {
-    font-weight: bold;
-    background-color: #9CAFD4;
-    color: #ffffff;
-    border: 1px double #869DCA;
-}
-
-.contents a.qindexHL:visited {
-    color: #ffffff;
-}
-
-a.code, a.code:visited, a.line, a.line:visited {
-    color: #4665A2;
-}
-
-a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
-    color: #4665A2;
-}
-
-/* @end */
-
-dl.el {
-    margin-left: -1cm;
-}
-
-pre.fragment {
-    border: 1px solid #C4CFE5;
-    background-color: #FBFCFD;
-    padding: 4px 6px;
-    margin: 4px 8px 4px 2px;
-    overflow: auto;
-    word-wrap: break-word;
-    font-size:  9pt;
-    line-height: 125%;
-    font-family: monospace, fixed;
-    font-size: 105%;
-}
-
-div.fragment {
-    padding: 4px 6px;
-    margin: 4px 8px 4px 2px;
-    border: 1px solid #C4CFE5;
-}
-
-div.line {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 12px;
-    min-height: 13px;
-    line-height: 1.0;
-    white-space: -moz-pre-wrap; /* Moz */
-    white-space: -pre-wrap;     /* Opera 4-6 */
-    white-space: -o-pre-wrap;   /* Opera 7 */
-    white-space: pre-wrap;      /* CSS3  */
-    word-wrap: normal;      /* IE 5.5+ */
-    text-indent: -53px;
-    padding-left: 53px;
-    padding-bottom: 0px;
-    margin: 0px;
-    -webkit-transition-property: background-color, box-shadow;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-property: background-color, box-shadow;
-    -moz-transition-duration: 0.5s;
-    -ms-transition-property: background-color, box-shadow;
-    -ms-transition-duration: 0.5s;
-    -o-transition-property: background-color, box-shadow;
-    -o-transition-duration: 0.5s;
-    transition-property: background-color, box-shadow;
-    transition-duration: 0.5s;
-}
-div.line:hover{
-    background-color: #FBFF00;
-}
-
-div.line.glow {
-    background-color: cyan;
-    box-shadow: 0 0 10px cyan;
-}
-
-
-span.lineno {
-    padding-right: 4px;
-    text-align: right;
-    color:rgba(0,0,0,0.3);
-    border-right: 1px solid #EEE;
-    border-left: 1px solid #EEE;
-    background-color: #FFF;
-    white-space: pre;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace ;
-}
-span.lineno a {
-    background-color: #FAFAFA;
-    cursor:pointer;
-}
-
-span.lineno a:hover {
-    background-color: #EFE200;
-    color: #1e1e1e;
-}
-
-div.groupHeader {
-    margin-left: 16px;
-    margin-top: 12px;
-    font-weight: bold;
-}
-
-div.groupText {
-    margin-left: 16px;
-    font-style: italic;
-}
-
-/* @group Code Colorization */
-
-span.keyword {
-    color: #008000
-}
-
-span.keywordtype {
-    color: #604020
-}
-
-span.keywordflow {
-    color: #e08000
-}
-
-span.comment {
-    color: #800000
-}
-
-span.preprocessor {
-    color: #806020
-}
-
-span.stringliteral {
-    color: #002080
-}
-
-span.charliteral {
-    color: #008080
-}
-
-span.vhdldigit {
-    color: #ff00ff
-}
-
-span.vhdlchar {
-    color: #000000
-}
-
-span.vhdlkeyword {
-    color: #700070
-}
-
-span.vhdllogic {
-    color: #ff0000
-}
-
-blockquote {
-    background-color: #F7F8FB;
-    border-left: 2px solid #9CAFD4;
-    margin: 0 24px 0 4px;
-    padding: 0 12px 0 16px;
-}
-
-/*---------------- Search Box */
-
-#search-box {
-  margin: 10px 0px;
-}
-#search-box .close {
-  display: none;
-  position: absolute;
-  right: 0px;
-  padding: 6px 12px;
-  z-index: 5;
-}
-
-/*---------------- Search results window */
-
-#search-results-window {
-  display: none;
-}
-
-iframe#MSearchResults {
-  width: 100%;
-  height: 15em;
-}
-
-.SRChildren {
-  padding-left: 3ex; padding-bottom: .5em
-}
-.SRPage .SRChildren {
-  display: none;
-}
-a.SRScope {
-  display: block;
-}
-a.SRSymbol:focus, a.SRSymbol:active,
-a.SRScope:focus, a.SRScope:active {
-  text-decoration: underline;
-}
-span.SRScope {
-  padding-left: 4px;
-}
-.SRResult {
-  display: none;
-}
-
-/* class and file list */
-.directory .icona,
-.directory .arrow {
-  height: auto;
-}
-.directory .icona .icon {
-  height: 16px;
-}
-.directory .icondoc {
-  background-position: 0px 0px;
-  height: 20px;
-}
-.directory .iconfopen {
-  background-position: 0px 0px;
-}
-.directory td.entry {
-  padding: 7px 8px 6px 8px;
-}
-
-.table > tbody > tr > td.memSeparator {
-  line-height: 0;
-}
-
-.memItemLeft, .memTemplItemLeft {
-  white-space: normal;
-}
-
-/* enumerations */
-.panel-body thead > tr {
-  background-color: #e0e0e0;
-}
-
-/* todo lists */
-.todoname,
-.todoname a {
-  font-weight: bold;
-}
-
-/* Class title */
-.summary {
-  margin-top: 25px;
-}
-.page-header {
-  margin: 20px 0px !important;
-}
-.page-header .title {
-  display: inline-block;
-}
-.page-header .pull-right {
-  margin-top: 0.3em;
-  margin-left: 0.5em;
-}
-.page-header .label {
-  font-size: 50%;
-}
-
-
-
-
 .memtitle {
-	padding: initial;
-    border-top: initial;
-    border-left: initial;
-    border-right: initial;
-    border-top-right-radius: initial;
-    border-top-left-radius: initial;
-    margin-bottom: -initial;
-    background-image: initial;
-    background-repeat: initial;
-    background-color: initial;
-    line-height: initial;
-    font-weight: initial;
-    float: initial;
-	margin-bottom: 10px;
+    border: 1px solid var(--tb-border) !important;
+    border-bottom: none !important;
+    border-radius: var(--tb-radius) var(--tb-radius) 0 0 !important;
+    color: var(--tb-accent) !important;
 }
+.memname td, .memname { color: var(--tb-text) !important; }
+.memname .paramname, .paramname { color: var(--tb-accent-hi) !important; font-style: normal !important; }
+.memdoc, dl.reflist dd {
+    background: var(--tb-bg) !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--tb-text) !important;
+}
+.fieldtable, .fieldtable th, .fieldtable td {
+    border-color: var(--tb-border) !important;
+    background: var(--tb-surface) !important;
+}
+.fieldtable th { background: var(--tb-surface-2) !important; color: var(--tb-accent) !important; }
+
+/* --- code blocks & syntax ------------------------------------------------- */
+div.fragment, pre.fragment {
+    background: var(--tb-surface-2) !important;
+    border: 1px solid var(--tb-border) !important;
+    border-radius: var(--tb-radius) !important;
+    padding: 12px 14px !important;
+    color: var(--tb-text) !important;
+}
+div.line, .fragment .line { font-family: var(--tb-mono) !important; color: var(--tb-text) !important; }
+span.lineno {
+    background: transparent !important;
+    border-right: 1px solid var(--tb-border) !important;
+    color: var(--tb-text-dim) !important;
+}
+code, tt, .computeroutput, span.tt {
+    font-family: var(--tb-mono) !important;
+    background: var(--tb-surface-2) !important;
+    color: var(--tb-accent-hi) !important;
+    padding: .08em .35em;
+    border-radius: 4px;
+}
+.memdoc code, .memproto code { background: var(--tb-surface-3) !important; }
+
+.keyword, .keywordtype, .keywordflow { color: var(--tb-kw) !important; }
+.comment       { color: var(--tb-com) !important; font-style: italic; }
+.stringliteral, .charliteral { color: var(--tb-str) !important; }
+.preprocessor  { color: #c89cff !important; }
+.vhdldigit, .lineno a, a.code, a.codeRef { color: var(--tb-num) !important; }
+a.code, a.codeRef { text-decoration: none !important; }
+
+/* --- generic tables / directories ---------------------------------------- */
+table.doxtable, table.markdownTable { border-collapse: collapse !important; }
+table.doxtable td, table.doxtable th, .markdownTable td, .markdownTable th,
+.directory td, table.directory {
+    border: 1px solid var(--tb-border) !important;
+    background: var(--tb-surface) !important;
+    color: var(--tb-text) !important;
+}
+table.doxtable th, .markdownTableHead th {
+    background: var(--tb-surface-2) !important;
+    color: var(--tb-accent) !important;
+}
+.directory .even, tr.even, .even td { background: var(--tb-surface-2) !important; }
+.directory tr:hover td { background: var(--tb-surface-3) !important; }
+.iconfopen, .icondoc, .iconfclosed { filter: hue-rotate(200deg) saturate(1.6); }
+
+/* --- admonitions (note / warning / etc.) --------------------------------- */
+dl.note, dl.attention, dl.warning, dl.bug, dl.deprecated, dl.todo, dl.remark, dl.pre, dl.post, dl.invariant {
+    background: var(--tb-surface) !important;
+    border-radius: 0 var(--tb-radius) var(--tb-radius) 0;
+    padding: 8px 14px;
+    color: var(--tb-text) !important;
+}
+dl.note       { border-left: 4px solid var(--tb-accent) !important; }
+dl.warning, dl.attention, dl.bug { border-left: 4px solid #e06c5b !important; }
+dl.deprecated { border-left: 4px solid #b06bd0 !important; }
+dl.todo, dl.remark { border-left: 4px solid var(--tb-num) !important; }
+
+/* --- search box ----------------------------------------------------------- */
+#MSearchBox, #MSearchField, #MSearchSelect {
+    background: var(--tb-surface-2) !important;
+    border: 1px solid var(--tb-border) !important;
+    border-radius: var(--tb-radius) !important;
+    color: var(--tb-text) !important;
+}
+#MSearchField { color: var(--tb-text) !important; }
+.left #MSearchSelect { background: none !important; }
+
+/* --- misc ----------------------------------------------------------------- */
+.contents { padding: 0 18px; }
+.footer, address.footer, .navpath ul, #nav-path li {
+    color: var(--tb-text-dim) !important;
+    background: var(--tb-surface) !important;
+}
+.footer a { color: var(--tb-accent) !important; }
+::selection { background: var(--tb-accent); color: #161614; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--tb-bg); }
+::-webkit-scrollbar-thumb { background: var(--tb-surface-3); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--tb-accent); }
